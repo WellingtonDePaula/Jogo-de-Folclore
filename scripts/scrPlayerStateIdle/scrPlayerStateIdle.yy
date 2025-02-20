@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateIdle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateIdle",
+  "parent":{
+    "name":"States",
+    "path":"folders/Scripts/Entities/Player/States.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

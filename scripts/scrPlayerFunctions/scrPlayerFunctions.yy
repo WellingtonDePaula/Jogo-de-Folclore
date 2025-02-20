@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerFunctions",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Entities/Player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

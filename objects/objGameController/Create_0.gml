@@ -1,0 +1,1 @@
+global.cam = instance_create_layer(0, 0, "Camera", objCamera);

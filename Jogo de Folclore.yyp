@@ -47,7 +47,7 @@
   },
   "name":"Jogo de Folclore",
   "resources":[
-    {"id":{"name":"objCam","path":"objects/objCam/objCam.yy",},},
+    {"id":{"name":"objCamera","path":"objects/objCamera/objCamera.yy",},},
     {"id":{"name":"objCollider","path":"objects/objCollider/objCollider.yy",},},
     {"id":{"name":"objEntity","path":"objects/objEntity/objEntity.yy",},},
     {"id":{"name":"objGameController","path":"objects/objGameController/objGameController.yy",},},

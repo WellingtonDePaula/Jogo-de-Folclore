@@ -10,9 +10,9 @@ stateSprites = [
 	sprPlayerWalking,
 ];
 
-enum States {
-    IDLE,
-    WALK,
+States = {
+    IDLE: 0,
+    WALK: 1,
 }
 
 state = States.IDLE;

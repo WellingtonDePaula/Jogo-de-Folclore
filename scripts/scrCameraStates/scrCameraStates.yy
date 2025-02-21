@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrCameraStates",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCameraStates",
+  "parent":{
+    "name":"Camera",
+    "path":"folders/Scripts/System/Camera.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

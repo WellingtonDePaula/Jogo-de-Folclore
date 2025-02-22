@@ -1,6 +1,8 @@
 function scrPlayerStateWalking(){
 	stateDebug = "Walking";
 	
+	setCamState(global.cam, CameraStates.FOLLOW);
+	
 	#region Code
 	
 	var velocities = updateMovement(vel, inputs);
@@ -13,7 +15,7 @@ function scrPlayerStateWalking(){
 	#region Change States
 	
 	if(!checkMoveInput(inputs)[0]) {
-		state = States.IDLE;
+		subState = NormalSubState.IDLE;
 	}
 	
 	#endregion

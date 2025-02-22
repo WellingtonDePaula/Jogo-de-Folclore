@@ -1,4 +1,5 @@
 state = undefined;
+subState = undefined;
 statePrevious = undefined;
 stateScripts = [];
 stateSprites = [];

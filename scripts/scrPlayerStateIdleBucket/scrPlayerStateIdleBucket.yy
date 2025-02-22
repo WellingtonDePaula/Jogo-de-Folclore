@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateIdleBucket",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateIdleBucket",
+  "parent":{
+    "name":"Bucket",
+    "path":"folders/Scripts/Entities/Player/States/Bucket.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

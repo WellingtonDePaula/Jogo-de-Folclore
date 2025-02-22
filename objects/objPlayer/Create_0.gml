@@ -1,21 +1,76 @@
 event_inherited();
 
+vel = 1.5;
+
+facing = "front";
+isSide = false;
+
+#region States
+
 stateScripts = [
-	scrPlayerStateIdle,
-	scrPlayerStateWalking,
+	[
+		scrPlayerStateIdle,
+		scrPlayerStateWalking,
+	],
+	
+	[
+		scrPlayerStateBucketIdle,
+		scrPlayerStateBucketWalking,
+	],
 ];
 
 stateSprites = [
-	sprPlayerIdle,
-	sprPlayerWalking,
+	[
+		[
+			sprPlayerIdleFront,
+			sprPlayerIdleBack,
+			sprPlayerIdleSideFront,
+			sprPlayerIdleSideBack,
+		],
+		[
+			sprPlayerWalkingFront,
+			sprPlayerWalkingBack,
+			sprPlayerWalkingSideFront,
+			sprPlayerWalkingSideBack,
+		],
+	],
+	
+	[
+		[
+			sprPlayerIdleFront,
+			sprPlayerIdleBack,
+			sprPlayerIdleSideFront,
+			sprPlayerIdleSideBack,
+		],
+		[
+			sprPlayerWalkingFront,
+			sprPlayerWalkingBack,
+			sprPlayerWalkingSideFront,
+			sprPlayerWalkingSideBack,
+		],
+	],
+
 ];
 
-States = {
-    IDLE: 0,
-    WALK: 1,
+enum PlayerState {
+	NORMAL,
+	BUCKET,
 }
 
-state = States.IDLE;
+enum NormalSubState {
+    IDLE,
+    WALKING,
+}
+
+enum BucketSubState {
+	IDLE,
+    WALKING,
+}
+
+state = PlayerState.NORMAL;
+subState = NormalSubState.IDLE;
+
+#endregion
 
 inputs = {
 	right: ord("D"),
@@ -23,5 +78,3 @@ inputs = {
 	down: ord("S"),
 	up: ord("W"),
 }
-
-vel = 1;

@@ -5,22 +5,23 @@ resolutionScale = 0;
 viewWidth = 0;
 viewHeight = 0;
 
-camSetResolution(self, 1280, 720, 3.5);
+camSetResolution(self, 1280, 720, 3);
 
 viewTarget = objPlayer;
 
 camX = 0;
 camY = 0;
-camSmoothness = .4;
+camSmoothnessDefault = .3;
+camSmoothnessBetween = .1;
 
 stateScripts = [
 	scrCameraStateFollowTarget,
 	scrCameraStateFollowTargetAiming,
 ];
 
-States = {
-	FOLLOW: 0,
-	BETWEEN: 1,
+enum CameraStates {
+	FOLLOW,
+	BETWEEN,
 }
 
-state = stateScripts[States.FOLLOW];
+state = stateScripts[CameraStates.FOLLOW];

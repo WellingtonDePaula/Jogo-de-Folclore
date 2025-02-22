@@ -13,6 +13,12 @@ function camSetResolution(cam, width, height, scale) {
 	window_center();
 }
 
-function camSetViewTarget(target) {
+function setCamViewTarget(target) {
 	viewTarget = target;
+}
+
+function setCamState(cam, stateScript) {
+	with(cam) {
+		state = stateScripts[stateScript]
+	}
 }

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scrPlayerStateWalking",
   "parent":{
-    "name":"States",
-    "path":"folders/Scripts/Entities/Player/States.yy",
+    "name":"Normal",
+    "path":"folders/Scripts/Entities/Player/States/Normal.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

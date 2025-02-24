@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateAimingIdleBucket",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateAimingIdleBucket",
+  "parent":{
+    "name":"Aiming",
+    "path":"folders/Scripts/Entities/Player/States/Bucket/Aiming.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

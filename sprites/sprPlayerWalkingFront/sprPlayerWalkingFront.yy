@@ -31,7 +31,7 @@
   "origin":9,
   "parent":{
     "name":"Walking",
-    "path":"folders/Sprites/Entities/Player/Normal/Walking.yy",
+    "path":"folders/Sprites/Entities/Enemies/Player/Normal/Walking.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

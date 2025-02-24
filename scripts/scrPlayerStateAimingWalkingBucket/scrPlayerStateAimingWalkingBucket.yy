@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateAimingWalkingBucket",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateAimingWalkingBucket",
+  "parent":{
+    "name":"Aiming",
+    "path":"folders/Scripts/Entities/Player/States/Bucket/Aiming.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

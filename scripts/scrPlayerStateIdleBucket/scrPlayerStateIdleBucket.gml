@@ -1,7 +1,7 @@
-function scrPlayerStateBucketIdle(){
+function scrPlayerStateIdleBucket(){
 	stateDebug = "Bucket Idle";
 	
-	setCamState(global.cam, CameraStates.BETWEEN);
+	setCamState(global.cam, CameraStates.FOLLOW);
 	
 	#region Code
 	
@@ -16,6 +16,10 @@ function scrPlayerStateBucketIdle(){
 	
 	if(checkMoveInput(inputs)[0]) {
 		subState = BucketSubState.WALKING;
+	}
+	
+	if(mouse_check_button_pressed(mb_right)) {
+		subState = BucketSubState.AIMING_IDLE;
 	}
 	
 	#endregion

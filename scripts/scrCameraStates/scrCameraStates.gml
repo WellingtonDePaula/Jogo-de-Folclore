@@ -10,7 +10,7 @@ function scrCameraStateFollowTargetAiming() {
 	var dist = point_distance(viewTarget.x, viewTarget.y, mouse_x, mouse_y);
 	var dir = point_direction(viewTarget.x, viewTarget.y, mouse_x, mouse_y);
 	
-	var xx = viewTarget.x + (dist * .2 * cos(degtorad(dir)));
+	var xx = viewTarget.x + ((dist * .2) * cos(degtorad(dir)));
 	
 	var yy = viewTarget.y - (dist * .2 * sin(degtorad(dir)));
 	

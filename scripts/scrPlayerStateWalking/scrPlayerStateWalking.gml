@@ -3,12 +3,18 @@ function scrPlayerStateWalking(){
 	
 	setCamState(global.cam, CameraStates.FOLLOW);
 	
+	#region State Consequences
+	
+	isAiming = false;
+	
+	#endregion
+	
 	#region Code
 	
-	var velocities = updateMovement(vel, inputs);
+	var velocities = updatePlayerMovement(vel, inputs);
 	velh = velocities[0];
 	velv = velocities[1];
-	fixSideSprite();
+	updatePlayerDirection();
 	
 	#endregion
 	

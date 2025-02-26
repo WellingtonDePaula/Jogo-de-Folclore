@@ -3,12 +3,18 @@ function scrPlayerStateAimingIdleBucket() {
 	
 	setCamState(global.cam, CameraStates.BETWEEN);
 	
+	#region State Consequences
+	
+	isAiming = true;
+	
+	#endregion
+	
 	#region Code
 	
-	var velocities = updateMovement(vel - .5, inputs);
+	var velocities = updatePlayerMovement(vel - .5, inputs);
 	velh = velocities[0];
 	velv = velocities[1];
-	fixSideSprite();
+	updatePlayerDirection();
 	
 	#endregion
 	

@@ -12,7 +12,7 @@ function checkMoveInput(inputs) {
 	return [keys, moveDir];
 }
 
-function updateMovement(vel, inputKeys) {
+function updatePlayerMovement(vel, inputKeys) {
 	var inputsUpdated, keys, moveDir
 	
 	inputsUpdated = checkMoveInput(inputs);
@@ -26,13 +26,22 @@ function updateMovement(vel, inputKeys) {
 	return [hSpeed, vSpeed];
 }
 
-function fixSideSprite() {
+function fixPlayerSideSprite() {
+	if(isAiming) {
+		if(mouse_x > x) {
+			image_xscale = 1;
+			return;
+		}
+		image_xscale = -1;
+		return;
+	}
 	if(velh != 0) {
 		image_xscale = sign(velh);
+		return;
 	}
 }
 
-function updateSideAndFacing() {
+function updatePlayerDirection() {
 	var right, left, down, up, dir, keys;
 	
 	right = keyboard_check(inputs.right);
@@ -40,21 +49,29 @@ function updateSideAndFacing() {
 	down = keyboard_check(inputs.down);
 	up = keyboard_check(inputs.up);
 	
-	dir = point_direction(0, 0, right - left, down - up);
+	switch(isAiming) {
+		case true:
+			dir = point_direction(x, y, mouse_x, mouse_y);
+			break;
+		case false:
+			dir = point_direction(0, 0, right - left, down - up);
+			break;
+	}
+	
 	keys = right - left != 0 || down - up != 0;
 	
-	if(keys) {
-		if(dir > 0 && dir < 180) {
-			facing = "back";
-		}
-		if(dir > 180 && dir < 365) {
-			facing = "front";
-		}
-		//Verifica se o player está andando na diagonal ou para os lados, e então coloca a variavle de isSide como true
-		if(dir >= 0 && dir < 90 || dir > 90 && dir <= 180 || dir >= 180 && dir < 270 || dir > 270 && dir <= 360) {
-			isSide = true;
-			return;
-		}
+	if(dir > 0 && dir < 180) {
+		facing = "back";
+	}
+	if(dir > 180 && dir < 365) {
+		facing = "front";
+	}
+	//Verifica se o player está andando na diagonal ou para os lados, e então coloca a variavle de isSide como true
+	if(dir >= 0 && dir < 90 || dir > 90 && dir <= 180 || dir >= 180 && dir < 270 || dir > 270 && dir <= 360) {
+		isSide = true;
+		return;
+	}
+	if(!keys) {
 		isSide = false;
 	}
 	
@@ -77,7 +94,9 @@ function getIndexForSprite() {
 	}
 }
 
-function updateSprite() {
+function updatePlayerSprite() {
+	fixPlayerSideSprite();
+	updatePlayerDirection();
 	var index = getIndexForSprite();
 	if(sprite_index != stateSprites[state][subState][index]) {
 		image_index = 0;

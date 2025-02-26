@@ -1,6 +1,5 @@
 event_inherited();
-updateSideAndFacing();
-updateSprite();
+updatePlayerSprite();
 
 if(keyboard_check_pressed(ord("N"))) {
 	state = PlayerState.BUCKET;

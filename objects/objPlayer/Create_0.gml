@@ -5,6 +5,8 @@ vel = 1.5;
 facing = "front";
 isSide = false;
 
+isAiming = false;
+
 stateScripts = [
 	[
 		scrPlayerStateIdle,

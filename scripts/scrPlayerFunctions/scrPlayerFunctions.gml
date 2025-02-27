@@ -49,32 +49,37 @@ function updatePlayerDirection() {
 	down = keyboard_check(inputs.down);
 	up = keyboard_check(inputs.up);
 	
+	keys = right - left != 0 || down - up != 0;
+	static dir = 0;
+	
 	switch(isAiming) {
 		case true:
 			dir = point_direction(x, y, mouse_x, mouse_y);
+			var isSideTollerance = 35;
+			if(mouse_x > x -25 && mouse_x < x + 25) {
+				isSide = false;
+				break;
+			}
+			isSide = true;
 			break;
 		case false:
 			dir = point_direction(0, 0, right - left, down - up);
+			if(keys) {
+				if(dcos(dir) != 0) {
+					isSide = true;
+				} else {
+					isSide = false;
+				}
+			}
 			break;
 	}
 	
-	keys = right - left != 0 || down - up != 0;
-	
-	if(dir > 0 && dir < 180) {
-		facing = "back";
-	}
-	if(dir > 180 && dir < 365) {
+	if(dsin(dir) < 0) {
 		facing = "front";
 	}
-	//Verifica se o player está andando na diagonal ou para os lados, e então coloca a variavle de isSide como true
-	if(dir >= 0 && dir < 90 || dir > 90 && dir <= 180 || dir >= 180 && dir < 270 || dir > 270 && dir <= 360) {
-		isSide = true;
-		return;
+	if(dsin(dir) > 0) {
+		facing = "back";
 	}
-	if(!keys) {
-		isSide = false;
-	}
-	
 }
 
 function getIndexForSprite() {

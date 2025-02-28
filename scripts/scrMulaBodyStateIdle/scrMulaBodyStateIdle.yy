@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMulaBodyStateIdle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMulaBodyStateIdle",
+  "parent":{
+    "name":"Arm",
+    "path":"folders/Scripts/Entities/Enemies/Bosses/Mula/States/Normal/Arm.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

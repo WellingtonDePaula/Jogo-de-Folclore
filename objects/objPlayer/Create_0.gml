@@ -7,6 +7,10 @@ isSide = false;
 
 isAiming = false;
 
+
+
+#region States
+
 stateScripts = [
 	[
 		scrPlayerStateIdle,
@@ -20,9 +24,6 @@ stateScripts = [
 		scrPlayerStateAimingWalkingBucket,
 	],
 ];
-
-
-#region States
 
 #region Sprites
 stateSprites = [
@@ -106,7 +107,7 @@ enum PlayerState {
 	BUCKET,
 }
 
-enum NormalSubState {
+enum PlayerNormalSubState {
     IDLE,
     WALKING,
 }
@@ -120,7 +121,7 @@ enum BucketSubState {
 }
 
 state = PlayerState.NORMAL;
-subState = NormalSubState.IDLE;
+subState = PlayerNormalSubState.IDLE;
 
 #endregion States
 

@@ -29,7 +29,7 @@
   "origin":9,
   "parent":{
     "name":"Idle",
-    "path":"folders/Sprites/Entities/Enemies/Player/Normal/Idle.yy",
+    "path":"folders/Sprites/Entities/Player/Normal/Idle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

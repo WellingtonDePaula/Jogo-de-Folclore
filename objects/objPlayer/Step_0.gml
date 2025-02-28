@@ -1,5 +1,5 @@
 event_inherited();
-updatePlayerSprite();
+move_and_collide(velh, velv, objCollider);
 
 if(keyboard_check_pressed(ord("N"))) {
 	state = PlayerState.BUCKET;
@@ -7,5 +7,5 @@ if(keyboard_check_pressed(ord("N"))) {
 }
 if(keyboard_check_pressed(ord("M"))) {
 	state = PlayerState.NORMAL;
-	subState = NormalSubState.IDLE;
+	subState = PlayerNormalSubState.IDLE;
 }

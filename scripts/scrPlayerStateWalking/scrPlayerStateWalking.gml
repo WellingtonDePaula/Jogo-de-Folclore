@@ -15,13 +15,14 @@ function scrPlayerStateWalking(){
 	velh = velocities[0];
 	velv = velocities[1];
 	updatePlayerDirection();
+	updatePlayerSprite();
 	
 	#endregion
 	
 	#region Change States
 	
 	if(!checkMoveInput(inputs)[0]) {
-		subState = NormalSubState.IDLE;
+		subState = PlayerNormalSubState.IDLE;
 	}
 	
 	#endregion

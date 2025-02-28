@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMulaArmFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMulaArmFunctions",
+  "parent":{
+    "name":"Normal",
+    "path":"folders/Scripts/Entities/Enemies/Bosses/Mula/States/Normal.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

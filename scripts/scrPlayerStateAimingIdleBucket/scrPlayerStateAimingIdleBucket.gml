@@ -15,6 +15,7 @@ function scrPlayerStateAimingIdleBucket() {
 	velh = velocities[0];
 	velv = velocities[1];
 	updatePlayerDirection();
+	updatePlayerSprite();
 	
 	#endregion
 	

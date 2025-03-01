@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMulaFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMulaFunctions",
+  "parent":{
+    "name":"Mula",
+    "path":"folders/Scripts/Entities/Mula.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

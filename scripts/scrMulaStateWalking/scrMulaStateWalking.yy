@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMulaStateWalking",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMulaStateWalking",
+  "parent":{
+    "name":"Normal",
+    "path":"folders/Scripts/Entities/Mula/States/Normal.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -42,7 +42,7 @@ function fixPlayerSideSprite() {
 }
 
 function updatePlayerDirection() {
-	var right, left, down, up, dir, keys;
+	var right, left, down, up, keys;
 	
 	right = keyboard_check(inputs.right);
 	left = keyboard_check(inputs.left);

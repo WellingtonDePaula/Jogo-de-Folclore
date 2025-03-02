@@ -108,3 +108,43 @@ function updatePlayerSprite() {
 	}
 	sprite_index = stateSprites[state][subState][index];
 }
+
+function dash() {
+	var moveInputs = checkMoveInput(inputs);
+	var dir = moveInputs[1];
+	if(!moveInputs[0]) {
+		if(isSide) {
+			if(image_xscale > 0) {
+				dir = 0;
+			} else {
+				dir = 180;
+			}
+		} else {
+			switch(facing) {
+				case "front":
+					dir = 270;
+					break;
+				case "back":
+					dir = 90;
+					break;
+			}
+		}
+	}
+	velh = lengthdir_x(velDash, dir);
+	velv = lengthdir_y(velDash, dir);
+	velhDash = velh;
+	velvDash = velv;
+	canDash = false;
+	//Ativa o timer para resetar a variavel do dash
+	alarm[0] = dashRechargeTime;
+	
+	switch(state) {
+		case PlayerState.NORMAL:
+			subState = PlayerNormalSubState.DASH;
+			break;
+		
+		case PlayerState.BUCKET:
+			subState = PlayerBucketSubState.DASH;
+			break;
+	}
+}

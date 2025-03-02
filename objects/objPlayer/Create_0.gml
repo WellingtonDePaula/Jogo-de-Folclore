@@ -1,13 +1,20 @@
 event_inherited();
 
+velAiming = 1;
+
+velhDash = 0;
+velvDash = 0;
+
 vel = 1.5;
+velDash = 2.5;
+
+dashRechargeTime = sprite_get_number(sprPlayerDashFront) * velDash * 2.5;
+canDash = true;
 
 facing = "front";
 isSide = false;
 
 isAiming = false;
-
-
 
 #region States
 
@@ -15,11 +22,13 @@ stateScripts = [
 	[
 		scrPlayerStateIdle,
 		scrPlayerStateWalking,
+		scrPlayerStateDash,
 	],
 	
 	[
 		scrPlayerStateIdleBucket,
 		scrPlayerStateWalkingBucket,
+		scrPlayerStateDashBucket,
 		scrPlayerStateAimingIdleBucket,
 		scrPlayerStateAimingWalkingBucket,
 	],
@@ -47,6 +56,15 @@ stateSprites = [
 			sprPlayerWalkingSideBack,
 		],
 //#endregion WALKING
+
+//#region DASH
+		[
+			sprPlayerDashFront,
+			sprPlayerDashBack,
+			sprPlayerDashSideFront,
+			sprPlayerDashSideBack,
+		],
+//#endregion DASH
 		
 	],
 //#endregion NORMAL
@@ -71,6 +89,15 @@ stateSprites = [
 			sprPlayerWalkingSideBack,
 		],
 //#endregion WALKING
+
+//#region DASH
+		[
+			sprPlayerDashFront,
+			sprPlayerDashBack,
+			sprPlayerDashSideFront,
+			sprPlayerDashSideBack,
+		],
+//#endregion DASH
 		
 //#region IDLE_AIMING
 		[
@@ -110,11 +137,13 @@ enum PlayerState {
 enum PlayerNormalSubState {
     IDLE,
     WALKING,
+	DASH,
 }
 
-enum BucketSubState {
+enum PlayerBucketSubState {
 	IDLE,
     WALKING,
+	DASH,
 	AIMING_IDLE,
 	AIMING_WALKING,
     THROWING,
@@ -130,4 +159,6 @@ inputs = {
 	left: ord("A"),
 	down: ord("S"),
 	up: ord("W"),
+	aim: mb_right,
+	dash: vk_shift,
 }

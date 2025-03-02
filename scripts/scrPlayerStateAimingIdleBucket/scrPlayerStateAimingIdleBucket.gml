@@ -11,7 +11,7 @@ function scrPlayerStateAimingIdleBucket() {
 	
 	#region Code
 	
-	var velocities = updatePlayerMovement(vel - .5, inputs);
+	var velocities = updatePlayerMovement(velAiming, inputs);
 	velh = velocities[0];
 	velv = velocities[1];
 	updatePlayerDirection();
@@ -22,11 +22,15 @@ function scrPlayerStateAimingIdleBucket() {
 	#region Change States
 	
 	if(checkMoveInput(inputs)[0]) {
-		subState = BucketSubState.AIMING_WALKING;
+		subState = PlayerBucketSubState.AIMING_WALKING;
 	}
 	
-	if(mouse_check_button_released(mb_right)) {
-		subState = BucketSubState.IDLE;
+	if(mouse_check_button_released(inputs.aim)) {
+		subState = PlayerBucketSubState.IDLE;
+	}
+	
+	if(keyboard_check_pressed(inputs.dash) && canDash) {
+		dash();
 	}
 	
 	#endregion

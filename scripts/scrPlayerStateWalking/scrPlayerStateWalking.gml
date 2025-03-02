@@ -25,5 +25,9 @@ function scrPlayerStateWalking(){
 		subState = PlayerNormalSubState.IDLE;
 	}
 	
+	if(keyboard_check_pressed(inputs.dash) && canDash) {
+		dash();
+	}
+	
 	#endregion
 }

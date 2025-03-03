@@ -24,7 +24,7 @@ function scrPlayerStateBucketDash(){
 	
 	if(image_index >= image_number) {
 		spriteChanged = false;
-		subState = PlayerBucketSubState.IDLE;
+		state = PlayerStates.IDLE;
 	}
 	
 	#endregion

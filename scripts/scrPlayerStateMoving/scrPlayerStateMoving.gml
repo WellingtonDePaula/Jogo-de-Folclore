@@ -1,5 +1,5 @@
 function scrPlayerStateMoving(){
-	stateDebug = "Walking";
+	stateDebug = "Moving";
 	
 	setCamState(global.cam, CameraStates.FOLLOW);
 	
@@ -22,11 +22,12 @@ function scrPlayerStateMoving(){
 	#region Change States
 	
 	if(!checkMoveInput(inputs)[0]) {
-		subState = PlayerNormalSubState.IDLE;
+		state = PlayerStates.IDLE;
 	}
 	
 	if(keyboard_check_pressed(inputs.dash) && canDash) {
 		dash();
+		state = PlayerStates.DASH;
 	}
 	
 	#endregion

@@ -7,7 +7,7 @@ if(state != undefined) {
 			switch(state) {
 				
 				#region IDLE
-				case PlayerState.IDLE:
+				case PlayerStates.IDLE:
 					execute = stateScripts.NORMAL.IDLE;
 					break;
 				#endregion
@@ -15,7 +15,7 @@ if(state != undefined) {
 				//////////////////////////////////////////////////////////////////////////////////////////
 				
 				#region MOVING
-				case PlayerState.MOVING:
+				case PlayerStates.MOVING:
 					execute = stateScripts.NORMAL.MOVING;
 					break;
 				#endregion
@@ -23,7 +23,7 @@ if(state != undefined) {
 				//////////////////////////////////////////////////////////////////////////////////////////
 				
 				#region DASH
-				case PlayerState.DASH:
+				case PlayerStates.DASH:
 					execute = stateScripts.NORMAL.DASH;
 					break;
 				#endregion
@@ -39,7 +39,7 @@ if(state != undefined) {
 			switch(state) {
 				
 				#region IDLE
-				case PlayerState.IDLE:
+				case PlayerStates.IDLE:
 					execute = stateScripts.BUCKET.IDLE;
 					break;
 				#endregion
@@ -47,7 +47,7 @@ if(state != undefined) {
 				//////////////////////////////////////////////////////////////////////////////////////////
 				
 				#region MOVING
-				case PlayerState.MOVING:
+				case PlayerStates.MOVING:
 					execute = stateScripts.BUCKET.MOVING;
 					break;
 				#endregion
@@ -55,7 +55,7 @@ if(state != undefined) {
 				//////////////////////////////////////////////////////////////////////////////////////////
 				
 				#region DASH
-				case PlayerState.DASH:
+				case PlayerStates.DASH:
 					execute = stateScripts.BUCKET.DASH;
 					break;
 				#endregion
@@ -71,7 +71,7 @@ if(state != undefined) {
 			switch(state) {
 				
 				#region IDLE
-				case PlayerState.IDLE:
+				case PlayerStates.IDLE:
 					execute = stateScripts.BUCKET_AIMING.IDLE;
 					break;
 				#endregion
@@ -79,7 +79,7 @@ if(state != undefined) {
 				//////////////////////////////////////////////////////////////////////////////////////////
 				
 				#region MOVING
-				case PlayerState.MOVING:
+				case PlayerStates.MOVING:
 					execute = stateScripts.BUCKET_AIMING.MOVING;
 					break;
 				#endregion
@@ -87,7 +87,7 @@ if(state != undefined) {
 				//////////////////////////////////////////////////////////////////////////////////////////
 				
 				#region DASH
-				case PlayerState.DASH:
+				case PlayerStates.DASH:
 					execute = stateScripts.BUCKET_AIMING.DASH;
 					break;
 				#endregion
@@ -95,7 +95,7 @@ if(state != undefined) {
 				//////////////////////////////////////////////////////////////////////////////////////////
 				
 				#region THROWING
-				case PlayerState.THROWING:
+				case PlayerStates.THROWING:
 					execute = stateScripts.BUCKET_AIMING.THROWING;
 					break;
 				#endregion
@@ -107,3 +107,10 @@ if(state != undefined) {
 	script_execute(execute);
 }
 move_and_collide(velh, velv, objCollider);
+
+if(keyboard_check_pressed(ord("N"))) {
+	stateMode = PlayerMode.BUCKET;
+}
+if(keyboard_check_pressed(ord("M"))) {
+	stateMode = PlayerMode.NORMAL;
+}

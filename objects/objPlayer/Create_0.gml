@@ -34,6 +34,7 @@ stateScripts = {
 	BUCKET_AIMING: {
 		IDLE: scrPlayerStateBucketAimingIdle,
 		MOVING: scrPlayerStateBucketAimingMoving,
+		DASH: scrPlayerStateBucketAimingDash,
 		THROWING: undefined,
 	},
 	
@@ -65,7 +66,7 @@ enum PlayerMode {
 	BUCKET,
 	BUCKET_AIMING,
 }
-enum PlayerState {
+enum PlayerStates {
 	IDLE,
 	MOVING,
 	DASH,
@@ -73,7 +74,7 @@ enum PlayerState {
 }
 
 stateMode = PlayerMode.NORMAL;
-state = PlayerState.IDLE;
+state = PlayerStates.IDLE;
 
 #endregion States
 

@@ -1,5 +1,5 @@
-function scrPlayerStateDash() {
-	stateDebug = "Dash";
+function scrPlayerStateBucketAimingDash(){
+	stateDebug = "Bucket Aiming Dash";
 	
 	setCamState(global.cam, CameraStates.FOLLOW);
 	

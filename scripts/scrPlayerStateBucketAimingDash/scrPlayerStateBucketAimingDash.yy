@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateBucketAimingDash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateBucketAimingDash",
+  "parent":{
+    "name":"Aiming",
+    "path":"folders/Scripts/Entities/Player/States/Bucket/Aiming.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

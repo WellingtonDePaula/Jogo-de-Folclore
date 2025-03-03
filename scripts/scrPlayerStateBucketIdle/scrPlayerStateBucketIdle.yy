@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrPlayerStateDashBucket",
+  "%Name":"scrPlayerStateBucketIdle",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrPlayerStateDashBucket",
+  "name":"scrPlayerStateBucketIdle",
   "parent":{
     "name":"Bucket",
     "path":"folders/Scripts/Entities/Player/States/Bucket.yy",

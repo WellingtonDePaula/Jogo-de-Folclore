@@ -22,11 +22,12 @@ function scrPlayerStateIdle(){
 	#region Change States
 	
 	if(checkMoveInput(inputs)[0]) {
-		subState = PlayerNormalSubState.WALKING;
+		state = PlayerStates.MOVING;
 	}
 	
 	if(keyboard_check_pressed(inputs.dash) && canDash) {
 		dash();
+		state = PlayerStates.DASH;
 	}
 	
 	#endregion

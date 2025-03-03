@@ -22,15 +22,17 @@ function scrPlayerStateBucketAimingIdle() {
 	#region Change States
 	
 	if(checkMoveInput(inputs)[0]) {
-		subState = PlayerBucketSubState.AIMING_WALKING;
+		state = PlayerStates.MOVING;
 	}
 	
 	if(mouse_check_button_released(inputs.aim)) {
-		subState = PlayerBucketSubState.IDLE;
+		state = PlayerStates.IDLE;
+		stateMode = PlayerMode.BUCKET;
 	}
 	
 	if(keyboard_check_pressed(inputs.dash) && canDash) {
 		dash();
+		state = PlayerStates.DASH;
 	}
 	
 	#endregion

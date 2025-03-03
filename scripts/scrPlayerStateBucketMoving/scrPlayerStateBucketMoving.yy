@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrPlayerStateMovingBucket",
+  "%Name":"scrPlayerStateBucketMoving",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrPlayerStateMovingBucket",
+  "name":"scrPlayerStateBucketMoving",
   "parent":{
     "name":"Bucket",
     "path":"folders/Scripts/Entities/Player/States/Bucket.yy",

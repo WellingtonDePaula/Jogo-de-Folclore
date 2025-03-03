@@ -88,11 +88,11 @@ function getIndexForSprite() {
 			return 0;
 		}
 		if(facing == "back") {
-			return 1;
+			return 2;
 		}
 	}
 	if(facing == "front") {
-		return 2;
+		return 1;
 	}
 	if(facing == "back") {
 		return 3;
@@ -103,10 +103,116 @@ function updatePlayerSprite() {
 	fixPlayerSideSprite();
 	updatePlayerDirection();
 	var index = getIndexForSprite();
-	if(sprite_index != stateSprites[state][subState][index]) {
-		image_index = 0;
+	var sprite = undefined;
+	
+	switch(stateMode) {
+		#region NORMAL
+		case PlayerMode.NORMAL:
+			switch(state) {
+				
+				#region IDLE
+				case PlayerStates.IDLE:
+					sprite = stateSprites.NORMAL.IDLE;
+					break;
+				#endregion
+				
+				//////////////////////////////////////////////////////////////////////////////////////////
+				
+				#region MOVING
+				case PlayerStates.MOVING:
+					sprite = stateSprites.NORMAL.MOVING;
+					break;
+				#endregion
+				
+				//////////////////////////////////////////////////////////////////////////////////////////
+				
+				#region DASH
+				case PlayerStates.DASH:
+					sprite = stateSprites.NORMAL.DASH;
+					break;
+				#endregion
+				
+			}
+			break;
+		#endregion
+		
+		//////////////////////////////////////////////////////////////////////////////////////////
+		
+		#region BUCKET
+		case PlayerMode.BUCKET:
+			switch(state) {
+				
+				#region IDLE
+				case PlayerStates.IDLE:
+					sprite = stateSprites.BUCKET.IDLE;
+					break;
+				#endregion
+				
+				//////////////////////////////////////////////////////////////////////////////////////////
+				
+				#region MOVING
+				case PlayerStates.MOVING:
+					sprite = stateSprites.BUCKET.MOVING;
+					break;
+				#endregion
+				
+				//////////////////////////////////////////////////////////////////////////////////////////
+				
+				#region DASH
+				case PlayerStates.DASH:
+					sprite = stateSprites.BUCKET.DASH;
+					break;
+				#endregion
+				
+			}
+			break;
+		#endregion
+		
+		//////////////////////////////////////////////////////////////////////////////////////////
+		
+		#region BUCKET_AIMING
+		case PlayerMode.BUCKET_AIMING:
+			switch(state) {
+				
+				#region IDLE
+				case PlayerStates.IDLE:
+					sprite = stateSprites.BUCKET_AIMING.IDLE;
+					break;
+				#endregion
+				
+				//////////////////////////////////////////////////////////////////////////////////////////
+				
+				#region MOVING
+				case PlayerStates.MOVING:
+					sprite = stateSprites.BUCKET_AIMING.MOVING;
+					break;
+				#endregion
+				
+				//////////////////////////////////////////////////////////////////////////////////////////
+				
+				#region DASH
+				case PlayerStates.DASH:
+					sprite = stateSprites.BUCKET_AIMING.DASH;
+					break;
+				#endregion
+				
+				//////////////////////////////////////////////////////////////////////////////////////////
+				
+				#region THROWING
+				case PlayerStates.THROWING:
+					sprite = stateSprites.BUCKET_AIMING.THROWING;
+					break;
+				#endregion
+				
+			}
+			break;
+		#endregion
 	}
-	sprite_index = stateSprites[state][subState][index];
+	
+	if(sprite_index != sprite[index]) {
+		image_index = 0;
+		sprite_index = sprite[index];
+	}
 }
 
 function dash() {
@@ -137,14 +243,4 @@ function dash() {
 	canDash = false;
 	//Ativa o timer para resetar a variavel do dash
 	alarm[0] = dashRechargeTime;
-	
-	//switch(state) {
-	//	case PlayerState.NORMAL:
-	//		subState = PlayerNormalSubState.DASH;
-	//		break;
-		
-	//	case PlayerState.BUCKET:
-	//		subState = PlayerBucketSubState.DASH;
-	//		break;
-	//}
 }

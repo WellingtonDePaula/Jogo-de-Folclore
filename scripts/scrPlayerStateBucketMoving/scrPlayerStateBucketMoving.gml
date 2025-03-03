@@ -1,5 +1,5 @@
 function scrPlayerStateBucketMoving(){
-	stateDebug = "Bucket Walking";
+	stateDebug = "Bucket Moving";
 	
 	setCamState(global.cam, CameraStates.FOLLOW);
 	
@@ -22,15 +22,16 @@ function scrPlayerStateBucketMoving(){
 	#region Change States
 	
 	if(!checkMoveInput(inputs)[0]) {
-		subState = PlayerBucketSubState.IDLE;
+		state = PlayerStates.IDLE
 	}
 	
 	if(mouse_check_button(inputs.aim)) {
-		subState = PlayerBucketSubState.AIMING_IDLE;
+		stateMode = PlayerMode.BUCKET_AIMING;
 	}
 	
 	if(keyboard_check_pressed(inputs.dash) && canDash) {
 		dash();
+		state = PlayerStates.DASH;
 	}
 	
 	#endregion

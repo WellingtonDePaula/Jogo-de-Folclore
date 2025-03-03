@@ -25,7 +25,7 @@ function scrPlayerStateIdleBucket(){
 		subState = PlayerBucketSubState.WALKING;
 	}
 	
-	if(mouse_check_button_pressed(inputs.aim)) {
+	if(mouse_check_button(inputs.aim)) {
 		subState = PlayerBucketSubState.AIMING_IDLE;
 	}
 	

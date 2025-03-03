@@ -34,7 +34,13 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
-  "spriteMaskId":null,
+  "spriteId":{
+    "name":"sprPlayerIdleFront",
+    "path":"sprites/sprPlayerIdleFront/sprPlayerIdleFront.yy",
+  },
+  "spriteMaskId":{
+    "name":"sprPlayerIdleFront",
+    "path":"sprites/sprPlayerIdleFront/sprPlayerIdleFront.yy",
+  },
   "visible":true,
 }

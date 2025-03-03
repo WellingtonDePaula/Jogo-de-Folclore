@@ -1,8 +1,9 @@
 state = undefined;
-subState = undefined;
+stateMode = undefined;
 statePrevious = undefined;
-stateScripts = [];
-stateSprites = [];
+
+stateScripts = {};
+stateSprites = {};
 stateDebug = "";
 
 vel = 0;

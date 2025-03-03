@@ -1,4 +1,4 @@
-function scrPlayerStateAimingIdleBucket() {
+function scrPlayerStateBucketAimingIdle() {
 	stateDebug = "Bucket Aiming Idle";
 	
 	setCamState(global.cam, CameraStates.BETWEEN);

@@ -1,4 +1,4 @@
-function scrPlayerStateAimingWalkingBucket() {
+function scrPlayerStateBucketAimingMoving() {
 	stateDebug = "Bucket Aiming Walking";
 	
 	setCamState(global.cam, CameraStates.BETWEEN);

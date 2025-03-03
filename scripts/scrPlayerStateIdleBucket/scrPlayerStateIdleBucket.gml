@@ -1,4 +1,4 @@
-function scrPlayerStateIdleBucket(){
+function scrPlayerStateBucketIdle(){
 	stateDebug = "Bucket Idle";
 	
 	setCamState(global.cam, CameraStates.FOLLOW);

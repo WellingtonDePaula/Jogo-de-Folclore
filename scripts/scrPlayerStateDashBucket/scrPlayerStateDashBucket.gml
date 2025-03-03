@@ -1,4 +1,4 @@
-function scrPlayerStateDashBucket(){
+function scrPlayerStateBucketDash(){
 	stateDebug = "Bucket Dash";
 	
 	setCamState(global.cam, CameraStates.FOLLOW);

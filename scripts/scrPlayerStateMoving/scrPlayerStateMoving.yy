@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrPlayerStateWalking",
+  "%Name":"scrPlayerStateMoving",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrPlayerStateWalking",
+  "name":"scrPlayerStateMoving",
   "parent":{
     "name":"Normal",
     "path":"folders/Scripts/Entities/Player/States/Normal.yy",

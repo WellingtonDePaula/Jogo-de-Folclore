@@ -138,13 +138,13 @@ function dash() {
 	//Ativa o timer para resetar a variavel do dash
 	alarm[0] = dashRechargeTime;
 	
-	switch(state) {
-		case PlayerState.NORMAL:
-			subState = PlayerNormalSubState.DASH;
-			break;
+	//switch(state) {
+	//	case PlayerState.NORMAL:
+	//		subState = PlayerNormalSubState.DASH;
+	//		break;
 		
-		case PlayerState.BUCKET:
-			subState = PlayerBucketSubState.DASH;
-			break;
-	}
+	//	case PlayerState.BUCKET:
+	//		subState = PlayerBucketSubState.DASH;
+	//		break;
+	//}
 }

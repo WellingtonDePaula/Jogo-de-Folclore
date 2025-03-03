@@ -18,139 +18,62 @@ isAiming = false;
 
 #region States
 
-stateScripts = [
-	[
-		scrPlayerStateIdle,
-		scrPlayerStateWalking,
-		scrPlayerStateDash,
-	],
+stateScripts = {
+	NORMAL: {
+		IDLE: scrPlayerStateIdle,
+		MOVING: scrPlayerStateMoving,
+		DASH: scrPlayerStateDash,
+	},
 	
-	[
-		scrPlayerStateIdleBucket,
-		scrPlayerStateWalkingBucket,
-		scrPlayerStateDashBucket,
-		scrPlayerStateAimingIdleBucket,
-		scrPlayerStateAimingWalkingBucket,
-	],
-];
-
-#region Sprites
-stateSprites = [
-//#region NORMAL
-	[
+	BUCKET: {
+		IDLE: scrPlayerStateBucketIdle,
+		MOVING: scrPlayerStateBucketMoving,
+		DASH: scrPlayerStateBucketDash,
+	},
 	
-//#region IDLE
-		[
-			sprPlayerIdleFront,
-			sprPlayerIdleBack,
-			sprPlayerIdleSideFront,
-			sprPlayerIdleSideBack,
-		],
-//#endregion IDLE
-		
-//#region WALKING
-		[
-			sprPlayerWalkingFront,
-			sprPlayerWalkingBack,
-			sprPlayerWalkingSideFront,
-			sprPlayerWalkingSideBack,
-		],
-//#endregion WALKING
-
-//#region DASH
-		[
-			sprPlayerDashFront,
-			sprPlayerDashBack,
-			sprPlayerDashSideFront,
-			sprPlayerDashSideBack,
-		],
-//#endregion DASH
-		
-	],
-//#endregion NORMAL
+	BUCKET_AIMING: {
+		IDLE: scrPlayerStateBucketAimingIdle,
+		MOVING: scrPlayerStateBucketAimingMoving,
+		THROWING: undefined,
+	},
 	
-//#region BUCKET
-	[
+};
+
+stateSprites = {
+	NORMAL: {
+		IDLE: [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleSideBack, sprPlayerIdleBack],
+		MOVING: [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack],
+		DASH: [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack],
+	},
 	
-//#region IDLE
-		[
-			sprPlayerIdleFront,
-			sprPlayerIdleBack,
-			sprPlayerIdleSideFront,
-			sprPlayerIdleSideBack,
-		],
-//#endregion IDLE
-		
-//#region WALKING
-		[
-			sprPlayerWalkingFront,
-			sprPlayerWalkingBack,
-			sprPlayerWalkingSideFront,
-			sprPlayerWalkingSideBack,
-		],
-//#endregion WALKING
+	BUCKET: {
+		IDLE: [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleSideBack, sprPlayerIdleBack],
+		MOVING: [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack],
+		DASH: [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack],
+	},
+	
+	BUCKET_AIMING: {
+		IDLE: [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleSideBack, sprPlayerIdleBack],
+		MOVING: [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack],
+		DASH: [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack],
+		THROWING: [],
+	},
+};
 
-//#region DASH
-		[
-			sprPlayerDashFront,
-			sprPlayerDashBack,
-			sprPlayerDashSideFront,
-			sprPlayerDashSideBack,
-		],
-//#endregion DASH
-		
-//#region IDLE_AIMING
-		[
-			sprPlayerIdleFront,
-			sprPlayerIdleBack,
-			sprPlayerIdleSideFront,
-			sprPlayerIdleSideBack,
-		],
-//#endregion IDLE_AIMING
-		
-//#region WALKING_AIMING
-		[
-			sprPlayerWalkingFront,
-			sprPlayerWalkingBack,
-			sprPlayerWalkingSideFront,
-			sprPlayerWalkingSideBack,
-		],
-//#endregion WALKING_AIMING
-		
-//#region THROWING
-		[
-			
-		],
-//#endregion THROWING
-		
-	],
-//#endregion BUCKET
-];
-
-#endregion Sprites
-
-enum PlayerState {
+enum PlayerMode {
 	NORMAL,
 	BUCKET,
+	BUCKET_AIMING,
 }
-
-enum PlayerNormalSubState {
-    IDLE,
-    WALKING,
-	DASH,
-}
-
-enum PlayerBucketSubState {
+enum PlayerState {
 	IDLE,
-    WALKING,
+	MOVING,
 	DASH,
-	AIMING_IDLE,
-	AIMING_WALKING,
-    THROWING,
+	THROWING,
 }
 
-state = PlayerState.NORMAL;
-subState = PlayerNormalSubState.IDLE;
+stateMode = PlayerMode.NORMAL;
+state = PlayerState.IDLE;
 
 #endregion States
 
@@ -160,5 +83,5 @@ inputs = {
 	down: ord("S"),
 	up: ord("W"),
 	aim: mb_right,
-	dash: vk_shift,
+	dash: vk_space,
 }

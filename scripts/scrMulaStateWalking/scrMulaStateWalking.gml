@@ -2,7 +2,7 @@ function scrMulaStateWalking(){
 	stateDebug = "Idle";
 	
 	#region State Consequences
-	
+
 	#endregion
 	
 	#region Code

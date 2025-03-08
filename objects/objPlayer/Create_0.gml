@@ -32,7 +32,6 @@ enum PlayerStates {
 }
 
 #region Scripts
-stateScripts = [];
 // NORMAL
 stateScripts[PlayerMode.NORMAL] = [];
 stateScripts[PlayerMode.NORMAL][PlayerStates.IDLE] = scrPlayerStateIdle;
@@ -54,22 +53,21 @@ stateScripts[PlayerMode.BUCKET_AIMING][PlayerStates.THROWING] = undefined;
 #endregion
 
 #region Sprites
-stateSprites = [];
 // NORMAL
 stateSprites[PlayerMode.NORMAL] = [];
-stateSprites[PlayerMode.NORMAL][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleSideBack, sprPlayerIdleBack];
+stateSprites[PlayerMode.NORMAL][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
 stateSprites[PlayerMode.NORMAL][PlayerStates.MOVING] = [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
 stateSprites[PlayerMode.NORMAL][PlayerStates.DASH] = [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack];
 
 // BUCKET
 stateSprites[PlayerMode.BUCKET] = [];
-stateSprites[PlayerMode.BUCKET][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleSideBack, sprPlayerIdleBack];
+stateSprites[PlayerMode.BUCKET][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
 stateSprites[PlayerMode.BUCKET][PlayerStates.MOVING] = [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
 stateSprites[PlayerMode.BUCKET][PlayerStates.DASH] = [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack];
 
 // BUCKET_AIMING
 stateSprites[PlayerMode.BUCKET_AIMING] = [];
-stateSprites[PlayerMode.BUCKET_AIMING][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleSideBack, sprPlayerIdleBack];
+stateSprites[PlayerMode.BUCKET_AIMING][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
 stateSprites[PlayerMode.BUCKET_AIMING][PlayerStates.MOVING] = [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
 stateSprites[PlayerMode.BUCKET_AIMING][PlayerStates.DASH] = [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack];
 stateSprites[PlayerMode.BUCKET_AIMING][PlayerStates.THROWING] = [];

@@ -1,9 +1,12 @@
 state = undefined;
 stateMode = undefined;
-statePrevious = undefined;
+statePrevious = {
+	state: undefined,
+	sprite: undefined,
+};
 
-stateScripts = {};
-stateSprites = {};
+stateScripts = [];
+stateSprites = [];
 stateDebug = "";
 
 vel = 0;

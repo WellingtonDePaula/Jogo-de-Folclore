@@ -1,0 +1,3 @@
+function scrMulaFirstStateIdle() {
+	stateDebug = "Idle";
+}

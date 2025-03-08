@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMulaFirstStateChasing",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMulaFirstStateChasing",
+  "parent":{
+    "name":"First",
+    "path":"folders/Scripts/Entities/Mula/States/First.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

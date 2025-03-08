@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "fe6340c35f9582aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "d545b5f66a86519d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ce583eb381ac204",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Entities/Bosses/Mula sem cabeça/Mecânicas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Mecânicas"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2e131f3477173ab8",
+    "type": "split",
+    "children": [
+      {
+        "id": "cd70ab7555c85d07",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1228e84da374956b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "051f925da82e1874",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "ba6a102e9503a556",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "942b176bee47ea20",
+    "type": "split",
+    "children": [
+      {
+        "id": "4671496bc7442876",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16b718107fb8ead1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Entities/Bosses/Mula sem cabeça/Mecânicas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Mecânicas"
+            }
+          },
+          {
+            "id": "098e33ebc41d0f1a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Entities/Bosses/Mula sem cabeça/Mecânicas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Mecânicas"
+            }
+          },
+          {
+            "id": "6a7055fe64def37d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "90a139a513bd0155",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Entities/Bosses/Mula sem cabeça/Mecânicas.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Mecânicas"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "9ce583eb381ac204",
+  "lastOpenFiles": [
+    "Entities/Bosses/Mula sem cabeça/Ideias.md",
+    "Entities/Bosses/Mula sem cabeça/Mecânicas.md",
+    "Entities/Bosses/Mula sem cabeça/Lore.md",
+    "Enviroment/Better Grass.md",
+    "Entities/Player.md",
+    "Imagens/Pasted image 20250306163237.png",
+    "Imagens/Pasted image 20250306164159.png",
+    "Entities/Bosses/Mula sem cabeça/Mecânica e Lore.md",
+    "Imagens/Pasted image 20250306163725.png",
+    "Imagens/Pasted image 20250306163534.png",
+    "Entities/Bosses/Mula sem cabeça",
+    "Imagens",
+    "Enviroment",
+    "Entities",
+    "Entities/Bosses",
+    "Bem-vindo.md"
+  ]
+}

@@ -1,49 +1,48 @@
 event_inherited();
 
 vel = 1.5;
+path = path_add();
+xToGo = x;
+yToGo = y;
 
-facing = "front";
+distMinFromPlayer = 90;
+distMaxFromPlayer = 240;
+maxDistPlayerW = room_width/2;
+maxDistPlayerH = room_height/2;
+
+targetId = objPlayer;
 
 #region States
 
-stateScripts = [
-	[
-		scrMulaStateIdle,
-		scrMulaStateWalking,
-	],
-];
+#region Scripts
+//NORMAL
+stateScripts[MulaMode.FIRST] = [];
+stateScripts[MulaMode.FIRST][MulaStates.CHOOSE] = scrMulaFirstStateChoose;
+stateScripts[MulaMode.FIRST][MulaStates.IDLE] = scrMulaFirstStateIdle;
+stateScripts[MulaMode.FIRST][MulaStates.MOVING] = scrMulaFirstStateMoving;
+stateScripts[MulaMode.FIRST][MulaStates.CHASING] = scrMulaFirstStateChasing;
+#endregion
 
 #region Sprites
-stateSprites = [
-//#region NORMAL
-	[
-//#region IDLE
-		[
-			sprMulaIdleFront,
-		],
-//#endregion IDLE
-		
-//#region WALKING
-		[
-			sprMulaWalkingFront,
-		],
-//#endregion WALKING
-	],
-//#endregion NORMAL
-];
+//NORMAL
+stateSprites[MulaMode.FIRST] = [];
+stateSprites[MulaMode.FIRST][MulaStates.CHOOSE] = sprMulaIdle;
+stateSprites[MulaMode.FIRST][MulaStates.IDLE] = sprMulaIdle;
+stateSprites[MulaMode.FIRST][MulaStates.MOVING] = sprMulaMoving;
+#endregion
 
-#endregion Sprites
-
-enum MulaState {
-	NORMAL,
+enum MulaMode {
+	FIRST,
 }
 
-enum MulaNormalSubState {
+enum MulaStates {
+	CHOOSE,
     IDLE,
-    WALKING,
+    MOVING,
+	CHASING,
 }
 
-state = MulaState.NORMAL;
-subState = MulaNormalSubState.IDLE;
+state = MulaStates.CHOOSE;
+stateMode = MulaMode.FIRST;
 
 #endregion States

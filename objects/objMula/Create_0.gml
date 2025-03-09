@@ -1,16 +1,22 @@
 event_inherited();
 
+
 vel = 1.5;
-path = path_add();
+
+#region Mula IA
+movePath = path_add();
 xToGo = x;
 yToGo = y;
 
-distMinFromPlayer = 90;
-distMaxFromPlayer = 240;
-maxDistPlayerW = room_width/2;
-maxDistPlayerH = room_height/2;
+maxAttackFactor = 14;
+chooseAttackFactor = maxAttackFactor;
+
+alarmCooldown = [50, 200];
 
 targetId = objPlayer;
+
+dirToChase = 0;
+#endregion
 
 #region States
 

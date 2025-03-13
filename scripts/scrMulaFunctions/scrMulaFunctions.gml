@@ -11,9 +11,9 @@ function generateRandPoint() {
 	}
 }
 
-function moveToPoint() {
-	generateRandPoint();
-	if(mp_grid_path(global.grid, movePath, x, y, xToGo, yToGo, true)) {
+function moveMula(pointX, pointY) {
+	//generateRandPoint();
+	if(mp_grid_path(global.grid, movePath, x, y, pointX, pointY, true)) {
 		path_start(movePath, vel, path_action_stop, false);
 	}
 }

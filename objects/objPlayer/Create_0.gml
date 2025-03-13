@@ -1,5 +1,4 @@
 event_inherited();
-
 velAiming = 1;
 
 velhDash = 0;
@@ -17,7 +16,6 @@ isSide = false;
 isAiming = false;
 
 #region States
-
 enum PlayerMode {
     NORMAL,
     BUCKET,

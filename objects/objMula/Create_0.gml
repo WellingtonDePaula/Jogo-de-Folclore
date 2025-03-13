@@ -8,7 +8,7 @@ movePath = path_add();
 xToGo = x;
 yToGo = y;
 
-maxAttackFactor = 14;
+maxAttackFactor = 3;
 chooseAttackFactor = maxAttackFactor;
 
 alarmCooldown = [50, 200];
@@ -16,6 +16,8 @@ alarmCooldown = [50, 200];
 targetId = objPlayer;
 
 dirToChase = 0;
+
+distToChase = 70;
 #endregion
 
 #region States
@@ -26,6 +28,7 @@ stateScripts[MulaMode.FIRST] = [];
 stateScripts[MulaMode.FIRST][MulaStates.CHOOSE] = scrMulaFirstStateChoose;
 stateScripts[MulaMode.FIRST][MulaStates.IDLE] = scrMulaFirstStateIdle;
 stateScripts[MulaMode.FIRST][MulaStates.MOVING] = scrMulaFirstStateMoving;
+stateScripts[MulaMode.FIRST][MulaStates.PRE_CHASING] = scrMulaFirstStatePreChasing;
 stateScripts[MulaMode.FIRST][MulaStates.CHASING] = scrMulaFirstStateChasing;
 #endregion
 
@@ -45,6 +48,7 @@ enum MulaStates {
 	CHOOSE,
     IDLE,
     MOVING,
+	PRE_CHASING,
 	CHASING,
 }
 

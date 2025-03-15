@@ -1,3 +1,3 @@
-if(clear) {
-	draw_clear(c_black);
-}
+//if(clear) {
+//	draw_clear(c_black);
+//}

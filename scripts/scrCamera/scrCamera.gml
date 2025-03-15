@@ -1,8 +1,8 @@
-function camSetResolution(cam, width, height, scale) {
+function setCamResolution(cam, width, height) {
 	with(cam) {
 		resolutionWidth = width;
 		resolutionHeight = height;
-		resolutionScale = scale;
+		resolutionScale = (resolutionWidth + resolutionHeight) * scaleFactor;
 	
 		viewWidth = resolutionWidth / resolutionScale;
 		viewHeight = resolutionHeight / resolutionScale;

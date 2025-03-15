@@ -1,11 +1,12 @@
-objMapresolutionWidth = 0;
-resolutionHeight = 0;
-resolutionScale = 0;
+scaleFactor = 0.00125;
+resolutionWidth = 1280;
+resolutionHeight = 720;
+resolutionScale = (resolutionWidth + resolutionHeight) * scaleFactor;
 
 viewWidth = 0;
 viewHeight = 0;
 
-camSetResolution(self, camWidth, camHeight, camScale);
+setCamResolution(self, resolutionWidth, resolutionHeight);
 
 viewTarget = objPlayer;
 

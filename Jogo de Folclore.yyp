@@ -80,6 +80,7 @@
     {"id":{"name":"scrCamera","path":"scripts/scrCamera/scrCamera.yy",},},
     {"id":{"name":"scrCameraStates","path":"scripts/scrCameraStates/scrCameraStates.yy",},},
     {"id":{"name":"scrEntityFunctions","path":"scripts/scrEntityFunctions/scrEntityFunctions.yy",},},
+    {"id":{"name":"scrGlobal","path":"scripts/scrGlobal/scrGlobal.yy",},},
     {"id":{"name":"scrMulaFirstStateChasing","path":"scripts/scrMulaFirstStateChasing/scrMulaFirstStateChasing.yy",},},
     {"id":{"name":"scrMulaFirstStateChoose","path":"scripts/scrMulaFirstStateChoose/scrMulaFirstStateChoose.yy",},},
     {"id":{"name":"scrMulaFirstStateIdle","path":"scripts/scrMulaFirstStateIdle/scrMulaFirstStateIdle.yy",},},

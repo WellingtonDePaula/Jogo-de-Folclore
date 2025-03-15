@@ -1,23 +1,65 @@
 #region Menu
 
-
 #region Kernal
 
-option1 = {
-	text: "Jogar",
-	func: function() {
-		room_goto(rmGame);
-	}
-}
+mainOptions = {
+		option1: {
+		text: "Jogar",
+		func: function() {
+			room_goto(rmGame);
+		}
+	},
 	
-option2 = {
-	text: "Sair",
-	func: function() {
-		game_end();
-	}
+	option2: {
+		text: "Opcoes",
+		func: function() {
+			with(objMenu) {
+				lastMenu = currentMenu;
+				currentMenu = configMenu;
+				selected = 0;
+			}
+		}
+	},
+	
+	option3: {
+		text: "Sair",
+		func: function() {
+			game_end();
+		}
+	},
+}
+configOptions = {
+	option1: {
+		text: "1280X720",
+		func: function() {
+			setCamResolution(global.cam, 1280, 720);
+		}
+	},
+	
+	option2: {
+		text: "1920X1080",
+		func: function() {
+			setCamResolution(global.cam, 1920, 1080);
+		}
+	},
+	
+	option3: {
+		text: "Voltar",
+		func: function() {
+			with(objMenu) {
+				currentMenu = lastMenu;
+				lastMenu = undefined;
+				selected = 0;
+			}
+		}
+	},
 }
 
-menu = [option1, option2];
+mainMenu = [mainOptions.option1, mainOptions.option2, mainOptions.option3];
+configMenu = [configOptions.option1, configOptions.option2, configOptions.option3];
+
+currentMenu = mainMenu;
+lastMenu = undefined;
 
 inputs = {
 	down: vk_down,
@@ -26,12 +68,16 @@ inputs = {
 }
 
 selected = 0;
+scale = 0;
+textScale = 0;
 
 #endregion
 
 #region Appearance
 
-distBetweenOption = 30;
+spacing = 25;
+
+sizeFactor = 0.0009;
 
 #endregion
 

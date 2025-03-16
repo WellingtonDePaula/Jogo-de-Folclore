@@ -1,3 +1,10 @@
+show_debug_message(instance_number(objGUI));
+if(!instance_exists(objGUI)) {
+	GUI = instance_create_layer(0, 0, "GUI", objGUI);
+} else {
+	GUI = instance_nearest(x, y, objGUI);
+}
+
 #region Menu
 
 #region Kernal
@@ -6,7 +13,8 @@ mainOptions = {
 		option1: {
 		text: "Jogar",
 		func: function() {
-			room_goto(rmGame);
+			//room_goto(rmGame);
+			room_goto(rmCutscenes);
 		}
 	},
 	
@@ -76,8 +84,6 @@ textScale = 0;
 #region Appearance
 
 spacing = 25;
-
-sizeFactor = 0.0009;
 
 #endregion
 

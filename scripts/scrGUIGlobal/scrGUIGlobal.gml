@@ -1,0 +1,1 @@
+global.mainFont = font_add("nokiafc22.ttf", 13, false, false, 32, 128);

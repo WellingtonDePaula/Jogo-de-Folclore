@@ -8,7 +8,7 @@ movePath = path_add();
 xToGo = x;
 yToGo = y;
 
-maxAttackFactor = 3;
+maxAttackFactor = 12;
 chooseAttackFactor = maxAttackFactor;
 
 alarmCooldown = [50, 200];

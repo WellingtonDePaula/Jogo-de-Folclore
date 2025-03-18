@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"fe467e5d673a46bd","type":"text","text":"rmCutscenes","x":-160,"y":-160,"width":250,"height":60},
+		{"id":"19570e8d54629c95","type":"text","text":"rmBossWerewolf","x":160,"y":-350,"width":250,"height":60},
+		{"id":"6978bfd9bfa71f1c","type":"text","text":"rmBossCuca","x":285,"y":-100,"width":250,"height":60},
+		{"id":"7f5c78e3fea2666c","type":"text","text":"rmBossMula","x":-160,"y":-580,"width":250,"height":60},
+		{"id":"0a3a1a7f285c9787","type":"text","text":"rmTutorial","x":-500,"y":-360,"width":250,"height":60},
+		{"id":"3b58e6457d6fb828","type":"text","text":"rmMainMenu","x":-500,"y":40,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"d844bda0c601747e","fromNode":"3b58e6457d6fb828","fromSide":"top","toNode":"fe467e5d673a46bd","toSide":"left","color":"6","label":"Cutscene inicial"},
+		{"id":"7b95c5cc247d079d","fromNode":"0a3a1a7f285c9787","fromSide":"top","toNode":"7f5c78e3fea2666c","toSide":"left","color":"6","label":"Primeiro Boss"},
+		{"id":"e3703ef173bba76b","fromNode":"fe467e5d673a46bd","fromSide":"left","toNode":"0a3a1a7f285c9787","toSide":"bottom","color":"6","label":"Tutorial com a cuca"},
+		{"id":"d7da191bf0987ee5","fromNode":"7f5c78e3fea2666c","fromSide":"bottom","toNode":"fe467e5d673a46bd","toSide":"top","color":"1","label":"Cutscene pós derrota da mula"},
+		{"id":"b8185d1d4012254e","fromNode":"fe467e5d673a46bd","fromSide":"top","toNode":"19570e8d54629c95","toSide":"left","color":"1","label":"Segundo Boss"},
+		{"id":"5e35fcf580458d30","fromNode":"19570e8d54629c95","fromSide":"bottom","toNode":"fe467e5d673a46bd","toSide":"right","color":"2"},
+		{"id":"3ce8a9348022ea11","fromNode":"fe467e5d673a46bd","fromSide":"right","toNode":"6978bfd9bfa71f1c","toSide":"left","color":"2"}
+	]
+}

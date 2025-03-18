@@ -1,0 +1,1 @@
+Estado que antecede o estado de perseguição ao player

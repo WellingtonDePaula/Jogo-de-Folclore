@@ -1,4 +1,3 @@
-show_debug_message(instance_number(objGUI));
 if(!instance_exists(objGUI)) {
 	GUI = instance_create_layer(0, 0, "GUI", objGUI);
 } else {
@@ -10,15 +9,23 @@ if(!instance_exists(objGUI)) {
 #region Kernal
 
 mainOptions = {
-		option1: {
+	
+	option1: {
 		text: "Jogar",
+		func: function() {
+			room_goto(undefined);
+			//room_goto(rmCutscenes);
+		}
+	},
+	option2: {
+		text: "Novo Jogo",
 		func: function() {
 			//room_goto(rmGame);
 			room_goto(rmCutscenes);
 		}
 	},
 	
-	option2: {
+	option3: {
 		text: "Opcoes",
 		func: function() {
 			with(objMenu) {
@@ -29,7 +36,7 @@ mainOptions = {
 		}
 	},
 	
-	option3: {
+	option4: {
 		text: "Sair",
 		func: function() {
 			game_end();
@@ -63,7 +70,7 @@ configOptions = {
 	},
 }
 
-mainMenu = [mainOptions.option1, mainOptions.option2, mainOptions.option3];
+mainMenu = [mainOptions.option1, mainOptions.option2, mainOptions.option3, mainOptions.option4];
 configMenu = [configOptions.option1, configOptions.option2, configOptions.option3];
 
 currentMenu = mainMenu;

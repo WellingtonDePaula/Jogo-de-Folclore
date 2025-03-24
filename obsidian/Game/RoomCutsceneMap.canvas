@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"9bf54a9bf082b30b","type":"text","text":"rmMainMenu","x":-517,"y":425,"width":250,"height":55},
+		{"id":"f663010de08f1a27","type":"text","text":"rmTutorial","x":-517,"y":150,"width":250,"height":50},
+		{"id":"f2240f66d2568f03","type":"text","text":"rmCutscenes","x":-517,"y":20,"width":250,"height":52},
+		{"id":"369266e1886ca6fe","type":"file","file":"Game/Cutscenes/New Game Cutscene.md","x":-1040,"y":195,"width":400,"height":230,"color":"1"},
+		{"id":"92affc91b3b02dce","type":"file","file":"Game/Cutscenes/After Tutorial.md","x":-1040,"y":-66,"width":400,"height":225,"color":"2"},
+		{"id":"e683d00128bd992a","type":"text","text":"rmBossMula","x":-517,"y":-102,"width":250,"height":52},
+		{"id":"0db05914105358d4","type":"text","text":"rmCutscenes","x":-180,"y":-102,"width":250,"height":52},
+		{"id":"c22d893c7b6979ed","type":"file","file":"Game/Cutscenes/After Mula.md","x":193,"y":-188,"width":400,"height":225,"color":"3"},
+		{"id":"db7f2ba474f77f0e","type":"text","text":"rmBossWerewolf","x":-180,"y":20,"width":250,"height":52},
+		{"id":"3ce8a6f478a2ef56","type":"text","text":"rmCutscenes","x":-517,"y":285,"width":250,"height":50},
+		{"id":"78f0e6496df3926a","type":"text","text":"rmCutscenes","x":-180,"y":149,"width":250,"height":52},
+		{"id":"b55da561b2912861","type":"file","file":"Game/Cutscenes/After Werewolf.md","x":193,"y":63,"width":400,"height":225,"color":"4"},
+		{"id":"a579ba064202a6f2","type":"text","text":"rmBossCuca","x":-180,"y":285,"width":250,"height":50},
+		{"id":"940748ea8b73666a","type":"text","text":"rmCutscenes","x":-180,"y":428,"width":250,"height":52},
+		{"id":"165b3a70fd9a5fcb","type":"file","file":"Game/Cutscenes/After Werewolf.md","x":193,"y":342,"width":400,"height":225,"color":"5"}
+	],
+	"edges":[
+		{"id":"74aa18ebf6903893","fromNode":"9bf54a9bf082b30b","fromSide":"top","toNode":"3ce8a6f478a2ef56","toSide":"bottom","color":"1"},
+		{"id":"0322b62376fdd904","fromNode":"3ce8a6f478a2ef56","fromSide":"left","toNode":"369266e1886ca6fe","toSide":"right","color":"1"},
+		{"id":"1bdca9719658cef9","fromNode":"3ce8a6f478a2ef56","fromSide":"top","toNode":"f663010de08f1a27","toSide":"bottom","color":"1"},
+		{"id":"94bdb6f29992b1f9","fromNode":"f663010de08f1a27","fromSide":"top","toNode":"f2240f66d2568f03","toSide":"bottom","color":"2"},
+		{"id":"c86c77c1e7c04b98","fromNode":"f2240f66d2568f03","fromSide":"left","toNode":"92affc91b3b02dce","toSide":"right","color":"2"},
+		{"id":"18861c6a0405e536","fromNode":"f2240f66d2568f03","fromSide":"top","toNode":"e683d00128bd992a","toSide":"bottom","color":"2"},
+		{"id":"1ab08689bf66bd7a","fromNode":"e683d00128bd992a","fromSide":"right","toNode":"0db05914105358d4","toSide":"left","color":"2"},
+		{"id":"af90aa6cddd3fba8","fromNode":"0db05914105358d4","fromSide":"right","toNode":"c22d893c7b6979ed","toSide":"left","color":"3"},
+		{"id":"264a6c71e527e76b","fromNode":"0db05914105358d4","fromSide":"bottom","toNode":"db7f2ba474f77f0e","toSide":"top","color":"3"},
+		{"id":"355574bd37433e9d","fromNode":"db7f2ba474f77f0e","fromSide":"bottom","toNode":"78f0e6496df3926a","toSide":"top","color":"3"},
+		{"id":"f525a2384a3e35ca","fromNode":"78f0e6496df3926a","fromSide":"right","toNode":"b55da561b2912861","toSide":"left","color":"4"},
+		{"id":"7df84d3eb07e743b","fromNode":"78f0e6496df3926a","fromSide":"bottom","toNode":"a579ba064202a6f2","toSide":"top","color":"4"},
+		{"id":"e6190e7a5c2c67da","fromNode":"a579ba064202a6f2","fromSide":"bottom","toNode":"940748ea8b73666a","toSide":"top","color":"4"},
+		{"id":"f5d4a175347f2e79","fromNode":"940748ea8b73666a","fromSide":"right","toNode":"165b3a70fd9a5fcb","toSide":"left","color":"5"}
+	]
+}

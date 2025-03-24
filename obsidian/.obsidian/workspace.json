@@ -11,14 +11,17 @@
             "id": "eddafdca820ee067",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Entities/Bosses/Mula sem cabeça/Lore.md",
-                "mode": "source",
-                "source": false
+                "file": "Game/RoomCutsceneMap.canvas",
+                "viewState": {
+                  "x": -170.0249656890147,
+                  "y": 234.1666870288839,
+                  "zoom": -0.5916440788494686
+                }
               },
-              "icon": "lucide-file",
-              "title": "Lore"
+              "icon": "lucide-layout-dashboard",
+              "title": "RoomCutsceneMap"
             }
           }
         ]
@@ -168,29 +171,37 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "1228e84da374956b",
+  "active": "eddafdca820ee067",
   "lastOpenFiles": [
-    "Entities/Bosses/Mula sem cabeça/Ideias.md",
-    "Entities/Bosses/Mula sem cabeça/States/Canvas/FirstMode.canvas",
+    "Game/Cutscenes/New Game Cutscene.md",
+    "Game/Cutscenes/After Cuca.md",
+    "Game/Cutscenes/After Werewolf.md",
+    "Game/Cutscenes/After Mula.md",
+    "Game/Cutscenes/After Tutorial.md",
+    "Game/RoomCutsceneMap.canvas",
     "Game/Room Map.canvas",
-    "Entities/Bosses/Mula sem cabeça/Lore.md",
-    "Imagens/Pasted image 20250318171804.png",
+    "Game/Cutscenes/Cutscene Map.canvas",
+    "Game/Cutscenes",
+    "Entities/Bosses/Mula sem cabeça/Ideias.md",
     "Entities/Bosses/Mula sem cabeça/Mecânicas.md",
+    "Entities/Bosses/Mula sem cabeça/Lore.md",
+    "Enviroment/Better Grass.md",
+    "Entities/Bosses/Player/Mecânicas.md",
+    "Entities/Bosses/Player/Ideias.md",
+    "Entities/Bosses/Player/Lore.md",
+    "Entities/Bosses/Player/States/Canvas/Normal.canvas",
+    "Entities/Bosses/Player/States/Canvas/BucketAiming.canvas",
+    "Entities/Bosses/Player/States/Canvas/Bucket.canvas",
+    "Entities/Bosses/Mula sem cabeça/States/Canvas/FirstMode.canvas",
+    "Imagens/Pasted image 20250318171804.png",
     "Entities/Bosses/Mula sem cabeça/States/Modes/FirstMode/CHASING.md",
     "Entities/Bosses/Mula sem cabeça/States/Modes/FirstMode/IDLE.md",
     "Entities/Bosses/Mula sem cabeça/States/Canvas/SecondMode.canvas",
     "Entities/Bosses/Mula sem cabeça/States/Modes/FirstMode/MOVING.md",
     "Entities/Bosses/Mula sem cabeça/States/Modes/FirstMode/CHOOSE.md",
     "Entities/Bosses/Mula sem cabeça/States/Modes/FirstMode/PRE-CHASING.md",
-    "Enviroment/Better Grass.md",
     "Imagens/Pasted image 20250306163237.png",
-    "Entities/Bosses/Player/States/Canvas/Normal.canvas",
-    "Entities/Bosses/Player/Mecânicas.md",
-    "Entities/Bosses/Player/Lore.md",
-    "Entities/Bosses/Player/Ideias.md",
-    "Entities/Bosses/Player/States/Canvas/Bucket.canvas",
     "Entities/Bosses/Player/States/Modes/Normal/IDLE.md",
-    "Entities/Bosses/Player/States/Canvas/BucketAiming.canvas",
     "Entities/Bosses/Player/States/Modes/Normal/DASH.md",
     "Entities/Bosses/Player/States/Modes/Normal/MOVING.md",
     "Entities/Bosses/Player/States/Modes/FirstMode/PRE-CHASING.md",
@@ -208,15 +219,10 @@
     "Entities/Bosses/Mula sem cabeça/States/Canvas",
     "Entities/Bosses/Mula sem cabeça/States/Sem título.md",
     "Entities/Bosses/Mula sem cabeça/States",
-    "Game",
     "Sem título.canvas",
     "2025-03-18.md",
-    "Sem título.md",
-    "Entities/Bosses/Lore.md",
     "Imagens/Pasted image 20250306164159.png",
-    "Entities/Bosses/Mula sem cabeça/Mecânica e Lore.md",
     "Imagens/Pasted image 20250306163725.png",
-    "Imagens/Pasted image 20250306163534.png",
-    "Bem-vindo.md"
+    "Imagens/Pasted image 20250306163534.png"
   ]
 }

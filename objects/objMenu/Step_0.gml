@@ -4,8 +4,6 @@ down = keyboard_check_pressed(inputs.down);
 up = keyboard_check_pressed(inputs.up);
 select = keyboard_check_pressed(inputs.select);
 
-
-
 switch(true) {
 		
 	case down:

@@ -1,1 +1,5 @@
-global.mainFont = font_add("nokiafc22.ttf", 13, false, false, 32, 128);
+var _scale = 40;
+global.mainFont = {
+	scale: _scale,
+	font: font_add("nokiafc22.ttf", _scale, false, false, 32, 128),
+}

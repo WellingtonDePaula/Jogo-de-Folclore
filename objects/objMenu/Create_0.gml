@@ -1,19 +1,10 @@
-if(!instance_exists(objGUI)) {
-	GUI = instance_create_layer(0, 0, "GUI", objGUI);
-} else {
-	GUI = instance_nearest(x, y, objGUI);
-}
-
 #region Menu
-
-#region Kernal
-
 mainOptions = {
 	
 	option1: {
 		text: "Jogar",
 		func: function() {
-			room_goto(undefined);
+			//room_goto(undefined);
 			//room_goto(rmCutscenes);
 		}
 	},
@@ -21,6 +12,7 @@ mainOptions = {
 		text: "Novo Jogo",
 		func: function() {
 			//room_goto(rmGame);
+			objCutsceneManager.startCutscene(CutsceneAction.NEW_GAME);
 			room_goto(rmCutscenes);
 		}
 	},
@@ -84,14 +76,6 @@ inputs = {
 
 selected = 0;
 scale = 0;
-textScale = 0;
 
-#endregion
-
-#region Appearance
-
-spacing = 25;
-
-#endregion
-
+spacing = 2 * global.mainFont.scale;
 #endregion

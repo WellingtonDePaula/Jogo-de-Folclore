@@ -22,7 +22,7 @@ if(!instance_exists(objMap)) {
 }
 
 if(!instance_exists(objCutsceneManager)) {
-	cutsceneManager = instance_create_layer(0, 0, "GUI", objCutsceneManager);
+	cutsceneManager = instance_create_layer(0, 0, "Cutscenes", objCutsceneManager);
 } else {
 	cutsceneManager = instance_nearest(x, y, objCutsceneManager);
 }

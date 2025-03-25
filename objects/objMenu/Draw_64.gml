@@ -3,13 +3,13 @@ var centerX = display_get_gui_width() / 2;
 var centerY = display_get_gui_height() / 2;
 
 //Ajusta o espaçamento na esc;ala
-textScale = GUI.scale;
-var scaledSpacing = (spacing * textScale);
+scale = global.scale;
+var scaledSpacing = (spacing * scale);
 
 for(var i = 0; i < array_length(currentMenu); i++) {
 	//Centraliza a palavra
 	draw_set_halign(fa_center);
-	draw_set_font(global.mainFont);
+	draw_set_font(global.mainFont.font);
 	
 	//Pega o texto da opção atual
 	var text = currentMenu[i].text;
@@ -27,7 +27,7 @@ for(var i = 0; i < array_length(currentMenu); i++) {
 		draw_set_color(c_red);
 	}
 	//Escreve as opções na tela
-	draw_text_transformed(x1, y1, text, textScale, textScale, 0);
+	draw_text_transformed(x1, y1, text, scale, scale, 0);
 	
 	//Coloca os valores como padrão de novo
 	draw_set_color(-1);

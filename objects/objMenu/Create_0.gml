@@ -12,8 +12,8 @@ mainOptions = {
 		text: "Novo Jogo",
 		func: function() {
 			//room_goto(rmGame);
-			objCutsceneManager.startCutscene(CutsceneAction.NEW_GAME);
 			room_goto(rmCutscenes);
+			startCutcsene(Cutscenes.NEW_GAME);
 		}
 	},
 	

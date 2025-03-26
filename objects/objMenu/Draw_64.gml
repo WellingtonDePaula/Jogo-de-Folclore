@@ -1,3 +1,4 @@
+
 //Define o ponto central da tela
 var centerX = display_get_gui_width() / 2;
 var centerY = display_get_gui_height() / 2;
@@ -28,6 +29,7 @@ for(var i = 0; i < array_length(currentMenu); i++) {
 	}
 	//Escreve as opções na tela
 	draw_text_transformed(x1, y1, text, scale, scale, 0);
+	//draw_sprite_ext(sprBackground, 0, 0, 0, scale, scale, 0, c_white, 1);
 	
 	//Coloca os valores como padrão de novo
 	draw_set_color(-1);

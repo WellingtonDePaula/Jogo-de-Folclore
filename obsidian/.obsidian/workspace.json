@@ -15,9 +15,9 @@
               "state": {
                 "file": "Game/RoomCutsceneMap.canvas",
                 "viewState": {
-                  "x": -224.52895535062459,
-                  "y": 202.82005906221764,
-                  "zoom": -0.522094113188587
+                  "x": -223.5,
+                  "y": 189.5,
+                  "zoom": -0.1887607798552537
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -171,15 +171,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eddafdca820ee067",
+  "active": "1228e84da374956b",
   "lastOpenFiles": [
-    "Game/Cutscenes/After Tutorial.md",
-    "Game/Cutscenes/After Cuca.md",
+    "Enviroment/Better Grass.md",
     "Game/RoomCutsceneMap.canvas",
     "Game/Room Map.canvas",
+    "Game/Cutscenes/After Cuca.md",
+    "Game/Cutscenes/After Tutorial.md",
     "Entities/Bosses/Mula sem cabeça/States/Canvas/FirstMode.canvas",
     "Entities/Bosses/Mula sem cabeça/States/Canvas/SecondMode.canvas",
-    "Enviroment/Better Grass.md",
     "Game/Cutscenes/New Game Cutscene.md",
     "Game/Cutscenes/After Werewolf.md",
     "Game/Cutscenes/After Mula.md",

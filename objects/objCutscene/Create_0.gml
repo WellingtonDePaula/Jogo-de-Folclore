@@ -1,4 +1,5 @@
 manager = undefined;
 
-cutsceneArray = undefined;
+sceneArray = undefined;
+
 currentFrame = 0;

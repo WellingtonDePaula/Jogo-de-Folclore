@@ -70,7 +70,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"Jogo de Folclore",
   "resources":[
@@ -115,6 +115,8 @@
     {"id":{"name":"scrUtils","path":"scripts/scrUtils/scrUtils.yy",},},
     {"id":{"name":"sprBackground","path":"sprites/sprBackground/sprBackground.yy",},},
     {"id":{"name":"sprEmBreve","path":"sprites/sprEmBreve/sprEmBreve.yy",},},
+    {"id":{"name":"sprEmBreve2","path":"sprites/sprEmBreve2/sprEmBreve2.yy",},},
+    {"id":{"name":"sprEmBreve3","path":"sprites/sprEmBreve3/sprEmBreve3.yy",},},
     {"id":{"name":"sprMulaIdle","path":"sprites/sprMulaIdle/sprMulaIdle.yy",},},
     {"id":{"name":"sprMulaMoving","path":"sprites/sprMulaMoving/sprMulaMoving.yy",},},
     {"id":{"name":"sprPlayerDashBack","path":"sprites/sprPlayerDashBack/sprPlayerDashBack.yy",},},

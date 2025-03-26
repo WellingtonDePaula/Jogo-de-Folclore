@@ -12,6 +12,11 @@ function setCamResolution(cam, width, height) {
 		display_set_gui_size(viewWidth * resolutionScale, viewHeight * resolutionScale);
 		camera_set_view_size(view_camera[0], viewWidth, viewHeight);
 		window_center();
+		with(objGUI) {
+			scaleX = other.resolutionWidth / baseW;
+			scaleY = other.resolutionHeight / baseH;
+			global.scale = min(scaleX, scaleY);
+		}
 	}
 }
 

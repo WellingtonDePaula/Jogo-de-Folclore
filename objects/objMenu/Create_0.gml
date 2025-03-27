@@ -5,7 +5,7 @@ mainOptions = {
 		text: "Jogar",
 		func: function() {
 			//room_goto(undefined);
-			//room_goto(rmCutscenes);
+			room_goto(rmGame);
 		}
 	},
 	option2: {
@@ -13,7 +13,7 @@ mainOptions = {
 		func: function() {
 			//room_goto(rmGame);
 			room_goto(rmCutscenes);
-			startCutcsene(Cutscenes.NEW_GAME);
+			global.cutsceneManager.startCutscene(Cutscenes.NEW_GAME);
 		}
 	},
 	

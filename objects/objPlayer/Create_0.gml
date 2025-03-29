@@ -47,7 +47,6 @@ stateScripts[PlayerMode.BUCKET][PlayerStates.DASH] = scrPlayerStateBucketDash;
 stateScripts[PlayerMode.BUCKET_AIMING] = [];
 stateScripts[PlayerMode.BUCKET_AIMING][PlayerStates.IDLE] = scrPlayerStateBucketAimingIdle;
 stateScripts[PlayerMode.BUCKET_AIMING][PlayerStates.MOVING] = scrPlayerStateBucketAimingMoving;
-stateScripts[PlayerMode.BUCKET_AIMING][PlayerStates.DASH] = scrPlayerStateBucketAimingDash;
 stateScripts[PlayerMode.BUCKET_AIMING][PlayerStates.THROWING] = undefined;
 #endregion
 
@@ -68,7 +67,6 @@ stateSprites[PlayerMode.BUCKET][PlayerStates.DASH] = [sprPlayerDashFront, sprPla
 stateSprites[PlayerMode.BUCKET_AIMING] = [];
 stateSprites[PlayerMode.BUCKET_AIMING][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
 stateSprites[PlayerMode.BUCKET_AIMING][PlayerStates.MOVING] = [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
-stateSprites[PlayerMode.BUCKET_AIMING][PlayerStates.DASH] = [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack];
 stateSprites[PlayerMode.BUCKET_AIMING][PlayerStates.THROWING] = [];
 #endregion
 

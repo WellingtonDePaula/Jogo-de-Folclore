@@ -33,6 +33,7 @@ function scrPlayerStateBucketAimingMoving() {
 	if(keyboard_check_pressed(inputs.dash) && canDash) {
 		dash();
 		state = PlayerStates.DASH;
+		stateMode = PlayerMode.BUCKET;
 	}
 	
 	#endregion

@@ -1,6 +1,12 @@
 randomize();
 
-//O game controller faz a certificação de que certos objetos estarão de certeza em todas as rooms, todo objeto
+game_set_speed(500, gamespeed_fps);
+
+//Delta Timing
+global.deltaFactor = 1;
+#macro delta global.deltaFactor
+
+//O game controller também faz a certificação de que certos objetos estarão de certeza em todas as rooms, todo objeto
 //instanciado aqui, DEVE ser persistente
 
 if(!instance_exists(objCamera)) {

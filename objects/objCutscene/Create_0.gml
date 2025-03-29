@@ -9,10 +9,15 @@ nextFrame = function() {
 		if(currentFrame < array_length(sceneArray) -1) {
 			currentFrame += 1;
 			canSkip = false;
-			alarm[0] = sceneArray[currentFrame][1] * game_get_speed(gamespeed_fps);
+			Alarm[0] = sceneArray[currentFrame][1] * game_get_speed(gamespeed_fps);
 			return;
 		}
 		room_goto(rmGame);
 		instance_destroy();
 	}
+}
+
+//Alarms
+for(var i = 0; i < 12; i++) {
+	Alarm[i] = ALARM_INACTIVE;
 }

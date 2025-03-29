@@ -26,8 +26,8 @@ function scrPlayerStateIdle(){
 	}
 	
 	if(keyboard_check_pressed(inputs.dash) && canDash) {
-		dash();
 		state = PlayerStates.DASH;
+		dash();
 	}
 	
 	#endregion

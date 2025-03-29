@@ -1,6 +1,6 @@
 function scrCameraStateFollowTarget() {
-	camX = lerp(camX, viewTarget.x-viewWidth/2, camSmoothnessDefault);
-	camY = lerp(camY, viewTarget.y-viewHeight/2, camSmoothnessDefault);
+	camX = lerp(camX, (viewTarget.x-viewWidth/2), camSmoothnessDefault * delta);
+	camY = lerp(camY, (viewTarget.y-viewHeight/2), camSmoothnessDefault * delta);
 	
 	camX = clamp(camX, 0, room_width-viewWidth);
 	camY = clamp(camY, 0, room_height-viewHeight);
@@ -14,8 +14,8 @@ function scrCameraStateFollowTargetAiming() {
 	
 	var yy = viewTarget.y - (dist * .2 * dsin(dir));
 	
-	camX = lerp(camX, xx - viewWidth/2, camSmoothnessBetween);
-	camY = lerp(camY, yy - viewHeight/2, camSmoothnessBetween);
+	camX = lerp(camX, xx - viewWidth/2, camSmoothnessBetween * delta);
+	camY = lerp(camY, yy - viewHeight/2, camSmoothnessBetween * delta);
 	
 	camX = clamp(camX, 0, room_width-viewWidth);
 	camY = clamp(camY, 0, room_height-viewHeight);

@@ -22,7 +22,7 @@ function scrPlayerStateBucketDash(){
 	
 	#region Change States
 	
-	if(image_index >= image_number) {
+	if(image_index >= image_number - 1) {
 		spriteChanged = false;
 		state = PlayerStates.IDLE;
 	}

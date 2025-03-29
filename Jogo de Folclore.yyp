@@ -92,7 +92,6 @@
     {"id":{"name":"scrGUIFunctions","path":"scripts/scrGUIFunctions/scrGUIFunctions.yy",},},
     {"id":{"name":"scrGUIGlobal","path":"scripts/scrGUIGlobal/scrGUIGlobal.yy",},},
     {"id":{"name":"scrPlayerFunctions","path":"scripts/scrPlayerFunctions/scrPlayerFunctions.yy",},},
-    {"id":{"name":"scrPlayerStateBucketAimingDash","path":"scripts/scrPlayerStateBucketAimingDash/scrPlayerStateBucketAimingDash.yy",},},
     {"id":{"name":"scrPlayerStateBucketAimingIdle","path":"scripts/scrPlayerStateBucketAimingIdle/scrPlayerStateBucketAimingIdle.yy",},},
     {"id":{"name":"scrPlayerStateBucketAimingMoving","path":"scripts/scrPlayerStateBucketAimingMoving/scrPlayerStateBucketAimingMoving.yy",},},
     {"id":{"name":"scrPlayerStateBucketDash","path":"scripts/scrPlayerStateBucketDash/scrPlayerStateBucketDash.yy",},},

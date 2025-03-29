@@ -20,5 +20,10 @@ startCutscene = function(_scene) {
 	currentScene = instance_create_layer(0, 0, "GUI", objCutscene);
 	currentScene.manager = self;
 	currentScene.sceneArray = scenes[_scene];
-	currentScene.alarm[0] = currentScene.sceneArray[currentScene.currentFrame][1] * game_get_speed(gamespeed_fps);
+	currentScene.Alarm[0] = currentScene.sceneArray[currentScene.currentFrame][1] * game_get_speed(gamespeed_fps);
+}
+
+//Alarms
+for(var i = 0; i < 12; i++) {
+	Alarm[i] = ALARM_INACTIVE;
 }

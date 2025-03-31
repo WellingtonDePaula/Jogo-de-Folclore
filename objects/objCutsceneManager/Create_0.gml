@@ -6,11 +6,16 @@ enum Cutscenes {
 	NEW_GAME,
 }
 
+enum Scenes {
+	ROOM,
+	SCENES,
+}
+
 currentScene = undefined;
 
 scenes = [];
-scenes[Cutscenes.NEW_GAME] = [
-	//sprite da cena, quantos segundos para pular a cena
+scenes[Cutscenes.NEW_GAME][Scenes.ROOM] = rmCucaJail;
+scenes[Cutscenes.NEW_GAME][Scenes.SCENES] = [
 	[sprEmBreve, 1],
 	[sprEmBreve2, 1],
 	[sprEmBreve3, 1],
@@ -19,7 +24,8 @@ scenes[Cutscenes.NEW_GAME] = [
 startCutscene = function(_scene) {
 	currentScene = instance_create_layer(0, 0, "GUI", objCutscene);
 	currentScene.manager = self;
-	currentScene.sceneArray = scenes[_scene];
+	currentScene.roomTarget = scenes[_scene][Scenes.ROOM];
+	currentScene.sceneArray = scenes[_scene][Scenes.SCENES];
 	currentScene.Alarm[0] = currentScene.sceneArray[currentScene.currentFrame][1] * game_get_speed(gamespeed_fps);
 }
 

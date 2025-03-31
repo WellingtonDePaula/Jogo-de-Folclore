@@ -1,5 +1,6 @@
 manager = undefined;
 currentFrame = 0;
+roomTarget = undefined;
 sceneArray = undefined;
 
 canSkip = false;
@@ -12,7 +13,7 @@ nextFrame = function() {
 			Alarm[0] = sceneArray[currentFrame][1] * game_get_speed(gamespeed_fps);
 			return;
 		}
-		room_goto(rmGame);
+		room_goto(roomTarget);
 		instance_destroy();
 	}
 }

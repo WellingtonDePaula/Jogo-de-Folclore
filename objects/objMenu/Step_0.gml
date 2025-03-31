@@ -7,18 +7,19 @@ select = keyboard_check_pressed(inputs.select);
 switch(true) {
 		
 	case down:
-		selected += 1;
+		optionSelected += 1;
 		break;
 		
 	case up:
-		selected -= 1;
+		optionSelected -= 1;
 		break;
 			
 }
 
-selected = clamp(selected, 0, array_length(currentMenu)-1);
+var menu = optionsArr[currentMenu];
+optionSelected = clamp(optionSelected, 0, array_length(menu)-1);
 
 if(select) {
 	//Caso o botão de selecionar seja pressionado, será executado a função da opção selecionada no menu atual
-	currentMenu[selected].func();
+	menu[optionSelected].func();
 }

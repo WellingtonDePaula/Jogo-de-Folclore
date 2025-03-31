@@ -29,6 +29,7 @@ options[MenuTypes.MAIN] = {
 		text: "Play Test",
 		func: function() {
 			room_goto(rmTest);
+			
 		},
 	},
 	
@@ -54,14 +55,14 @@ options[MenuTypes.OPTIONS] = {
 	option1: {
 		text: "1280X720",
 		func: function() {
-			setCamResolution(global.cam, 1280, 720);
+			setCamResolution(global.cam, 1280, 720, global.ScaleFactors.NORMAL);
 		},
 	},
 	
 	option2: {
 		text: "1920X1080",
 		func: function() {
-			setCamResolution(global.cam, 1920, 1080);
+			setCamResolution(global.cam, 1920, 1080, global.ScaleFactors.NORMAL);
 		},
 	},
 	

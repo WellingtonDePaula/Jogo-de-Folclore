@@ -80,6 +80,11 @@ options[MenuTypes.OPTIONS] = {
 
 #region Main
 
+
+//for(i = 0; i < 5; i++) {
+//	optionsArr[MenuTypes.MAIN][i] =  struct_get(options[MenuTypes.MAIN], "option" + string(i+1));
+//}
+
 optionsArr[MenuTypes.MAIN][0] = options[MenuTypes.MAIN].option1;
 optionsArr[MenuTypes.MAIN][1] = options[MenuTypes.MAIN].option2;
 optionsArr[MenuTypes.MAIN][2] = options[MenuTypes.MAIN].option3;

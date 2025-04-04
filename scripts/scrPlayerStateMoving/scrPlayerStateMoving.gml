@@ -1,8 +1,6 @@
 function scrPlayerStateMoving(){
 	stateDebug = "Moving";
 	
-	setCamState(global.cam, CameraStates.FOLLOW);
-	
 	#region State Consequences
 	
 	isAiming = false;

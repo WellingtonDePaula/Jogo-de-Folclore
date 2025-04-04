@@ -1,8 +1,6 @@
 function scrPlayerStateIdle(){
 	stateDebug = "Idle";
 	
-	setCamState(global.cam, CameraStates.FOLLOW);
-	
 	#region State Consequences
 	
 	isAiming = false;

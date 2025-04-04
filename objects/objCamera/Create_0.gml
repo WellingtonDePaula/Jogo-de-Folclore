@@ -1,7 +1,7 @@
 //scaleFactor = 0.00125;
 global.ScaleFactors = {
 	NORMAL: 0.00125,
-	CUCA_JAIL: 0.00200,
+	CUCA_JAIL: 0.00180,
 }
 
 scaleFactor = global.ScaleFactors.NORMAL;
@@ -17,16 +17,20 @@ viewTarget = objPlayer;
 
 camX = 0;
 camY = 0;
+staticX = 0;
+staticY = 0;
 camSmoothnessDefault = .3;
 camSmoothnessBetween = .1;
 
 stateScripts = [
 	scrCameraStateFollowTarget,
+	scrCameraStateStatic,
 	scrCameraStateFollowTargetAiming,
 ];
 
 enum CameraStates {
 	FOLLOW,
+	STATIC,
 	BETWEEN,
 }
 

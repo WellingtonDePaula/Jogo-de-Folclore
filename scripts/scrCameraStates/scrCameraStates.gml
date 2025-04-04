@@ -6,6 +6,11 @@ function scrCameraStateFollowTarget() {
 	camY = clamp(camY, 0, room_height-viewHeight);
 }
 
+function scrCameraStateStatic() {
+	camX = staticX - viewWidth/2;
+	camY = staticY - viewHeight/2;
+}
+
 function scrCameraStateFollowTargetAiming() {
 	var dist = point_distance(viewTarget.x, viewTarget.y, mouse_x, mouse_y);
 	var dir = point_direction(viewTarget.x, viewTarget.y, mouse_x, mouse_y);

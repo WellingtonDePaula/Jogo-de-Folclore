@@ -9,6 +9,7 @@ enum Cutscenes {
 enum Scenes {
 	ROOM,
 	SCENES,
+	FADE_ATTRIBUTES,
 }
 
 currentScene = undefined;
@@ -16,17 +17,39 @@ currentScene = undefined;
 scenes = [];
 scenes[Cutscenes.NEW_GAME][Scenes.ROOM] = rmCucaJail;
 scenes[Cutscenes.NEW_GAME][Scenes.SCENES] = [
-	[sprEmBreve, 1],
-	[sprEmBreve2, 1],
-	[sprEmBreve3, 1],
-];
+// [SPRITE, TEMPO EM SEGUNDOS]
+	[sprEmBreve, .5],
+	[sprEmBreve2, .5],
+	[sprEmBreve3, .5],
+]
+scenes[Cutscenes.NEW_GAME][Scenes.FADE_ATTRIBUTES] = {
+	alpha: 1,
+	minAlpha: 0,
+	blackScreenTime: 0,
+	fadeTime: 2,
+}
 
-startCutscene = function(_scene) {
+startCutscene = function(_cutscene) {
 	currentScene = instance_create_layer(0, 0, "GUI", objCutscene);
-	currentScene.manager = self;
-	currentScene.roomTarget = scenes[_scene][Scenes.ROOM];
-	currentScene.sceneArray = scenes[_scene][Scenes.SCENES];
-	currentScene.Alarm[0] = currentScene.sceneArray[currentScene.currentFrame][1] * game_get_speed(gamespeed_fps);
+	with(currentScene) {
+		var scenes = other.scenes;
+		manager = other;
+		roomTarget = scenes[_cutscene][Scenes.ROOM];
+		sceneArray = scenes[_cutscene][Scenes.SCENES];
+	
+		var attributes = scenes[Cutscenes.NEW_GAME][Scenes.FADE_ATTRIBUTES];
+		var keys = variable_struct_get_names(attributes);
+		
+		//Loop para atribuir os valores da estrutura contida em attributes á instância
+		for(var i = 0; i < array_length(keys); i++) {
+			var name = keys[i];
+			var val = variable_struct_get(attributes, name);
+			variable_instance_set(self, name, val);
+		}
+		
+		//Alarme para tornar o canSkip true
+		Alarm[0] = sceneArray[currentFrame][1] * 60;
+	}
 }
 
 //Alarms

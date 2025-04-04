@@ -1,10 +1,9 @@
 randomize();
 
-game_set_speed(60, gamespeed_fps);
-
+game_set_speed(120, gamespeed_fps);
 //Delta Timing
 global.deltaFactor = 1;
-#macro delta global.deltaFactor
+global.fpsFactor = 60;
 
 //O game controller também faz a certificação de que certos objetos estarão de certeza em todas as rooms, todo objeto
 //instanciado aqui, DEVE ser persistente

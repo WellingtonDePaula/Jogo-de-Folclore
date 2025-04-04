@@ -138,5 +138,5 @@ function dash() {
 	velvDash = velv;
 	canDash = false;
 	//Ativa o timer para resetar a variavel do dash
-	Alarm[0] = dashRechargeTime;
+	Alarm[0] = dashRechargeTime * 60;
 }

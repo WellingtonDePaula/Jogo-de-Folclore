@@ -1,8 +1,6 @@
 function scrPlayerStateDash() {
 	stateDebug = "Dash";
 	
-	setCamState(global.cam, CameraStates.FOLLOW);
-	
 	#region State Consequences
 	
 	isAiming = false;

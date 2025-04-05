@@ -12,7 +12,7 @@ function checkMoveInput(inputs) {
 	return [keys, moveDir];
 }
 
-function updatePlayerMovement(vel, inputKeys) {
+function updatePlayerMovement(normalVel, inputKeys) {
 	var inputsUpdated, keys, moveDir
 	
 	inputsUpdated = checkMoveInput(inputs);
@@ -20,8 +20,8 @@ function updatePlayerMovement(vel, inputKeys) {
 	moveDir = inputsUpdated[1];
 	
 	var hSpeed, vSpeed;
-	hSpeed = lengthdir_x(vel * keys, moveDir);
-	vSpeed = lengthdir_y(vel * keys, moveDir);
+	hSpeed = lengthdir_x(normalVel * keys, moveDir);
+	vSpeed = lengthdir_y(normalVel * keys, moveDir);
 	
 	return [hSpeed, vSpeed];
 }
@@ -107,7 +107,7 @@ function updatePlayerSprite() {
 	var spriteArray = stateSprites[stateMode][state];
 	if (spriteArray != undefined && sprite_index != spriteArray[index]) {
 		image_index = 0;
-		sprite_index = spriteArray[index]
+		sprite_index = spriteArray[index];
 	}
 }
 
@@ -137,6 +137,7 @@ function dash() {
 	velhDash = velh;
 	velvDash = velv;
 	canDash = false;
+	image_index = 0;
 	//Ativa o timer para resetar a variavel do dash
-	Alarm[0] = dashRechargeTime * 60;
+	Alarm[0] = dashRechargeTime * FPS;
 }

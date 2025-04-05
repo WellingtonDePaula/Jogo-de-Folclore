@@ -1,6 +1,7 @@
 randomize();
 
 game_set_speed(120, gamespeed_fps);
+
 //Delta Timing
 global.deltaFactor = 1;
 global.fpsFactor = 60;

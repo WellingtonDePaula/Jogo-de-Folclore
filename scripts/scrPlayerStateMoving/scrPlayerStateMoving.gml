@@ -7,26 +7,34 @@ function scrPlayerStateMoving(){
 	
 	#endregion
 	
+	#region Change States
+	
+	if(!checkMoveInput(inputs)[0]) {
+		state = PlayerStates.IDLE;
+		return;
+	}
+	
+	if(keyboard_check_pressed(inputs.dash) && canDash) {
+		state = PlayerStates.DASH;
+		dash();
+		return;
+	}
+	
+	if(mouse_check_button(inputs.shoot) && myWeapon != noone) {
+		stateMode = PlayerMode.USING_SLINGSHOT;
+		return;
+	}
+	
+	#endregion
+	
 	#region Code
 	
-	var velocities = updatePlayerMovement(vel, inputs);
+	var velocities = updatePlayerMovement(normalVel, inputs);
 	velh = velocities[0];
 	velv = velocities[1];
 	updatePlayerDirection();
 	updatePlayerSprite();
 	
 	#endregion
-	
-	#region Change States
-	
-	if(!checkMoveInput(inputs)[0]) {
-		state = PlayerStates.IDLE;
-	}
-	
-	if(keyboard_check_pressed(inputs.dash) && canDash) {
-		dash();
-		state = PlayerStates.DASH;
-	}
-	
-	#endregion
+
 }

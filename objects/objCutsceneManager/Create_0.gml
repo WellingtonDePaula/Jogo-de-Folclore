@@ -25,8 +25,8 @@ scenes[Cutscenes.NEW_GAME][Scenes.SCENES] = [
 scenes[Cutscenes.NEW_GAME][Scenes.FADE_ATTRIBUTES] = {
 	alpha: 1,
 	minAlpha: 0,
-	blackScreenTime: 0,
-	fadeTime: 2,
+	blackScreenTime: 1,
+	fadeTime: 1,
 }
 
 startCutscene = function(_cutscene) {
@@ -48,7 +48,7 @@ startCutscene = function(_cutscene) {
 		}
 		
 		//Alarme para tornar o canSkip true
-		Alarm[0] = sceneArray[currentFrame][1] * 60;
+		Alarm[0] = sceneArray[currentFrame][1] * FPS;
 	}
 }
 

@@ -25,13 +25,17 @@ nextFrame = function() {
 				step --;
 			}
 			currentFrame = step;
-			Alarm[0] = sceneArray[currentFrame][1] * 60;
+			Alarm[0] = sceneArray[currentFrame][1] * FPS;
 		}
 	}
+	
 	if(finished) {
 		var factor =  (delta / FPS) / (alpha * fadeTime);
-		show_debug_message((abs(alpha) + abs(minAlpha)));
 		alpha = lerp(alpha, minAlpha, factor);
+		
+		if(alpha <= minAlpha && Alarm[1] == ALARM_INACTIVE) {
+			Alarm[1] = blackScreenTime * FPS;
+		}
 	}
 }
 

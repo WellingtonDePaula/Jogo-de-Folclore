@@ -3,7 +3,7 @@
   "%Name":"sprPlayerDashSideFront",
   "bboxMode":0,
   "bbox_bottom":22,
-  "bbox_left":0,
+  "bbox_left":1,
   "bbox_right":22,
   "bbox_top":0,
   "collisionKind":1,

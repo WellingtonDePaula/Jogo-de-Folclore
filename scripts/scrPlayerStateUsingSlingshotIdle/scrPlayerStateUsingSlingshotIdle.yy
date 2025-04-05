@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateUsingSlingshotIdle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateUsingSlingshotIdle",
+  "parent":{
+    "name":"Charging",
+    "path":"folders/Scripts/Entities/Player/States/Slingshot/Charging.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

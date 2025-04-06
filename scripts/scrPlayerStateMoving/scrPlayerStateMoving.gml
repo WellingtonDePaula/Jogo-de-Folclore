@@ -20,7 +20,7 @@ function scrPlayerStateMoving(){
 		return;
 	}
 	
-	if(mouse_check_button(inputs.shoot) && myWeapon != noone) {
+	if(mouse_check_button(inputs.shoot) && myWeapon != noone && ammo[Bullet.AMMO] >= 1) {
 		stateMode = PlayerMode.USING_SLINGSHOT;
 		return;
 	}

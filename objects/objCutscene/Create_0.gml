@@ -11,7 +11,6 @@ fadeTime = 0;
 blackScreenTime = 0;
 
 nextFrame = function() {
-	//show_debug_message([keyboard_check_pressed(manager.inputs.nextFrame),  canSkip]);
 	static step = 0;
 	static finished = false;
 	if(keyboard_check_pressed(manager.inputs.nextFrame) && !finished) {

@@ -1,8 +1,7 @@
 depth = -bbox_bottom;
-verifyDestroy();
+verifyCollision();
 
-image_angle += 1 * speed;
+speed = spd*delta;
+spd = lerp(spd, 0, .01);
 
-if(weaponId.image_index >= weaponId.image_number-1) {
-	speed = spd;	
-}
+image_angle += speed * spdMultiplier;

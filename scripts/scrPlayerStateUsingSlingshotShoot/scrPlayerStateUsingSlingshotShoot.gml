@@ -4,12 +4,15 @@ function scrPlayerStateUsingSlingshotShoot(){
 	#region State Consequences
 	
 	isAiming = true;
+	velh = 0;
+	velv = 0;
 	
 	#endregion
 	
 	#region Change States
 	
 	if(image_index >= image_number -1) {
+		myWeapon.shoot();
 		stateMode = PlayerMode.NORMAL;
 		state = PlayerStates.IDLE;
 	}

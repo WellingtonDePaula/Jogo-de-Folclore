@@ -4,6 +4,7 @@ if (_script != undefined) {
 }
 velh = velh * delta;
 velv = velv * delta;
+
 depth = -bbox_bottom;
 
 move_and_collide(velh, velv, objCollider);

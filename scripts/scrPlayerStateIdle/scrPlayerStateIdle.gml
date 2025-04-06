@@ -5,6 +5,9 @@ function scrPlayerStateIdle(){
 	
 	isAiming = false;
 	
+	velh = 0;
+	velv = 0;
+	
 	#endregion
 	
 	#region Change States
@@ -20,7 +23,7 @@ function scrPlayerStateIdle(){
 		return;
 	}
 	
-	if(mouse_check_button(inputs.shoot) && myWeapon != noone) {
+	if(mouse_check_button(inputs.shoot) && myWeapon != noone && ammo[Bullet.AMMO] >= 1) {
 		stateMode = PlayerMode.USING_SLINGSHOT;
 		return;
 	}
@@ -29,9 +32,6 @@ function scrPlayerStateIdle(){
 	
 	#region Code
 	
-	var velocities = updatePlayerMovement(normalVel, inputs);
-	velh = velocities[0];
-	velv = velocities[1];
 	updatePlayerDirection();
 	updatePlayerSprite();
 	

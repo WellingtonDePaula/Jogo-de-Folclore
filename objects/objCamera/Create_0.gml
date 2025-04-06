@@ -1,6 +1,6 @@
 //scaleFactor = 0.00125;
 global.ScaleFactors = {
-	NORMAL: 0.00125,
+	NORMAL: 0.00155,
 	CUCA_JAIL: 0.00180,
 }
 

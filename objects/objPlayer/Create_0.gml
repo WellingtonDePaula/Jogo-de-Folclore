@@ -5,7 +5,6 @@ velAiming = 1;
 velhDash = 0;
 velvDash = 0;
 
-
 normalVel = 1.5;
 shootVel = .8;
 velDash = 2.5;
@@ -18,6 +17,9 @@ facing = "front";
 isSide = false;
 
 ammo = [];
+ammo[Bullet.AMMO] = 2;
+ammo[Bullet.TYPE] = objRock;
+
 myWeapon = instance_create_layer(0, 0, "Player", objSlingshot);
 myWeapon.weaponId = self;
 isAiming = false;

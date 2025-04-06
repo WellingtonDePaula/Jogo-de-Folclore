@@ -24,13 +24,14 @@ function scrPlayerStateUsingSlingshotIdle(){
 	}
 	if(!mouse_check_button(inputs.shoot)) {
 		if(myWeapon.strenghtCharged >= 1) {
+			myWeapon.dir = point_direction(x, y, mouse_x, mouse_y);
 			state = PlayerStates.SHOOT;
 		} else {
+			myWeapon.resetCharge();
 			stateMode = PlayerMode.NORMAL;
 			state = PlayerStates.IDLE;
 		}
 		image_index = 0;
-		myWeapon.shoot();
 		return;
 	}
 	

@@ -28,6 +28,9 @@ function scrPlayerStateDash() {
 	
 
 	if(!spriteChanged) {
+		if(ammo[Bullet.AMMO] >= 1) {
+			ammo[Bullet.AMMO] -= 1;
+		}
 		updatePlayerSprite();
 		spriteChanged = true;
 	}

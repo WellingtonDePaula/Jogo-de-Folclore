@@ -1,11 +1,11 @@
 event_inherited();
 
-reloadTime = .03;
+reloadTime = .01;
 
 strenghtCharged = 0;
 maxCharge = 2;
 
-spdMultiplier = 1;
+dir = 0;
 
 resetCharge = function() {
 	Alarm[0] = ALARM_INACTIVE;
@@ -24,16 +24,20 @@ charge = function() {
 }
 
 shoot = function() {
-	if(strenghtCharged >= 1) {
+	var playerAmmo = weaponId.ammo[Bullet.AMMO];
+	if(strenghtCharged >= 1 && playerAmmo >= 1) {
+		playerAmmo -= 1;
+		weaponId.ammo[Bullet.AMMO] = playerAmmo;
+		
+		var bulletType = weaponId.ammo[Bullet.TYPE];
 		var xx = weaponId.x;
 		var yy = weaponId.y;
 		
-		var bullet = instance_create_layer(xx, yy, "Tools", objRock);
+		var bullet = instance_create_layer(xx, yy, "Tools", bulletType);
 		bullet.weaponId = weaponId;
 	
-		var dir = point_direction(xx, yy, mouse_x, mouse_y);
 		var bulletMultiplier = bullet.spdMultiplier
-		bullet.spd = spdMultiplier * (strenghtCharged / bulletMultiplier);
+		bullet.spd = strenghtCharged * bulletMultiplier;
 		
 		bullet.direction = dir;
 		bullet.image_angle = dir;

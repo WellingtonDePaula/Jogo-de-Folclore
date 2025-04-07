@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrProjectileStates",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrProjectileStates",
+  "parent":{
+    "name":"Tools",
+    "path":"folders/Scripts/Tools.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,8 +1,8 @@
 event_inherited();
 
-spdMultiplier =2.5;
+spdMultiplier = 2.5;
 damage = 1;
-
+mass = .08;
 colliders = [objWall];
 
 toString = function() {

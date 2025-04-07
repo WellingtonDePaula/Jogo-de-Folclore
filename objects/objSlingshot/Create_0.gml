@@ -36,7 +36,7 @@ shoot = function() {
 		var bullet = instance_create_layer(xx, yy, "Tools", bulletType);
 		bullet.weaponId = weaponId;
 	
-		var bulletMultiplier = bullet.spdMultiplier
+		var bulletMultiplier = bullet.spdMultiplier;
 		bullet.spd = strenghtCharged * bulletMultiplier;
 		
 		bullet.direction = dir;

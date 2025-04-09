@@ -11,17 +11,14 @@
             "id": "eddafdca820ee067",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Game/RoomCutsceneMap.canvas",
-                "viewState": {
-                  "x": -223.5,
-                  "y": 189.5,
-                  "zoom": -0.1887607798552537
-                }
+                "file": "Ideias.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "RoomCutsceneMap"
+              "icon": "lucide-file",
+              "title": "Ideias"
             }
           }
         ]
@@ -171,10 +168,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1228e84da374956b",
+  "active": "eddafdca820ee067",
   "lastOpenFiles": [
-    "Enviroment/Better Grass.md",
+    "Pasted image 20250409112611.png",
     "Game/RoomCutsceneMap.canvas",
+    "Ideias.md",
+    "Untitled",
+    "Enviroment/Better Grass.md",
     "Game/Room Map.canvas",
     "Game/Cutscenes/After Cuca.md",
     "Game/Cutscenes/After Tutorial.md",
@@ -217,8 +217,6 @@
     "Entities/Bosses/Mula sem cabeça/States/Modes",
     "Entities/Bosses/Mula sem cabeça/States/Canvas/ThirdMode.canvas",
     "Entities/Bosses/Mula sem cabeça/States/Canvas",
-    "Entities/Bosses/Mula sem cabeça/States/Sem título.md",
-    "Entities/Bosses/Mula sem cabeça/States",
     "Sem título.canvas",
     "Imagens/Pasted image 20250306164159.png",
     "Imagens/Pasted image 20250306163725.png",

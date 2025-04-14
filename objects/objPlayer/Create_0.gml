@@ -79,4 +79,5 @@ inputs = {
 	up: ord("W"),
 	dash: vk_space,
 	shoot: mb_left,
+	interact: ord("E"),
 }

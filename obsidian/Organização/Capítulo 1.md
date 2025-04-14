@@ -9,7 +9,6 @@
 - Diálogo: a Cuca diz que ela terá que trabalhar para sempre.
     
 - Saída da Cuca.
-    
 
 ---
 
@@ -24,7 +23,6 @@
 - Introdução ao controle de movimento (**W/A/S/D**).
     
 - Introdução narrativa: perda de memória.
-    
 
 ---
 
@@ -39,7 +37,6 @@
 - Condição de ajuda mútua.
     
 - Voz joga uma chave pela janela com barras.
-    
 
 ---
 
@@ -52,7 +49,6 @@
 - Jogador deve se mover até a chave (WASD).
     
 - Interagir com **E** para pegar o item.
-    
 
 ---
 
@@ -71,7 +67,6 @@
 **Eventos:**
 
 - Indicador de interação na cela vizinha.
-    
 
 ---
 
@@ -82,7 +77,6 @@
 **Detalhes:**
 
 - Direção clara: vá ao armazém à esquerda.
-    
 
 ---
 
@@ -94,7 +88,6 @@
 - Pegue a chave e o elástico.
     
 - Veja a chave alta, fora de alcance.
-    
 
 ---
 
@@ -122,7 +115,6 @@
 - Aprender a atirar com o estilingue.
     
 - Diálogo com o velho no final da memória.
-    
 
 ---
 
@@ -150,7 +142,6 @@
 - Cabo de picareta é jogado.
     
 - Aviso sobre o perigo e ensino da rolagem (**SPACE**).
-    
 
 ---
 
@@ -169,7 +160,6 @@
 - Desafio leve de navegação.
     
 - Tombar a mesa (**E**) e pegar o cabo.
-    
 
 ---
 
@@ -193,7 +183,6 @@
 **Eventos:**
 
 - Usar o estilingue para acertar a chave.
-    
 
 ---
 

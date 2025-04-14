@@ -1,1 +1,0 @@
-É a primeira cutscene do jogo, a qual conta sobre a história geral do jogo, com cenas dele com a família, e que mostra como ele foi aprisionado pela cuca, como ele fugiu da cela, e como ele acabou no primeiro confronto do jogo contra a cuca no tutorial.

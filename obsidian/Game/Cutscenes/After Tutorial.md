@@ -1,1 +1,0 @@
-Cutscene pós tutorial, mostrando como ele foi até a primeira batalha contra a mula.

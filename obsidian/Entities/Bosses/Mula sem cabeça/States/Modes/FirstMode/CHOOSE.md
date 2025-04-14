@@ -1,1 +1,0 @@
-Nesse estado, a Mula tem uma porcentagem de chance de escolher ou o estado [[Entities/Bosses/Mula sem cabeça/States/Modes/FirstMode/IDLE|IDLE]] ou o estado [[Entities/Bosses/Mula sem cabeça/States/Modes/FirstMode/MOVING|MOVING]].

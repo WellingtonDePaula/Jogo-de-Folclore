@@ -1,1 +1,0 @@
-Cutscene pós batalha contra a Mula.

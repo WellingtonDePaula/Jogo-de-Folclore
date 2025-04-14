@@ -2,6 +2,10 @@ weaponId = noone;
 
 damage = 0;
 
+scale = 3;
+image_xscale = scale;
+image_yscale = scale;
+
 spdMultiplier = 0;
 spd = 0;
 

@@ -24,23 +24,24 @@ charge = function() {
 }
 
 shoot = function() {
-	var playerAmmo = weaponId.ammo[Bullet.AMMO];
-	if(strenghtCharged >= 1 && playerAmmo >= 1) {
-		playerAmmo -= 1;
-		weaponId.ammo[Bullet.AMMO] = playerAmmo;
+	with(weaponId) {
+		if(other.strenghtCharged >= 1 && inventoryItemAmount(inv, Ammo) > 0) {
+			inventoryRemoveAmout(inv, Ammo, 1);
+			var ammoStruct = inventoryStruct(inv, Ammo);
 		
-		var bulletType = weaponId.ammo[Bullet.TYPE];
-		var xx = weaponId.x;
-		var yy = weaponId.y;
+			var bulletType = ammoStruct.obj;
+			var xx = x;
+			var yy = y;
 		
-		var bullet = instance_create_layer(xx, yy, "Tools", bulletType);
-		bullet.weaponId = weaponId;
+			var bullet = instance_create_layer(xx, yy, "Tools", bulletType);
+			bullet.weaponId = self;
 	
-		var bulletMultiplier = bullet.spdMultiplier;
-		bullet.spd = strenghtCharged * bulletMultiplier;
+			var bulletMultiplier = bullet.spdMultiplier;
+			bullet.spd = other.strenghtCharged * bulletMultiplier;
 		
-		bullet.direction = dir;
-		bullet.image_angle = dir;
+			bullet.direction = other.dir;
+			bullet.image_angle = other.dir;
+		}
 	}
 	resetCharge();
 }

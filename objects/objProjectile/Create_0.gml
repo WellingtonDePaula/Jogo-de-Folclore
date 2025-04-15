@@ -22,11 +22,6 @@ debugState = "";
 
 speedDecay = 0.02;
 
-enum Bullet {
-	AMMO,
-	TYPE,
-}
-
 onCollision = function(destroy) {
 	for(var i = 0; i < array_length(onColFuncs); i++) {
 		script_execute(onColFuncs[i]);

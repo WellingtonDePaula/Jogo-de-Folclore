@@ -16,9 +16,9 @@ canDash = true;
 facing = "front";
 isSide = false;
 
-ammo = [];
-ammo[Bullet.AMMO] = 2;
-ammo[Bullet.TYPE] = objRock;
+inv = ds_list_create();
+
+ds_list_add(inv, new Ammo(objRock, 3, 5));
 
 myWeapon = instance_create_layer(0, 0, "Player", objSlingshot);
 myWeapon.weaponId = self;

@@ -213,3 +213,131 @@
 **Tipo:** Cutscene  
 **Resumo:** A Cuca surge, briga com o monstro usando magia.  
 **Final:** A criança foge pela caverna, encerrando o prólogo.
+
+---
+
+### **Cena 24 – Gameplay: Explorando a Floresta**
+
+**Tipo:** Jogável (exploração + puzzles)  
+**Resumo:** A criança vagueia sem rumo após fugir da caverna.  
+**Eventos:**
+
+- Ambientação: sol forte e vegetação densa.
+    
+- Pequenos puzzles com o estilingue (abrir caminhos, espantar animais, etc).
+    
+- Clima de incerteza e desorientação.
+
+---
+
+### **Cena 25 – Cutscene: A Igreja na Floresta**
+
+**Tipo:** Cutscene  
+**Resumo:** A criança encontra uma antiga igreja escondida pela vegetação.  
+**Eventos:**
+
+- Gramado aberto e fim de tarde.
+    
+- A criança se aproxima, exausta.
+    
+- Entra na igreja, visivelmente abandonada.
+
+---
+
+### **Cena 26 – Gameplay: Explorando a Igreja**
+
+**Tipo:** Jogável (exploração leve)  
+**Resumo:** A criança procura por algo útil dentro da igreja.  
+**Eventos:**
+
+- Igreja está vazia e em ruínas.
+    
+- Sem opções, a criança decide dormir ali.
+
+---
+
+### **Cena 27 – Cutscene: O Sonho**
+
+**Tipo:** Cutscene jogável (sequência onírica)  
+**Resumo:** A criança tem um pesadelo envolvendo figuras do passado.  
+**Eventos:**
+
+- Ambiente sombrio e sufocante.
+    
+- Figuras adultas com rostos derretidos.
+    
+- Conflito e uso mágico do estilingue.
+    
+- Fuga desesperada e perseguição por uma figura sombria.
+
+---
+
+### **Cena 28 – Gameplay: Fuga no Sonho**
+
+**Tipo:** Jogável (sequência limitada)  
+**Resumo:** A criança corre do monstro do sonho.  
+**Eventos:**
+
+- Cenário se desfaz enquanto ela corre.
+    
+- A perseguição termina com o monstro a alcançando.
+
+---
+
+### **Cena 29 – Cutscene: Despertar Assustado**
+
+**Tipo:** Cutscene  
+**Resumo:** A criança acorda assustada após o pesadelo.  
+**Eventos:**
+
+- Sons de chuva, relinchos e cascos.
+    
+- Clima de tensão crescente.
+
+---
+
+### **Cena 30 – Gameplay: Saindo da Igreja**
+
+**Tipo:** Jogável (transição)  
+**Resumo:** A criança se aproxima da porta e interage com ela.  
+**Eventos:**
+
+- Jogador usa **E** para abrir a porta.
+    
+- Ambientação externa: chuva forte e atmosfera opressiva.
+
+---
+
+### **Cena 31 – Boss Fight: A Mula sem Cabeça**
+
+**Tipo:** Batalha de chefe  
+**Resumo:** A criança enfrenta uma criatura aterradora.  
+**Eventos:**
+
+- Uso do estilingue com pedrinhas coletáveis.
+    
+- Estratégias com o cenário: atrair a mula para colidir com árvores.
+    
+- Dano acumulado enfraquece a criatura.
+
+---
+
+### **Cena 32 – Evento Final: A Transformação**
+
+**Tipo:** Interativo + cutscene  
+**Resumo:** Após vencer a criatura, a criança presencia sua transformação.  
+**Eventos:**
+
+- A mula cai e o jogador interage com **E**.
+    
+- Cutscene: a chuva para, amanhece, e a mula vira uma mulher.
+    
+- Reação de espanto da criança.
+
+---
+
+### **Cena 33 – Fim do Capítulo 1**
+
+**Tipo:** Transição narrativa  
+**Resumo:** Encerramento da primeira parte da história.  
+**Clima final:** Mistério, transformação, e novos questionamentos.

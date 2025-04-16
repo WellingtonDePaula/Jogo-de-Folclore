@@ -8,7 +8,7 @@ enum Cutscenes {
 
 enum Scenes {
 	ROOM,
-	SCENES,
+	SCENE,
 	FADE_ATTRIBUTES,
 }
 
@@ -16,12 +16,7 @@ currentScene = undefined;
 
 scenes = [];
 scenes[Cutscenes.NEW_GAME][Scenes.ROOM] = rmCucaJail;
-scenes[Cutscenes.NEW_GAME][Scenes.SCENES] = [
-// [SPRITE, TEMPO EM SEGUNDOS]
-	[sprEmBreve, .5],
-	[sprEmBreve2, .5],
-	[sprEmBreve3, .5],
-]
+scenes[Cutscenes.NEW_GAME][Scenes.SCENE] = [sprNewGameCutscene, 1.5]
 scenes[Cutscenes.NEW_GAME][Scenes.FADE_ATTRIBUTES] = {
 	alpha: 1,
 	minAlpha: 0,
@@ -35,7 +30,7 @@ startCutscene = function(_cutscene) {
 		var scenes = other.scenes;
 		manager = other;
 		roomTarget = scenes[_cutscene][Scenes.ROOM];
-		sceneArray = scenes[_cutscene][Scenes.SCENES];
+		sceneArray = scenes[_cutscene][Scenes.SCENE];
 	
 		var attributes = scenes[Cutscenes.NEW_GAME][Scenes.FADE_ATTRIBUTES];
 		var keys = variable_struct_get_names(attributes);
@@ -48,7 +43,7 @@ startCutscene = function(_cutscene) {
 		}
 		
 		//Alarme para tornar o canSkip true
-		Alarm[0] = sceneArray[currentFrame][1] * FPS;
+		Alarm[0] = sceneArray[1] * FPS;
 	}
 }
 

@@ -1,6 +1,6 @@
 //scaleFactor = 0.00125;
 global.ScaleFactors = {
-	NORMAL: 0.00155,
+	NORMAL: 0.00168,
 	CUCA_JAIL: 0.00180,
 }
 
@@ -21,6 +21,8 @@ staticX = 0;
 staticY = 0;
 camSmoothnessDefault = .3;
 camSmoothnessBetween = .1;
+
+clampPos = true;
 
 stateScripts = [
 	scrCameraStateFollowTarget,

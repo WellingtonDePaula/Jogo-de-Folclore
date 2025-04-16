@@ -10,14 +10,14 @@ options = [];
 options[MenuTypes.MAIN] = {
 	
 	option1: {
-		text: "Jogar",
+		text: "Play",
 		func: function() {
 			room_goto(rmCucaJail);
 		},
 	},
 	
 	option2: {
-		text: "Novo Jogo",
+		text: "New Game",
 		func: function() {
 			//room_goto(rmGame);
 			room_goto(rmCutscenes);
@@ -34,7 +34,7 @@ options[MenuTypes.MAIN] = {
 	},
 	
 	option4: {
-		text: "Opcoes",
+		text: "Options",
 		func: function() {
 			with(objMenu) {
 				lastMenu = MenuTypes.MAIN;
@@ -45,7 +45,7 @@ options[MenuTypes.MAIN] = {
 	},
 	
 	option5: {
-		text: "Sair",
+		text: "Quit",
 		func: function() {
 			game_end();
 		},
@@ -67,7 +67,7 @@ options[MenuTypes.OPTIONS] = {
 	},
 	
 	option3: {
-		text: "Voltar",
+		text: "Back",
 		func: function() {
 			with(objMenu) {
 				currentMenu = lastMenu;

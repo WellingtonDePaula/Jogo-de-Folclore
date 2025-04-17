@@ -1,15 +1,15 @@
 function scrProjectileStateIdle(){
-	verifyCollision(true);
-	
 	debugState = "Idle";
 	
 	velh = 0;
 	velv = 0;
+	
+	scale = lerp(scale, 0, .007);
+	image_xscale = scale;
+	image_yscale = scale;
 }
 
 function scrProjectileStateMoving(){
-	verifyCollision(true);
-	
 	debugState = "Moving";
 
 	spd = lerp(spd, 0, speedDecay);
@@ -25,9 +25,8 @@ function scrProjectileStateMoving(){
 	}
 	
 	image_angle += -sign(velh) * spdMultiplier * spd * 4;
-}
-
-function scrProjectileStateSliding(){
-	verifyCollision(false);
-	debugState = "Sliding";
+	
+	if(bounces > maxBounces) {
+		instance_destroy();
+	}
 }

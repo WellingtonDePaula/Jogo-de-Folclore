@@ -26,7 +26,7 @@ drawSkipMessage = function() {
 		font_enable_sdf(font, true);
 		font_enable_effects(font, true, {
 			outlineEnable: true,
-			outlineDistance: 4,
+			outlineDistance: 2,
 			outlineColour: c_black,
 		});
 		

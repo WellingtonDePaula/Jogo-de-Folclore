@@ -1,7 +1,7 @@
 script_execute(state);
 
-scale = lerp(scale, 1, .01);
-image_xscale = scale;
-image_yscale = scale;
+if(scale <= .1) {
+	instance_destroy();
+}
 
 depth = -bbox_bottom;

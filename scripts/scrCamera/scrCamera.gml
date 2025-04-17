@@ -9,7 +9,7 @@ function setCamResolution(_cam, _width, _height, _scaleFactor) {
 function setCamScale(_cam, _scaleFactor) {
 	with(_cam) {
 		scaleFactor = _scaleFactor;
-		resolutionScale = (resolutionWidth + resolutionHeight) * scaleFactor;
+		resolutionScale = (resolutionWidth + resolutionHeight) / scaleFactor;
 		setCam();
 	}
 }

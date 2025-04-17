@@ -3,7 +3,8 @@ event_inherited();
 spdMultiplier = 2.5;
 damage = 1;
 mass = .08;
-colliders = [objWall];
+
+maxBounces = 2;
 
 toString = function() {
 	show_debug_message("TO VIVAO PAIZAO");

@@ -1,1 +1,1 @@
-//draw_text(20, 80, debugState);
+draw_text(20, 80, debugState);

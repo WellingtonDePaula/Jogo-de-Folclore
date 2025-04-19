@@ -3,8 +3,6 @@ function scrPlayerStateDash() {
 	
 	#region State Consequences
 	
-	isAiming = false;
-	
 	#endregion
 	
 	#region Change States

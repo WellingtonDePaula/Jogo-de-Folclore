@@ -61,8 +61,8 @@ stateSprites[PlayerMode.NORMAL][PlayerStates.DASH] = [sprPlayerDashFront, sprPla
 
 // CHARGING SLINGSHOT
 stateSprites[PlayerMode.USING_SLINGSHOT] = [];
-stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
-stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.MOVING] = [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
+stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.IDLE] = [sprPlayerIdleChargingFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
+stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.MOVING] = [sprPlayerIdleChargingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
 stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.SHOOT] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
 
 #endregion

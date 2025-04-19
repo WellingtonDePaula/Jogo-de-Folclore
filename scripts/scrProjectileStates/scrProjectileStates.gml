@@ -24,7 +24,7 @@ function scrProjectileStateMoving(){
 		state = scrProjectileStateIdle;
 	}
 	
-	image_angle += -sign(velh) * spdMultiplier * spd * 4;
+	image_angle += -sign(velh) * spd * 4 / mass;
 	
 	if(bounces > maxBounces) {
 		instance_destroy();

@@ -3,7 +3,6 @@ function scrPlayerStateUsingSlingshotShoot(){
 	
 	#region State Consequences
 	
-	isAiming = true;
 	velh = 0;
 	velv = 0;
 	

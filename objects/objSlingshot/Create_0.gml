@@ -1,14 +1,14 @@
 event_inherited();
 
-reloadTime = .01;
-
 strenghtCharged = 0;
 maxCharge = 2;
+minStrenght = .1;
 
 dir = 0;
 
+reloadTime = 0.02;
+
 resetCharge = function() {
-	Alarm[0] = ALARM_INACTIVE;
 	strenghtCharged = 0;
 }
 
@@ -25,7 +25,7 @@ charge = function() {
 
 shoot = function() {
 	with(weaponId) {
-		if(other.strenghtCharged >= 1 && inventoryItemAmount(inv, Ammo) > 0) {
+		if(other.strenghtCharged >= other.minStrenght && inventoryItemAmount(inv, Ammo) > 0) {
 			inventoryRemoveAmout(inv, Ammo, 1);
 			var ammoStruct = inventoryStruct(inv, Ammo);
 		
@@ -36,8 +36,8 @@ shoot = function() {
 			var bullet = instance_create_layer(xx, yy, "Tools", bulletType);
 			bullet.weaponId = self;
 	
-			var bulletMultiplier = bullet.spdMultiplier;
-			bullet.spd = other.strenghtCharged * bulletMultiplier;
+			var bulletMass = bullet.mass;
+			bullet.spd = other.strenghtCharged / bulletMass;
 		
 			bullet.direction = other.dir;
 			bullet.image_angle = other.dir;

@@ -21,7 +21,7 @@ options[MenuTypes.MAIN] = {
 		func: function() {
 			//room_goto(rmGame);
 			room_goto(rmCutscenes);
-			global.cutsceneManager.startCutscene(Cutscenes.NEW_GAME);
+			global.cutsceneManager.startFrameCutscene(FrameCutscenes.NEW_GAME);
 		},
 	},
 	

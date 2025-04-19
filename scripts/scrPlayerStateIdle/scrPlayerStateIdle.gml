@@ -3,8 +3,6 @@ function scrPlayerStateIdle(){
 	
 	#region State Consequences
 	
-	isAiming = false;
-	
 	velh = 0;
 	velv = 0;
 	

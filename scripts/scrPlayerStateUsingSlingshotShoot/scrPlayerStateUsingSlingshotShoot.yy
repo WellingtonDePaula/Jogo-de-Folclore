@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scrPlayerStateUsingSlingshotShoot",
   "parent":{
-    "name":"Charging",
-    "path":"folders/Scripts/Entities/Player/States/Slingshot/Charging.yy",
+    "name":"Slingshot",
+    "path":"folders/Scripts/Entities/Player/States/Slingshot.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,6 +5,7 @@ function scrPlayerStateUsingSlingshotMoving(){
 	
 	isAiming = true;
 	myWeapon.charge();
+	static charged = false;
 	
 	#endregion
 	
@@ -19,12 +20,13 @@ function scrPlayerStateUsingSlingshotMoving(){
 		stateMode = PlayerMode.NORMAL;
 		state = PlayerStates.DASH;
 		myWeapon.resetCharge();
+		charged = false;
 		dash();
 		return;
 	}
 	
 	if(!mouse_check_button(inputs.shoot)) {
-		if(myWeapon.strenghtCharged >= 1) {
+		if(myWeapon.strenghtCharged >= myWeapon.minStrenght) {
 			myWeapon.dir = point_direction(x, y, mouse_x, mouse_y);
 			state = PlayerStates.SHOOT;
 		} else {
@@ -32,6 +34,7 @@ function scrPlayerStateUsingSlingshotMoving(){
 			stateMode = PlayerMode.NORMAL;
 			state = PlayerStates.IDLE;
 		}
+		charged = false;
 		image_index = 0;
 		return;
 	}
@@ -40,11 +43,19 @@ function scrPlayerStateUsingSlingshotMoving(){
 	
 	#region Code
 	
+	if(!charged && image_index >= image_number -1) {
+		charged = true;
+	}
+	
 	var velocities = updatePlayerMovement(shootVel, inputs);
 	velh = velocities[0];
 	velv = velocities[1];
 	updatePlayerDirection();
 	updatePlayerSprite();
+	
+	if(charged) {
+		image_index = image_number-1;
+	}
 	
 	#endregion
 

@@ -4,7 +4,6 @@ damage = 0;
 
 scale = 1;
 
-spdMultiplier = 0;
 spd = 0;
 
 mass = 0;

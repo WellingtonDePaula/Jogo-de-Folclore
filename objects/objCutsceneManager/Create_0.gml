@@ -2,8 +2,9 @@ inputs = {
 	nextFrame: vk_space,
 }
 
-enum FrameCutscenes {
-	NEW_GAME,
+enum Cutscenes {
+	FRAME_NEW_GAME,
+	REAL_TEST,
 }
 
 enum FrameScenes {
@@ -15,24 +16,28 @@ enum FrameScenes {
 currentScene = undefined;
 
 scenes = [];
-scenes[FrameCutscenes.NEW_GAME][FrameScenes.ROOM] = rmCucaJail;
-scenes[FrameCutscenes.NEW_GAME][FrameScenes.SCENE] = [sprNewGameCutscene, 1.5]
-scenes[FrameCutscenes.NEW_GAME][FrameScenes.FADE_ATTRIBUTES] = {
-	alpha: 1,
-	minAlpha: 0,
-	blackScreenTime: 1,
-	fadeTime: 1,
-}
+scenes[Cutscenes.FRAME_NEW_GAME] = new frameCutscene(rmCucaJail, sprNewGameCutscene, 1.5, 1, 0, 1, 1);
+
+var _first = realScene(
+		new realEntity(objPlayer, 0, 1, 2),
+	);
+var _second = realScene(
+		new realEntity(objPlayer, 90, 1, 2),
+	);
+scenes[Cutscenes.REAL_TEST] = realCutscene(
+	_first,
+	_second,
+);
 
 startFrameCutscene = function(_cutscene) {
 	currentScene = instance_create_layer(0, 0, "GUI", objFrameCutscene);
 	with(currentScene) {
 		var scenes = other.scenes;
 		manager = other;
-		roomTarget = scenes[_cutscene][FrameScenes.ROOM];
-		sceneArray = scenes[_cutscene][FrameScenes.SCENE];
+		roomTarget = scenes[_cutscene].targetRoom;
+		sceneArray = scenes[_cutscene].scene;
 	
-		var attributes = scenes[FrameCutscenes.NEW_GAME][FrameScenes.FADE_ATTRIBUTES];
+		var attributes = scenes[Cutscenes.FRAME_NEW_GAME].fadeAtribbutes;
 		var keys = variable_struct_get_names(attributes);
 		
 		//Loop para atribuir os valores da estrutura contida em attributes á instância
@@ -47,6 +52,9 @@ startFrameCutscene = function(_cutscene) {
 	}
 }
 
+startRealCutscene = function(_cutscene) {
+		
+}
 //Alarms
 for(var i = 0; i < 12; i++) {
 	Alarm[i] = ALARM_INACTIVE;

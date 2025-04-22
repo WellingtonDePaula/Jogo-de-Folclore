@@ -19,9 +19,8 @@ options[MenuTypes.MAIN] = {
 	option2: {
 		text: "New Game",
 		func: function() {
-			//room_goto(rmGame);
 			room_goto(rmCutscenes);
-			global.cutsceneManager.startFrameCutscene(FrameCutscenes.NEW_GAME);
+			global.cutsceneManager.startFrameCutscene(Cutscenes.FRAME_NEW_GAME);
 		},
 	},
 	
@@ -29,7 +28,6 @@ options[MenuTypes.MAIN] = {
 		text: "Play Test",
 		func: function() {
 			room_goto(rmTest);
-			
 		},
 	},
 	

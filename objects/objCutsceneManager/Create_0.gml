@@ -19,11 +19,14 @@ scenes = [];
 scenes[Cutscenes.FRAME_NEW_GAME] = new frameCutscene(rmCucaJail, sprNewGameCutscene, 1.5, 1, 0, 1, 1);
 
 var _first = realScene(
-		new realEntity(objPlayer, 0, 1, 2),
-	);
+	new realEntity(objPlayer, 0, 1, 2),
+	new realEntity(objTest, 270, 1.5, 0.5),
+);
+
 var _second = realScene(
-		new realEntity(objPlayer, 90, 1, 2),
-	);
+	new realEntity(objPlayer, 90, 1, 2),
+);
+
 scenes[Cutscenes.REAL_TEST] = realCutscene(
 	_first,
 	_second,
@@ -53,7 +56,12 @@ startFrameCutscene = function(_cutscene) {
 }
 
 startRealCutscene = function(_cutscene) {
-		
+	var scene = scenes[_cutscene];
+	currentScene = instance_create_layer(0, 0, "GameController", objRealCutscene);
+	with(currentScene) {
+		steps = scene;
+		manager = other;
+	}
 }
 //Alarms
 for(var i = 0; i < 12; i++) {

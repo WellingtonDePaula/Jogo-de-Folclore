@@ -1,0 +1,1 @@
+steps[current][index[0]].finished = true;

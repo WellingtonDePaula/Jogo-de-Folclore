@@ -3,12 +3,16 @@ function scrPlayerStateDash() {
 	
 	#region State Consequences
 	
+	isAiming = false;
+	static spriteChanged = false;
+	
 	#endregion
 	
 	#region Change States
 	
 	if(image_index >= image_number -1) {
 		spriteChanged = false;
+		inAction = false;
 		state = PlayerStates.IDLE;
 		return;
 	}
@@ -16,8 +20,6 @@ function scrPlayerStateDash() {
 	#endregion
 	
 	#region Code
-	
-	static spriteChanged = false;
 
 	velh =  velhDash - (velhDash/image_number) * image_index;
 	velv = velvDash - (velvDash/image_number) * image_index;

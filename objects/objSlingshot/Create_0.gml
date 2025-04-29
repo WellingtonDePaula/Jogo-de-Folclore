@@ -37,7 +37,8 @@ shoot = function() {
 			bullet.weaponId = self;
 	
 			var bulletMass = bullet.mass;
-			bullet.spd = other.strenghtCharged / bulletMass;
+			//bullet.spd = (other.strenghtCharged / bulletMass) +;
+			bullet.spd = (other.strenghtCharged / bulletMass);
 		
 			bullet.direction = other.dir;
 			bullet.image_angle = other.dir;

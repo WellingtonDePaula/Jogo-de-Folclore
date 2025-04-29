@@ -18,8 +18,6 @@ function scrPlayerStateUsingSlingshotIdle(){
 	}
 	
 	if(keyboard_check_pressed(inputs.dash) && canDash) {
-		stateMode = PlayerMode.NORMAL;
-		state = PlayerStates.DASH;
 		isAiming = false;
 		myWeapon.resetCharge();
 		charged = false

@@ -3,32 +3,38 @@ function scrPlayerStateIdle(){
 	
 	#region State Consequences
 	
-	velh = 0;
-	velv = 0;
+	isAiming = false;
 	
 	#endregion
 	
 	#region Change States
 	
-	if(checkMoveInput(inputs)[0]) {
+	
+	if(velh != 0 || velv != 0) {
 		state = PlayerStates.MOVING;
 		return;
 	}
+	if(!cutsceneRunning) {
+		if(keyboard_check_pressed(inputs.dash) && canDash) {
+			dash();
+			return;
+		}
 	
-	if(keyboard_check_pressed(inputs.dash) && canDash) {
-		state = PlayerStates.DASH;
-		dash();
-		return;
-	}
-	
-	if(mouse_check_button(inputs.shoot) && myWeapon != noone && inventoryItemAmount(inv, Ammo) > 0) {
-		stateMode = PlayerMode.USING_SLINGSHOT;
-		return;
+		if(mouse_check_button(inputs.shoot) && myWeapon != noone && inventoryItemAmount(inv, Ammo) > 0) {
+			stateMode = PlayerMode.USING_SLINGSHOT;
+			return;
+		}
 	}
 	
 	#endregion
 	
 	#region Code
+	
+	if(!cutsceneRunning) {
+		var velocities = updatePlayerMovement(normalVel, inputs);
+		velh = velocities[0];
+		velv = velocities[1];
+	}
 	
 	updatePlayerDirection();
 	updatePlayerSprite();

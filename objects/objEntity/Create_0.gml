@@ -5,9 +5,13 @@ statePrevious = {
 	sprite: undefined,
 };
 
+inAction = false;
+
 stateScripts = [];
 stateSprites = [];
 stateDebug = "";
+
+cutsceneRunning = false;
 
 normalVel = 0;
 velh = 0;

@@ -49,7 +49,7 @@ function updatePlayerDirection() {
 	down = keyboard_check(inputs.down);
 	up = keyboard_check(inputs.up);
 	
-	keys = right - left != 0 || down - up != 0;
+	//keys = right - left != 0 || down - up != 0;
 	static dir = 0;
 	
 	switch(isAiming) {
@@ -63,13 +63,15 @@ function updatePlayerDirection() {
 			isSide = true;
 			break;
 		case false:
-			dir = point_direction(0, 0, right - left, down - up);
-			if(keys) {
+			dir = point_direction(0, 0, sign(velh), sign(velv));
+			//show_debug_message(dir);
+			//if(keys) {
+			if(velh != 0) {
 				if(dcos(dir) != 0) {
 					isSide = true;
-				} else {
-					isSide = false;
 				}
+			} else if(velv != 0) {
+				isSide = false;
 			}
 			break;
 	}
@@ -112,32 +114,31 @@ function updatePlayerSprite() {
 }
 
 function dash() {
-	var moveInputs = checkMoveInput(inputs);
-	var dir = moveInputs[1];
-	if(!moveInputs[0]) {
-		if(isSide) {
-			if(image_xscale > 0) {
-				dir = 0;
-			} else {
-				dir = 180;
-			}
+	with(objPlayer) {
+		stateMode = PlayerMode.NORMAL;
+		state = PlayerStates.DASH;
+		inAction = true;
+		var dir = 0;
+		if(argument[0] == undefined) {
+			var moveInputs = checkMoveInput(inputs);
+			dir = moveInputs[1];
 		} else {
-			switch(facing) {
-				case "front":
-					dir = 270;
-					break;
-				case "back":
-					dir = 90;
-					break;
-			}
+			dir = argument[0];
 		}
+		var vel2 = 0;
+	
+		if(argument[1] != undefined) {
+			vel2 = argument[1]
+		} else {
+			vel2 = velDash;
+		}
+		velh = lengthdir_x(vel2, dir);
+		velv = lengthdir_y(vel2, dir);
+		velhDash = velh;
+		velvDash = velv;
+		canDash = false;
+		image_index = 0;
+		//Ativa o timer para resetar a variavel do dash
+		Alarm[0] = dashRechargeTime * FPS;
 	}
-	velh = lengthdir_x(velDash, dir);
-	velv = lengthdir_y(velDash, dir);
-	velhDash = velh;
-	velvDash = velv;
-	canDash = false;
-	image_index = 0;
-	//Ativa o timer para resetar a variavel do dash
-	Alarm[0] = dashRechargeTime * FPS;
 }

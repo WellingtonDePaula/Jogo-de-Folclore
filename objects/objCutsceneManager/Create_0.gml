@@ -19,17 +19,21 @@ scenes = [];
 scenes[Cutscenes.FRAME_NEW_GAME] = new frameCutscene(rmCucaJail, sprNewGameCutscene, 1.5, 1, 0, 1, 1);
 
 var _first = realScene(
-	new realEntity(objPlayer, 0, 1, 2),
-	new realEntity(objTest, 270, 1.5, 0.5),
+	new realEntity(objPlayer, 315, 2, 1),
 );
 
 var _second = realScene(
-	new realEntity(objPlayer, 90, 1, 2),
+	new realEntity(objPlayer, 0, 2.5, 0, dash),
+);
+
+var _third = realScene(
+	new realEntity(objPlayer, 0, 2, 2),
 );
 
 scenes[Cutscenes.REAL_TEST] = realCutscene(
 	_first,
 	_second,
+	_third,
 );
 
 startFrameCutscene = function(_cutscene) {

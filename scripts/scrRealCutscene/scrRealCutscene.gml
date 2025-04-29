@@ -3,6 +3,7 @@ function realEntity(_entity, _direction, _vel, _time) constructor {
 	dir = _direction;
 	vel = _vel;
 	time = _time;
+	func = argument[4];
 	finished = false;
 }
 

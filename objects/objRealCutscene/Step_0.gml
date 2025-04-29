@@ -2,19 +2,24 @@ if(steps != undefined) {
 	var finished = [];
 	if(current < array_length(steps)) {
 		for(var i = 0; i < array_length(steps[current]); i++) {
+			show_debug_message(array_length(steps[current]));
 			var step = steps[current][i];
 			var entity = step.entity;
 			if(step.finished && !entity.inAction) {
 				finished[i] = true;
+				entity.velh = 0;
+				entity.velv = 0;
 				continue
 			}
 			finished[i] = false;
 			entity.cutsceneRunning = true;
 
-		//show_debug_message(Alarm[i]);
 			if(Alarm[i] == ALARM_INACTIVE) {
-				Alarm[i] = step.time * FPS;
-				array_push(index, i);
+				if (!array_contains(index, i)) {
+					setPos(step, entity);
+					Alarm[i] = step.time * FPS;
+					array_push(index, i);
+				}
 			}
 			if(!entity.inAction) {
 				entity.velh = lengthdir_x(step.vel, step.dir);
@@ -24,6 +29,7 @@ if(steps != undefined) {
 		//show_debug_message(finished);
 		if(!array_contains(finished, false)) {
 			current ++;
+			index = [];
 		}
 	} else {
 		for(var i = 0; i < array_length(steps); i++) {

@@ -108,6 +108,7 @@
     {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
     {"id":{"name":"scrCamera","path":"scripts/scrCamera/scrCamera.yy",},},
     {"id":{"name":"scrCameraStates","path":"scripts/scrCameraStates/scrCameraStates.yy",},},
+    {"id":{"name":"scrCutscenes","path":"scripts/scrCutscenes/scrCutscenes.yy",},},
     {"id":{"name":"scrEntityFunctions","path":"scripts/scrEntityFunctions/scrEntityFunctions.yy",},},
     {"id":{"name":"scrFrameCutscene","path":"scripts/scrFrameCutscene/scrFrameCutscene.yy",},},
     {"id":{"name":"scrGlobal","path":"scripts/scrGlobal/scrGlobal.yy",},},

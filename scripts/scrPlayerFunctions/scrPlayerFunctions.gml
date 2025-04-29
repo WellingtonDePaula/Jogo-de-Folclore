@@ -123,12 +123,12 @@ function dash() {
 			var moveInputs = checkMoveInput(inputs);
 			dir = moveInputs[1];
 		} else {
-			dir = argument[0][0];
+			dir = argument[0];
 		}
 		var vel2 = 0;
 	
 		if(argument[1] != undefined) {
-			vel2 = argument[0][1];
+			vel2 = argument[1];
 		} else {
 			vel2 = velDash;
 		}

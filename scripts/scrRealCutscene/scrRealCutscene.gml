@@ -1,11 +1,13 @@
-function realEntity(_entity, _direction, _vel, _time) constructor {
-	entity = _entity;
-	dir = _direction;
-	vel = _vel;
-	time = _time;
-	func = argument[4];
-	funcArguments = argument[5];
-	finished = false;
+function realEntity(_object, _vel, _dir, _time, _x = undefined, _y = undefined, _func = undefined, _args = []) constructor {
+    entity = _object;
+    x = _x;
+    y = _y;
+    time = _time;
+    func = _func;
+    funcArguments = _args;
+    vel = _vel;
+	dir = _dir;
+    finished = false;
 }
 
 function realScene() {

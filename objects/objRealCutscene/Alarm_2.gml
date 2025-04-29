@@ -7,7 +7,7 @@ if(step.func != undefined) {
 	var dir = step.dir;
 	var vel = step.vel;
 	//show_message("a")
-	step.func(dir, vel);
+	step.func(step.funcArguments);
 	step.finished = true;
 	}
 } else {

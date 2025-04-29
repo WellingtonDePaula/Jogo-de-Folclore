@@ -16,8 +16,10 @@ if(steps != undefined) {
 				Alarm[i] = step.time * FPS;
 				array_push(index, i);
 			}
-			entity.velh = lengthdir_x(step.vel, step.dir);
-			entity.velv = lengthdir_y(step.vel, step.dir);
+			if(!entity.inAction) {
+				entity.velh = lengthdir_x(step.vel, step.dir);
+				entity.velv = lengthdir_y(step.vel, step.dir);
+			}
 		}
 		//show_debug_message(finished);
 		if(!array_contains(finished, false)) {

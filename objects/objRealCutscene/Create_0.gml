@@ -19,14 +19,10 @@ handleStepExecution = function(stepIndex) {
 }
 
 setPos = function(_step, _entity) {
-	if(_step.x == undefined) {
-		_entity.x = _entity.x;
-	} else {
+	if(_step.x != undefined) {
 		_entity.x = _step.x;
 	}
-	if(_step.y == undefined) {
-		_entity.y = _entity.y;
-	} else {
+	if(_step.y != undefined) {
 		_entity.y = _step.y;
 	}
 }

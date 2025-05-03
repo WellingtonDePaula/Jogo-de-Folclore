@@ -1,0 +1,4 @@
+event_inherited();
+
+dialog.add(sprMulaIdle, "lá, aventureiro! Seja bem-vindo ao nosso vilarejo. Aqui, você encontrará uma grande variedade de tarefas e missões para completar. Não se esqueça de conversar com os moradores para obter mais informações sobre oque precisa ser feito. Lembre-se de que o tempo é precioso e, quanto mais rápido você concluir as missões, mais recompensas poderá ganhar. Tome cuidado com os monstros nas florestas ao redor, eles têm se mostrado mais agressivos nos últimos dias. Boa sorte e que sua jornada seja repleta de grandes aventuras!");
+dialog.add(sprMulaIdle, "Bosta");

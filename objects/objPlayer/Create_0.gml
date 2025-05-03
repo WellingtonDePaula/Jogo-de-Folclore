@@ -28,6 +28,7 @@ isAiming = false;
 enum PlayerMode {
     NORMAL,
 	USING_SLINGSHOT,
+	DIALOG,
 }
 
 enum PlayerStates {

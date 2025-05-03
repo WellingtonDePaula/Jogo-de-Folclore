@@ -12,7 +12,7 @@ function scrPlayerStateUsingSlingshotShoot(){
 	
 	if(image_index >= image_number -1) {
 		myWeapon.shoot();
-		inAction = false;
+		isPaused = false;
 		stateMode = PlayerMode.NORMAL;
 		state = PlayerStates.IDLE;
 	}

@@ -117,7 +117,7 @@ function dash() {
 	with(objPlayer) {
 		stateMode = PlayerMode.NORMAL;
 		state = PlayerStates.DASH;
-		inAction = true;
+		isPaused = true;
 		var dir = 0;
 		if(argument[0] == undefined) {
 			var moveInputs = checkMoveInput(inputs);

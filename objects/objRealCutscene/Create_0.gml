@@ -8,6 +8,10 @@ current = 0;
 sceneEnded = false;
 index = [];
 
+if(instance_number(objRealCutscene) > 1) {
+	instance_destroy();
+}
+
 handleStepExecution = function(stepIndex) {
     var step = steps[current][index[stepIndex]];
     if (!step.finished) {

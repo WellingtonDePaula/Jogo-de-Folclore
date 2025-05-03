@@ -5,7 +5,7 @@ if(steps != undefined) {
 			show_debug_message(array_length(steps[current]));
 			var step = steps[current][i];
 			var entity = step.entity;
-			if(step.finished && !entity.inAction) {
+			if(step.finished && !entity.isPaused) {
 				finished[i] = true;
 				entity.velh = 0;
 				entity.velv = 0;
@@ -21,7 +21,7 @@ if(steps != undefined) {
 					array_push(index, i);
 				}
 			}
-			if(!entity.inAction) {
+			if(!entity.isPaused) {
 				entity.velh = lengthdir_x(step.vel, step.dir);
 				entity.velv = lengthdir_y(step.vel, step.dir);
 			}

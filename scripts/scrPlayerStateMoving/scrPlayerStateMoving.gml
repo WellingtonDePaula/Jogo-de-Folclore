@@ -14,7 +14,7 @@ function scrPlayerStateMoving(){
 		return;
 	}
 	
-	if(!cutsceneRunning) {
+	if(!cutsceneRunning && !isPaused) {
 		if(keyboard_check_pressed(inputs.dash) && canDash) {
 			dash();
 			return;
@@ -30,7 +30,7 @@ function scrPlayerStateMoving(){
 	
 	#region Code
 	
-	if(!cutsceneRunning) {
+	if(!cutsceneRunning && !isPaused) {
 		var velocities = updatePlayerMovement(normalVel, inputs);
 		velh = velocities[0];
 		velv = velocities[1];

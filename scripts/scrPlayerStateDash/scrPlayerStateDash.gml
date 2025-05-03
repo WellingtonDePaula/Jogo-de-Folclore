@@ -12,7 +12,7 @@ function scrPlayerStateDash() {
 	
 	if(image_index >= image_number -1) {
 		spriteChanged = false;
-		inAction = false;
+		isPaused = false;
 		state = PlayerStates.IDLE;
 		return;
 	}

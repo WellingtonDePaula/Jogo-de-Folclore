@@ -1,4 +1,4 @@
-function realEntity(_object, _vel, _dir, _time, _x = undefined, _y = undefined, _func = undefined, _args = []) constructor {
+function RealEntity(_object, _vel, _dir, _time, _x = undefined, _y = undefined, _func = undefined, _args = []) constructor {
     entity = _object;
     x = _x;
     y = _y;

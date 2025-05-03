@@ -5,7 +5,7 @@ statePrevious = {
 	sprite: undefined,
 };
 
-inAction = false;
+isPaused = false;
 
 stateScripts = [];
 stateSprites = [];

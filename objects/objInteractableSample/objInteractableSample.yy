@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"objinteractable",
+  "%Name":"objInteractableSample",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objinteractable",
+  "name":"objInteractableSample",
   "overriddenProperties":[],
   "parent":{
-    "name":"Parents",
-    "path":"folders/Objetos/Environment/Parents.yy",
+    "name":"Interactables",
+    "path":"folders/Objetos/Environment/Interactables.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objinteractable",
+    "path":"objects/objinteractable/objinteractable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprInteractableSample",
+    "path":"sprites/sprInteractableSample/sprInteractableSample.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

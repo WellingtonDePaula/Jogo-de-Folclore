@@ -10,14 +10,14 @@ options = [];
 options[MenuTypes.MAIN] = {
 	
 	option1: {
-		text: "Play",
+		text: "Jogar",
 		func: function() {
 			room_goto(rmCucaJail);
 		},
 	},
 	
 	option2: {
-		text: "New Game",
+		text: "Novo Jogo",
 		func: function() {
 			room_goto(rmCutscenes);
 			global.cutsceneManager.startFrameCutscene(Cutscenes.FRAME_NEW_GAME);
@@ -25,14 +25,14 @@ options[MenuTypes.MAIN] = {
 	},
 	
 	option3: {
-		text: "Play Test",
+		text: "Desenvolvedor",
 		func: function() {
 			room_goto(rmTest);
 		},
 	},
 	
 	option4: {
-		text: "Options",
+		text: "Opções",
 		func: function() {
 			with(objMenu) {
 				lastMenu = MenuTypes.MAIN;
@@ -43,7 +43,7 @@ options[MenuTypes.MAIN] = {
 	},
 	
 	option5: {
-		text: "Quit",
+		text: "Sair",
 		func: function() {
 			game_end();
 		},
@@ -65,7 +65,7 @@ options[MenuTypes.OPTIONS] = {
 	},
 	
 	option3: {
-		text: "Back",
+		text: "Voltar",
 		func: function() {
 			with(objMenu) {
 				currentMenu = lastMenu;

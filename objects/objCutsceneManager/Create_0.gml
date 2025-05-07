@@ -24,7 +24,6 @@ var _1 = realScene(
 
 var _2 = realScene(
 	new RealEntity(objPlayer,1.5, 45, 1),
-	new RealEntity(objTest, .5, 90, 2),
 );
 
 var _3 = realScene(

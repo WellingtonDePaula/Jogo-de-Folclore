@@ -4,6 +4,7 @@ function scrPlayerStateIdle(){
 	#region State Consequences
 	
 	isAiming = false;
+	canInteract = true;
 	
 	#endregion
 	
@@ -16,6 +17,7 @@ function scrPlayerStateIdle(){
 	}
 	if(!cutsceneRunning && !isPaused) {
 		if(keyboard_check_pressed(inputs.dash) && canDash) {
+			canInteract = false;
 			dash();
 			return;
 		}

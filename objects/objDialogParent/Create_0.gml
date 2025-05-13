@@ -4,6 +4,8 @@ if(instance_number(objDialogParent) > 1) {
 
 dialog = new Dialogue(objPlayer, objTest);
 
+objPlayer.stop();
+
 keyNext = vk_space;
 
 showingDialog = false;

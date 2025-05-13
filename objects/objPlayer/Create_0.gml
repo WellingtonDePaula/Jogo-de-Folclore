@@ -13,7 +13,7 @@ velDash = 2.5;
 dashRechargeTime = 0;
 canDash = true;
 
-facing = "front";
+facing = 1;
 isSide = false;
 
 inv = ds_list_create();
@@ -36,6 +36,7 @@ enum PlayerStates {
     MOVING,
     DASH,
 	SHOOT,
+	INTERACT,
 }
 
 #region Scripts

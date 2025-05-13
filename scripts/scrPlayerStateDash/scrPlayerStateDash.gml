@@ -4,6 +4,7 @@ function scrPlayerStateDash() {
 	#region State Consequences
 	
 	isAiming = false;
+	canInteract = false;
 	static spriteChanged = false;
 	
 	#endregion

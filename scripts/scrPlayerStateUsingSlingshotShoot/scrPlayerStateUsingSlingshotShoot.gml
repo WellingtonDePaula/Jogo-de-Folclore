@@ -5,6 +5,7 @@ function scrPlayerStateUsingSlingshotShoot(){
 	
 	velh = 0;
 	velv = 0;
+	canInteract = false;
 	
 	#endregion
 	

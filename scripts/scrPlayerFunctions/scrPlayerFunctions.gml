@@ -77,26 +77,26 @@ function updatePlayerDirection() {
 	}
 	
 	if(dsin(dir) < 0) {
-		facing = "front";
+		facing = 1;
 	}
 	if(dsin(dir) > 0) {
-		facing = "back";
+		facing = -1;
 	}
 }
 
 function getIndexForSprite() {
 	if(!isSide) {
-		if(facing == "front") {
+		if(facing == 1) {
 			return 0;
 		}
-		if(facing == "back") {
+		if(facing == -1) {
 			return 2;
 		}
 	}
-	if(facing == "front") {
+	if(facing == 1) {
 		return 1;
 	}
-	if(facing == "back") {
+	if(facing == -1) {
 		return 3;
 	}
 }
@@ -120,8 +120,17 @@ function dash() {
 		isPaused = true;
 		var dir = 0;
 		if(argument[0] == undefined) {
-			var moveInputs = checkMoveInput(inputs);
-			dir = moveInputs[1];
+			
+			if(velh == 0 && velv == 0) {
+				if(isSide) {
+					dir = point_direction(0, 0, image_xscale, 0);
+				} else {
+					dir = point_direction(0, 0, 0, facing);
+				}	
+			} else {
+				var moveInputs = checkMoveInput(inputs);
+				dir = moveInputs[1];
+			}
 		} else {
 			dir = argument[0];
 		}
@@ -140,5 +149,6 @@ function dash() {
 		image_index = 0;
 		//Ativa o timer para resetar a variavel do dash
 		Alarm[0] = dashRechargeTime * FPS;
+		show_debug_message(dir);
 	}
 }

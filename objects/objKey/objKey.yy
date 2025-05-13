@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"objinteractable",
+  "%Name":"objKey",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objinteractable",
+  "name":"objKey",
   "overriddenProperties":[],
   "parent":{
-    "name":"Parents",
-    "path":"folders/Objetos/Environment/Parents.yy",
+    "name":"Items",
+    "path":"folders/Objetos/Items.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objItem",
+    "path":"objects/objItem/objItem.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprKey",
+    "path":"sprites/sprKey/sprKey.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -28,8 +28,8 @@ function inventoryRemoveAmout(_inv, _type, _amount) {
 		var item = inventoryStruct(_inv, _type);
 		var i = ds_list_find_index(_inv, item);
 		item.RemoveAmount(_amount);
-		ds_list_insert(_inv, i, item);
 	}
+	
 	//return _inv;
 }
 
@@ -38,7 +38,6 @@ function inventoryAddAmout(_inv, _type, _amount) {
 		var item = inventoryStruct(_inv, _type);
 		var i = ds_list_find_index(_inv, item);
 		item.AddAmount(_amount);
-		ds_list_insert(_inv, i, item);
 	}
 	
 	//return _inv;

@@ -14,3 +14,6 @@ function Item(_obj,  _amount, _maxAmount) constructor {
 }
 
 function Ammo(_obj,  _amount, _maxAmount) : Item(_obj,  _amount, _maxAmount) constructor {}
+
+
+function Key(_obj,  _amount, _maxAmount) : Item(_obj,  _amount, _maxAmount) constructor {}

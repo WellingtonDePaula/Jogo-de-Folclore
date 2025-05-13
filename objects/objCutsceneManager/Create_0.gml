@@ -23,15 +23,21 @@ var _1 = realScene(
 );
 
 var _2 = realScene(
-	new RealEntity(objPlayer,1.5, 45, 1),
+	new RealEntity(objPlayer, 0, 0, 1.2),
 );
 
 var _3 = realScene(
-	new RealEntity(objPlayer, 0, 0, 0, undefined, undefined, dash, [0, 2.5]),
+	new RealEntity(objPlayer, 1.5, 315, .5, undefined, undefined, function() {
+		instance_create_layer(0, 0, "GameController", objDialogSample);
+	}),
 );
 
 var _4 = realScene(
-	new RealEntity(objPlayer, 1.5, 90, 2),
+	new RealEntity(objPlayer, 0, 0, 0, undefined, undefined, dash, [0, 2.5]),
+);
+
+var _5 = realScene(
+	new RealEntity(objPlayer, 1.5, 270, 1),
 );
 
 scenes[Cutscenes.REAL_TEST] = realCutscene(
@@ -39,6 +45,7 @@ scenes[Cutscenes.REAL_TEST] = realCutscene(
 	_2,
 	_3,
 	_4,
+	_5,
 );
 
 startFrameCutscene = function(_cutscene) {

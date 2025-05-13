@@ -2,7 +2,6 @@ if(steps != undefined) {
 	var finished = [];
 	if(current < array_length(steps)) {
 		for(var i = 0; i < array_length(steps[current]); i++) {
-			show_debug_message(array_length(steps[current]));
 			var step = steps[current][i];
 			var entity = step.entity;
 			if(step.finished && !entity.isPaused) {
@@ -13,7 +12,7 @@ if(steps != undefined) {
 			}
 			finished[i] = false;
 			entity.cutsceneRunning = true;
-
+			
 			if(Alarm[i] == ALARM_INACTIVE) {
 				if (!array_contains(index, i)) {
 					setPos(step, entity);

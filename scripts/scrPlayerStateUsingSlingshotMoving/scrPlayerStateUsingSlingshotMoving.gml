@@ -4,6 +4,7 @@ function scrPlayerStateUsingSlingshotMoving(){
 	#region State Consequences
 	
 	isAiming = true;
+	canInteract = false;
 	myWeapon.charge();
 	static charged = false;
 	

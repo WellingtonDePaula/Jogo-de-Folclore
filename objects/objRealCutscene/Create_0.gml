@@ -2,6 +2,8 @@ manager = undefined;
 
 steps = undefined;
 
+posFixed = [];
+
 current = 0;
 //steps[currentScene][currentEntity]
 

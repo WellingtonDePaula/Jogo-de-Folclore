@@ -33,7 +33,7 @@ function Dialogue() constructor {
 	
 	finish = function() {
 		for(var i = 0; i < array_length(participants); i++) {
-			participants[i].isPaused = false;
+			participants[i].isPaused = false; 
 		}
 	}
 }

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateCutsceneMoving",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateCutsceneMoving",
+  "parent":{
+    "name":"Cutscene",
+    "path":"folders/Scripts/Entities/Player/States/Cutscene.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateCutsceneGettingUp",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateCutsceneGettingUp",
+  "parent":{
+    "name":"Cutscene",
+    "path":"folders/Scripts/Entities/Player/States/Cutscene.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

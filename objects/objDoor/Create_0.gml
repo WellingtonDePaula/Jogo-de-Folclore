@@ -1,5 +1,9 @@
 event_inherited();
 
+open = function() {
+	
+}
+
 open = false;
 
 spd = image_speed;

@@ -37,3 +37,7 @@ function Dialogue() constructor {
 		}
 	}
 }
+
+function startDialog(_dialog) {
+	instance_create_layer(0, 0, "GameController", _dialog);
+}

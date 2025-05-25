@@ -4,10 +4,29 @@ if(steps != undefined) {
 		for(var i = 0; i < array_length(steps[current]); i++) {
 			var step = steps[current][i];
 			var entity = step.entity;
+			
+			if(step.state != undefined) {
+				var _mode = step.state.mode;
+				var _state = step.state.state;
+			
+				with(entity) {
+					stateMode = _mode;
+					state = _state;
+				}
+			}
 			if(step.finished && !entity.isPaused) {
 				finished[i] = true;
 				entity.velh = 0;
 				entity.velv = 0;
+				if(step.state != undefined) {
+					var _mode = step.state.defaultMode;
+					var _state = step.state.defaultState;
+					with(entity) {
+						stateMode = _mode;
+						state = _state;
+					}
+				}
+
 				continue
 			}
 			finished[i] = false;

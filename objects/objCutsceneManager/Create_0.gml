@@ -5,6 +5,7 @@ inputs = {
 enum Cutscenes {
 	FRAME_NEW_GAME,
 	REAL_TEST,
+	REAL_FIRST_CUCA_JAIL,
 }
 
 enum FrameScenes {
@@ -18,35 +19,73 @@ currentScene = undefined;
 scenes = [];
 scenes[Cutscenes.FRAME_NEW_GAME] = new frameCutscene(rmCucaJail, sprNewGameCutscene, 1.5, 1, 0, 1, 1);
 
+#region realTestCutscene
+
 var _1 = realScene(
-	new RealEntity(objPlayer, 1.5, 0, 1),
+	new RealEntity(objPlayer, new State(
+		PlayerMode.CUTSCENE,
+		PlayerStates.MOVING,
+		PlayerMode.NORMAL,
+		PlayerStates.IDLE
+	), 1.5, 0, 1),
 );
-
 var _2 = realScene(
-	new RealEntity(objPlayer, 0, 0, 1.2),
+	new RealEntity(objPlayer, new State(
+		PlayerMode.CUTSCENE,
+		PlayerStates.IDLE,
+		PlayerMode.NORMAL,
+		PlayerStates.IDLE
+	), .5, 0, 1.5),
 );
-
 var _3 = realScene(
-	new RealEntity(objPlayer, 1.5, 315, .5, undefined, undefined, function() {
-		instance_create_layer(0, 0, "GameController", objDialogSample);
-	}),
-);
-
-var _4 = realScene(
-	new RealEntity(objPlayer, 0, 0, 0, undefined, undefined, dash, [0, 2.5]),
-);
-
-var _5 = realScene(
-	new RealEntity(objPlayer, 1.5, 270, 1),
+	new RealEntity(objPlayer, undefined, 0, 0, 1, undefined, undefined, dash, [0, 2.5]),
 );
 
 scenes[Cutscenes.REAL_TEST] = realCutscene(
 	_1,
 	_2,
 	_3,
-	_4,
-	_5,
 );
+
+#endregion
+
+#region realFirstCucaJail
+
+_1 = realScene(
+	new RealEntity(objPlayer, new State(
+		PlayerMode.CUTSCENE,
+		PlayerStates.CRYING,
+		PlayerMode.NORMAL,
+		PlayerStates.IDLE
+	), 0, 0, 4)
+	//new RealEntity(objPlayer, 0, 0, 1.2, undefined, undefined, startDialog, [objDialogSample]),
+);
+
+_2 = realScene(
+	new RealEntity(objPlayer, new State(
+		PlayerMode.CUTSCENE,
+		PlayerStates.GETTING_UP,
+		PlayerMode.NORMAL,
+		PlayerStates.IDLE
+	), 0, 0, 0)
+);
+
+_3 = realScene(
+	new RealEntity(objPlayer, new State(
+		PlayerMode.CUTSCENE,
+		PlayerStates.IDLE,
+		PlayerMode.NORMAL,
+		PlayerStates.IDLE
+	), 0, 0, 1.2)
+)
+
+scenes[Cutscenes.REAL_FIRST_CUCA_JAIL] = realCutscene(
+	_1,
+	_2,
+	_3
+);
+
+#endregion
 
 startFrameCutscene = function(_cutscene) {
 	currentScene = instance_create_layer(0, 0, "GUI", objFrameCutscene);

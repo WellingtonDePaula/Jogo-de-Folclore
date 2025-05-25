@@ -7,6 +7,8 @@ switch(room) {
 			setCamScale(global.cam, global.ScaleFactors.CUCA_JAIL);
 			setCamState(self, CameraStates.STATIC);
 		}
+		
+		global.cutsceneManager.startRealCutscene(Cutscenes.REAL_FIRST_CUCA_JAIL);
 		break;
 
 	case rmTest:

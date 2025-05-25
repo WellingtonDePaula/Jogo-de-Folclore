@@ -10,9 +10,10 @@ options = [];
 options[MenuTypes.MAIN] = {
 	
 	option1: {
-		text: "Jogar",
+		text: "Continuar",
 		func: function() {
-			room_goto(rmCucaJail);
+			var rm = loadGame();
+			room_goto(rm);
 		},
 	},
 	

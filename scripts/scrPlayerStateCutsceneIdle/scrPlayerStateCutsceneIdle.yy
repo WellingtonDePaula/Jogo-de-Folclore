@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateCutsceneIdle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateCutsceneIdle",
+  "parent":{
+    "name":"Cutscene",
+    "path":"folders/Scripts/Entities/Player/States/Cutscene.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

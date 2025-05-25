@@ -27,6 +27,7 @@ isAiming = false;
 #region States
 enum PlayerMode {
     NORMAL,
+	CUTSCENE,
 	USING_SLINGSHOT,
 	DIALOG,
 }
@@ -37,6 +38,8 @@ enum PlayerStates {
     DASH,
 	SHOOT,
 	INTERACT,
+	CRYING,
+	GETTING_UP,
 }
 
 #region Scripts
@@ -52,6 +55,14 @@ stateScripts[PlayerMode.USING_SLINGSHOT][PlayerStates.IDLE] = scrPlayerStateUsin
 stateScripts[PlayerMode.USING_SLINGSHOT][PlayerStates.MOVING] = scrPlayerStateUsingSlingshotMoving;
 stateScripts[PlayerMode.USING_SLINGSHOT][PlayerStates.SHOOT] = scrPlayerStateUsingSlingshotShoot;
 
+//CUTSCENE
+stateScripts[PlayerMode.CUTSCENE] = [];
+stateScripts[PlayerMode.CUTSCENE][PlayerStates.IDLE] = scrPlayerStateCutsceneIdle;
+stateScripts[PlayerMode.CUTSCENE][PlayerStates.MOVING] = scrPlayerStateCutsceneMoving;
+stateScripts[PlayerMode.CUTSCENE][PlayerStates.DASH] = scrPlayerStateCutsceneDash;
+stateScripts[PlayerMode.CUTSCENE][PlayerStates.CRYING] = scrPlayerStateCutsceneCrying;
+stateScripts[PlayerMode.CUTSCENE][PlayerStates.GETTING_UP] = scrPlayerStateCutsceneGettingUp;
+
 #endregion
 
 #region Sprites
@@ -66,6 +77,14 @@ stateSprites[PlayerMode.USING_SLINGSHOT] = [];
 stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.IDLE] = [sprPlayerIdleChargingFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
 stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.MOVING] = [sprPlayerIdleChargingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
 stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.SHOOT] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
+
+//CUTSCENE
+stateSprites[PlayerMode.CUTSCENE] = [];
+stateSprites[PlayerMode.CUTSCENE][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
+stateSprites[PlayerMode.CUTSCENE][PlayerStates.MOVING] = [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
+stateSprites[PlayerMode.CUTSCENE][PlayerStates.DASH] = [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack];
+stateSprites[PlayerMode.CUTSCENE][PlayerStates.CRYING] = [sprPlayerCutsceneCryingFront, sprPlayerCutsceneCryingSideFront, sprPlayerCutsceneCryingBack, sprPlayerCutsceneCryingSideBack];
+stateSprites[PlayerMode.CUTSCENE][PlayerStates.GETTING_UP] = [sprPlayerCutsceneGettingUpFront, sprPlayerCutsceneGettingUpSideFront, sprPlayerCutsceneGettingUpBack, sprPlayerCutsceneGettingUpSideBack];
 
 #endregion
 

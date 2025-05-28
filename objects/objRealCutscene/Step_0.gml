@@ -10,8 +10,10 @@ if(steps != undefined) {
 				var _state = step.state.state;
 			
 				with(entity) {
-					stateMode = _mode;
-					state = _state;
+					if(_mode != undefined && _state != undefined) {
+						stateMode = _mode;
+						state = _state;
+					}
 				}
 			}
 			if(step.finished && !entity.isPaused) {
@@ -22,8 +24,10 @@ if(steps != undefined) {
 					var _mode = step.state.defaultMode;
 					var _state = step.state.defaultState;
 					with(entity) {
-						stateMode = _mode;
-						state = _state;
+						if(_mode != undefined && _state != undefined) {
+							stateMode = _mode;
+							state = _state;
+						}
 					}
 				}
 

@@ -24,27 +24,37 @@ scenes[Cutscenes.FRAME_NEW_GAME] = new frameCutscene(rmCucaJail, sprNewGameCutsc
 var _1 = realScene(
 	new RealEntity(objPlayer, new State(
 		PlayerMode.CUTSCENE,
-		PlayerStates.MOVING,
-		PlayerMode.NORMAL,
-		PlayerStates.IDLE
+		PlayerStates.MOVING
 	), 1.5, 0, 1),
 );
 var _2 = realScene(
 	new RealEntity(objPlayer, new State(
 		PlayerMode.CUTSCENE,
-		PlayerStates.IDLE,
-		PlayerMode.NORMAL,
-		PlayerStates.IDLE
+		PlayerStates.MOVING
 	), .5, 0, 1.5),
 );
+
 var _3 = realScene(
-	new RealEntity(objPlayer, undefined, 0, 0, 1, undefined, undefined, dash, [0, 2.5]),
+	new RealEntity(objPlayer, new State(
+		PlayerMode.CUTSCENE,
+		PlayerStates.IDLE
+	), 0, 0, 2),
+);
+
+var _4 = realScene(
+	new RealEntity(objPlayer, new State(
+		undefined,
+		undefined,
+		PlayerMode.NORMAL,
+		PlayerStates.IDLE
+	), 0, 0, 0, undefined, undefined, dash, [0, 2.5]),
 );
 
 scenes[Cutscenes.REAL_TEST] = realCutscene(
 	_1,
 	_2,
 	_3,
+	_4,
 );
 
 #endregion
@@ -54,9 +64,7 @@ scenes[Cutscenes.REAL_TEST] = realCutscene(
 _1 = realScene(
 	new RealEntity(objPlayer, new State(
 		PlayerMode.CUTSCENE,
-		PlayerStates.CRYING,
-		PlayerMode.NORMAL,
-		PlayerStates.IDLE
+		PlayerStates.CRYING
 	), 0, 0, 4)
 	//new RealEntity(objPlayer, 0, 0, 1.2, undefined, undefined, startDialog, [objDialogSample]),
 );
@@ -64,25 +72,31 @@ _1 = realScene(
 _2 = realScene(
 	new RealEntity(objPlayer, new State(
 		PlayerMode.CUTSCENE,
-		PlayerStates.GETTING_UP,
-		PlayerMode.NORMAL,
-		PlayerStates.IDLE
+		PlayerStates.GETTING_UP
 	), 0, 0, 0)
 );
 
 _3 = realScene(
 	new RealEntity(objPlayer, new State(
 		PlayerMode.CUTSCENE,
-		PlayerStates.IDLE,
-		PlayerMode.NORMAL,
 		PlayerStates.IDLE
 	), 0, 0, 1.2)
+)
+
+var _4 = realScene(
+	new RealEntity(objPlayer, new State(
+		PlayerMode.CUTSCENE,
+		PlayerStates.MOVING,
+		PlayerMode.NORMAL,
+		PlayerStates.IDLE
+	), 1.5, 270, 1)
 )
 
 scenes[Cutscenes.REAL_FIRST_CUCA_JAIL] = realCutscene(
 	_1,
 	_2,
-	_3
+	_3,
+	_4
 );
 
 #endregion

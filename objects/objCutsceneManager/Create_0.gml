@@ -87,10 +87,11 @@ _3 = realScene(
 _4 = realScene(
 	new RealEntity(objPlayer, new State(
 		PlayerMode.CUTSCENE,
+		1,
 		PlayerStates.MOVING,
 		PlayerMode.NORMAL,
 		PlayerStates.IDLE
-	), 1.5, 270, 1)
+	), 0.8, 270, 1)
 );
 
 scenes[Cutscenes.REAL_FIRST_CUCA_JAIL] = realCutscene(

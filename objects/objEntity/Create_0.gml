@@ -12,6 +12,7 @@ stateSprites = [];
 stateDebug = "";
 
 cutsceneRunning = false;
+cutsceneVel = 0;
 
 normalVel = 0;
 velh = 0;

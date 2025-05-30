@@ -10,6 +10,10 @@ function scrPlayerStateCutsceneMoving(){
 	
 	#region Code
 	
+	var spriteSpeed = sprite_get_speed(sprite_index);
+	image_speed = cutsceneVel/normalVel;
+	show_debug_message(image_speed);
+	
 	updatePlayerDirection();
 	updatePlayerSprite();
 	

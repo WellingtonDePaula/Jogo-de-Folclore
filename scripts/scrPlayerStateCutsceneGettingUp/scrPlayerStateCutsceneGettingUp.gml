@@ -1,5 +1,5 @@
 function scrPlayerStateCutsceneGettingUp(){
-	debugState = "Cutscene Getting Up";
+	stateDebug = "Cutscene Getting Up";
 	
 	#region State Consequences
 	

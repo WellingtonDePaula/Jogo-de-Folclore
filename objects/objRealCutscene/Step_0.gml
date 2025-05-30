@@ -54,6 +54,7 @@ if(steps != undefined) {
 				}
 			}
 			if(!entity.isPaused) {
+				entity.cutsceneVel = step.vel;
 				entity.velh = lengthdir_x(step.vel, step.dir);
 				entity.velv = lengthdir_y(step.vel, step.dir);
 			}

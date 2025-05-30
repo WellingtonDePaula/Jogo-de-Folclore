@@ -1,5 +1,5 @@
 function scrPlayerStateCutsceneCrying(){
-	debugState = "Cutscene Crying";
+	stateDebug = "Cutscene Crying";
 	
 	#region State Consequences
 	

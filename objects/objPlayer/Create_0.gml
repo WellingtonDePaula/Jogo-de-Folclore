@@ -88,8 +88,7 @@ stateSprites[PlayerMode.CUTSCENE][PlayerStates.GETTING_UP] = [sprPlayerCutsceneG
 
 #endregion
 
-stateMode = PlayerMode.NORMAL;
-state = PlayerStates.IDLE;
+changeState(PlayerMode.NORMAL, PlayerStates.IDLE, image_xscale);
 
 #endregion States
 

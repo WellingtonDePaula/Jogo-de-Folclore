@@ -5,14 +5,20 @@ if(steps != undefined) {
 			var step = steps[current][i];
 			var entity = step.entity;
 			
+			
 			if(step.state != undefined) {
 				var _mode = step.state.mode;
 				var _state = step.state.state;
-			
+				var _imageXscale = step.state.imageXscale;
+				
 				with(entity) {
+					if(_imageXscale == undefined) {
+						_imageXscale = image_xscale;
+					}
 					if(_mode != undefined && _state != undefined) {
-						stateMode = _mode;
-						state = _state;
+						if(stateMode != _mode || state != _state) {
+							changeState(_mode, _state, _imageXscale);
+						}
 					}
 				}
 			}
@@ -23,10 +29,14 @@ if(steps != undefined) {
 				if(step.state != undefined) {
 					var _mode = step.state.defaultMode;
 					var _state = step.state.defaultState;
+					var _imageXscale = step.state.imageXscale;
+					
 					with(entity) {
+						if(_imageXscale == undefined) {
+							_imageXscale = image_xscale;
+						}
 						if(_mode != undefined && _state != undefined) {
-							stateMode = _mode;
-							state = _state;
+							changeState(_mode, _state, _imageXscale);
 						}
 					}
 				}
@@ -57,7 +67,10 @@ if(steps != undefined) {
 		for(var i = 0; i < array_length(steps); i++) {
 			for(var j = 0; j < array_length(steps[i]); j++) {
 				var step = steps[i][j];
-				step.entity.cutsceneRunning = false;
+				with(step.entity) {
+					cutsceneRunning = false;
+					changeState(0, 0, image_xscale);
+				}
 				step.finished = false;
 			}
 		}

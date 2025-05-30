@@ -23,7 +23,7 @@ function scrPlayerStateIdle(){
 		}
 	
 		if(mouse_check_button(inputs.shoot) && myWeapon != noone && inventoryItemAmount(inv, Ammo) > 0) {
-			stateMode = PlayerMode.USING_SLINGSHOT;
+			changeState(PlayerMode.USING_SLINGSHOT, state, image_xscale);
 			return;
 		}
 	}

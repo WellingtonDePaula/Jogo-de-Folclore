@@ -64,7 +64,8 @@ scenes[Cutscenes.REAL_TEST] = realCutscene(
 _1 = realScene(
 	new RealEntity(objPlayer, new State(
 		PlayerMode.CUTSCENE,
-		PlayerStates.CRYING
+		PlayerStates.CRYING,
+		-1,
 	), 0, 0, 4)
 	//new RealEntity(objPlayer, 0, 0, 1.2, undefined, undefined, startDialog, [objDialogSample]),
 );
@@ -81,16 +82,16 @@ _3 = realScene(
 		PlayerMode.CUTSCENE,
 		PlayerStates.IDLE
 	), 0, 0, 1.2)
-)
+);
 
-var _4 = realScene(
+_4 = realScene(
 	new RealEntity(objPlayer, new State(
 		PlayerMode.CUTSCENE,
 		PlayerStates.MOVING,
 		PlayerMode.NORMAL,
 		PlayerStates.IDLE
 	), 1.5, 270, 1)
-)
+);
 
 scenes[Cutscenes.REAL_FIRST_CUCA_JAIL] = realCutscene(
 	_1,

@@ -27,11 +27,12 @@ function scrPlayerStateUsingSlingshotMoving(){
 	if(!mouse_check_button(inputs.shoot)) {
 		if(myWeapon.strenghtCharged >= myWeapon.minStrenght) {
 			myWeapon.dir = point_direction(x, y, mouse_x, mouse_y);
-			state = PlayerStates.SHOOT;
+			changeState(stateMode, PlayerStates.SHOOT, image_xscale);
+			return;
 		} else {
 			myWeapon.resetCharge();
-			stateMode = PlayerMode.NORMAL;
-			state = PlayerStates.IDLE;
+			changeState(PlayerMode.NORMAL, PlayerStates.IDLE, image_xscale);
+			return;
 		}
 		charged = false;
 		image_index = 0;

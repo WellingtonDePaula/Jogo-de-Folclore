@@ -33,8 +33,8 @@ function scrPlayerStateUsingSlingshotIdle(){
 		} else {
 			myWeapon.resetCharge();
 			isAiming = false;
-			stateMode = PlayerMode.NORMAL;
-			state = PlayerStates.IDLE;
+			changeState(PlayerMode.NORMAL, PlayerStates.IDLE, image_xscale);
+			return;
 		}
 		charged = false;
 		image_index = 0;

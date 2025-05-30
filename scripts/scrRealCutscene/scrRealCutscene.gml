@@ -30,9 +30,11 @@ function realCutscene() {
 	return result;
 }
 
-function State(_mode, _state, _defaultMode = undefined, _defaultState = undefined) constructor {
+function State(_mode, _state, _imageXscale = undefined, _defaultMode = undefined, _defaultState = undefined) constructor {
 	mode = _mode;
 	state = _state;
+	imageXscale = _imageXscale;
+	
 	defaultMode = _defaultMode;
 	defaultState = _defaultState;
 }

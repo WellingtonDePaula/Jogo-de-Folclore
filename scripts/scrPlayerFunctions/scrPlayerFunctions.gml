@@ -116,9 +116,9 @@ function updatePlayerSprite() {
 function dash() {
 	with(objPlayer) {
 		if(cutsceneRunning) {
-			stateMode = PlayerMode.CUTSCENE;
+			changeState(PlayerMode.CUTSCENE, state, image_xscale);
 		} else {
-			stateMode = PlayerMode.NORMAL;
+			changeState(PlayerMode.NORMAL, state, image_xscale);
 		}
 		state = PlayerStates.DASH;
 		isPaused = true;

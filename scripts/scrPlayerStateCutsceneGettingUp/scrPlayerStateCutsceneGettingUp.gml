@@ -9,21 +9,23 @@ function scrPlayerStateCutsceneGettingUp(){
 	
 	#endregion
 	
-	#region Change States
-	
-	if(image_index >= image_number -1) {
-		spriteChanged = false;
-		isPaused = false;
-		state = PlayerStates.IDLE;
-		return;
-	}
-	
-	#endregion
+
 	
 	#region Code
 	
 	updatePlayerDirection();
 	updatePlayerSprite();
+	
+	
+
+	#endregion
+	
+	#region Change States
+	
+	if(image_index >= image_number -1) {
+		isPaused = false;
+		return;
+	}
 	
 	#endregion
 }

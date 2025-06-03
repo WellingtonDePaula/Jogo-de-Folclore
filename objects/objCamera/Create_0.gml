@@ -30,6 +30,10 @@ stateScripts = [
 	scrCameraStateFollowTargetAiming,
 ];
 
+//moveToPoint = function(_x, _y, _scale) {
+	
+//}
+
 enum CameraStates {
 	FOLLOW,
 	STATIC,

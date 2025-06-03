@@ -4,20 +4,19 @@ function scrPlayerStateMoving(){
 	#region State Consequences
 	
 	isAiming = false;
-	canInteract = true;
+	//canInteract = true;
 	
 	#endregion
 	
 	#region Change States
 	
 	if(velh == 0 && velv == 0) {
-		state = PlayerStates.IDLE;
+		changeState(stateMode, PlayerStates.IDLE, image_xscale);
 		return;
 	}
 	
-	if(!cutsceneRunning && !isPaused) {
+	if(!isPaused) {
 		if(keyboard_check_pressed(inputs.dash) && canDash) {
-			canInteract = false;
 			dash();
 			return;
 		}
@@ -32,7 +31,7 @@ function scrPlayerStateMoving(){
 	
 	#region Code
 	
-	if(!cutsceneRunning && !isPaused) {
+	if(!isPaused) {
 		var velocities = updatePlayerMovement(normalVel, inputs);
 		velh = velocities[0];
 		velv = velocities[1];

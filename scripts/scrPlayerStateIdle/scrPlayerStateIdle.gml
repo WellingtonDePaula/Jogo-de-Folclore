@@ -4,7 +4,6 @@ function scrPlayerStateIdle(){
 	#region State Consequences
 	
 	isAiming = false;
-	canInteract = true;
 	
 	#endregion
 	
@@ -15,7 +14,7 @@ function scrPlayerStateIdle(){
 		state = PlayerStates.MOVING;
 		return;
 	}
-	if(!cutsceneRunning && !isPaused) {
+	if(!isPaused) {
 		if(keyboard_check_pressed(inputs.dash) && canDash) {
 			canInteract = false;
 			dash();
@@ -32,7 +31,7 @@ function scrPlayerStateIdle(){
 	
 	#region Code
 	
-	if(!cutsceneRunning && !isPaused) {
+	if(!isPaused) {
 		var velocities = updatePlayerMovement(normalVel, inputs);
 		velh = velocities[0];
 		velv = velocities[1];

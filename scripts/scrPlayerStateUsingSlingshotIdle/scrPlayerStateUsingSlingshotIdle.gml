@@ -6,6 +6,7 @@ function scrPlayerStateUsingSlingshotIdle(){
 	isAiming = true;
 	canInteract = false;
 	myWeapon.charge();
+	
 	static charged = false;
 	
 	#endregion
@@ -13,7 +14,7 @@ function scrPlayerStateUsingSlingshotIdle(){
 	#region Change States
 	
 	if(checkMoveInput(inputs)[0]) {
-		state = PlayerStates.MOVING;
+		changeState(stateMode, PlayerStates.MOVING, image_xscale);
 		isAiming = false;
 		return;
 	}
@@ -29,7 +30,7 @@ function scrPlayerStateUsingSlingshotIdle(){
 		if(myWeapon.strenghtCharged >= myWeapon.minStrenght) {
 			myWeapon.dir = point_direction(x, y, mouse_x, mouse_y);
 			isAiming = false;
-			state = PlayerStates.SHOOT;
+			changeState(stateMode, PlayerStates.SHOOT, image_xscale);
 		} else {
 			myWeapon.resetCharge();
 			isAiming = false;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerStateCrying",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerStateCrying",
+  "parent":{
+    "name":"Normal",
+    "path":"folders/Scripts/Entities/Player/States/Normal.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

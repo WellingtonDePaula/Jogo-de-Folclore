@@ -2,7 +2,13 @@ if(instance_number(objDialogParent) > 1) {
 	instance_destroy();
 }
 
-dialog = new Dialogue(objPlayer, objTest);
+interactObjectId = undefined;
+
+nextDialog = undefined;
+
+endFunction = function(){};
+
+dialog = undefined;
 
 objPlayer.stop();
 

@@ -1,5 +1,9 @@
 if(!showingDialog) {
 	if(dialog.count() <= 0) {
+		if(nextDialog != undefined) {
+			interactObjectId.currentDialog = nextDialog;
+		}
+		endFunction();
 		dialog.finish();
 		instance_destroy();
 		return;

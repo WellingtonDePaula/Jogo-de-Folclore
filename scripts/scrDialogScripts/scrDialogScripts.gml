@@ -10,6 +10,7 @@ function Dialogue() constructor {
 			continue;
 		}
 		argument[i].isPaused = true;
+		argument[i].canInteract = false;
 		participants[i] = argument[i];
 	}
 	
@@ -33,7 +34,8 @@ function Dialogue() constructor {
 	
 	finish = function() {
 		for(var i = 0; i < array_length(participants); i++) {
-			participants[i].isPaused = false; 
+			participants[i].isPaused = false;
+			participants[i].canInteract = true;
 		}
 	}
 }

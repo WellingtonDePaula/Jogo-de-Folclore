@@ -9,12 +9,13 @@ normalVel = 1.5;
 shootVel = .8;
 velDash = 2.5;
 
+canInteract = true;
+
 //dashRechargeTime = sprite_get_number(sprPlayerDashFront) * velDash * 2;
 dashRechargeTime = 0;
 canDash = true;
 
 facing = 1;
-isSide = false;
 
 inv = ds_list_create();
 
@@ -27,9 +28,7 @@ isAiming = false;
 #region States
 enum PlayerMode {
     NORMAL,
-	CUTSCENE,
 	USING_SLINGSHOT,
-	DIALOG,
 }
 
 enum PlayerStates {
@@ -48,20 +47,14 @@ stateScripts[PlayerMode.NORMAL] = [];
 stateScripts[PlayerMode.NORMAL][PlayerStates.IDLE] = scrPlayerStateIdle;
 stateScripts[PlayerMode.NORMAL][PlayerStates.MOVING] = scrPlayerStateMoving;
 stateScripts[PlayerMode.NORMAL][PlayerStates.DASH] = scrPlayerStateDash;
+stateScripts[PlayerMode.NORMAL][PlayerStates.CRYING] = scrPlayerStateCrying;
+stateScripts[PlayerMode.NORMAL][PlayerStates.GETTING_UP] = scrPlayerStateGettingUp;
 
 // CHARGING SLINGSHOT
 stateScripts[PlayerMode.USING_SLINGSHOT] = [];
 stateScripts[PlayerMode.USING_SLINGSHOT][PlayerStates.IDLE] = scrPlayerStateUsingSlingshotIdle;
 stateScripts[PlayerMode.USING_SLINGSHOT][PlayerStates.MOVING] = scrPlayerStateUsingSlingshotMoving;
 stateScripts[PlayerMode.USING_SLINGSHOT][PlayerStates.SHOOT] = scrPlayerStateUsingSlingshotShoot;
-
-//CUTSCENE
-stateScripts[PlayerMode.CUTSCENE] = [];
-stateScripts[PlayerMode.CUTSCENE][PlayerStates.IDLE] = scrPlayerStateCutsceneIdle;
-stateScripts[PlayerMode.CUTSCENE][PlayerStates.MOVING] = scrPlayerStateCutsceneMoving;
-stateScripts[PlayerMode.CUTSCENE][PlayerStates.DASH] = scrPlayerStateCutsceneDash;
-stateScripts[PlayerMode.CUTSCENE][PlayerStates.CRYING] = scrPlayerStateCutsceneCrying;
-stateScripts[PlayerMode.CUTSCENE][PlayerStates.GETTING_UP] = scrPlayerStateCutsceneGettingUp;
 
 #endregion
 
@@ -71,6 +64,8 @@ stateSprites[PlayerMode.NORMAL] = [];
 stateSprites[PlayerMode.NORMAL][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
 stateSprites[PlayerMode.NORMAL][PlayerStates.MOVING] = [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
 stateSprites[PlayerMode.NORMAL][PlayerStates.DASH] = [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack];
+stateSprites[PlayerMode.NORMAL][PlayerStates.CRYING] = [sprPlayerCryingFront, sprPlayerCryingSideFront, sprPlayerCryingBack, sprPlayerCryingSideBack];
+stateSprites[PlayerMode.NORMAL][PlayerStates.GETTING_UP] = [sprPlayerGettingUpFront, sprPlayerGettingUpSideFront, sprPlayerGettingUpBack, sprPlayerGettingUpSideBack];
 
 // CHARGING SLINGSHOT
 stateSprites[PlayerMode.USING_SLINGSHOT] = [];
@@ -78,17 +73,9 @@ stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.IDLE] = [sprPlayerIdleChar
 stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.MOVING] = [sprPlayerIdleChargingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
 stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.SHOOT] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
 
-//CUTSCENE
-stateSprites[PlayerMode.CUTSCENE] = [];
-stateSprites[PlayerMode.CUTSCENE][PlayerStates.IDLE] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
-stateSprites[PlayerMode.CUTSCENE][PlayerStates.MOVING] = [sprPlayerMovingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
-stateSprites[PlayerMode.CUTSCENE][PlayerStates.DASH] = [sprPlayerDashFront, sprPlayerDashSideFront, sprPlayerDashBack, sprPlayerDashSideBack];
-stateSprites[PlayerMode.CUTSCENE][PlayerStates.CRYING] = [sprPlayerCutsceneCryingFront, sprPlayerCutsceneCryingSideFront, sprPlayerCutsceneCryingBack, sprPlayerCutsceneCryingSideBack];
-stateSprites[PlayerMode.CUTSCENE][PlayerStates.GETTING_UP] = [sprPlayerCutsceneGettingUpFront, sprPlayerCutsceneGettingUpSideFront, sprPlayerCutsceneGettingUpBack, sprPlayerCutsceneGettingUpSideBack];
-
 #endregion
 
-changeState(PlayerMode.NORMAL, PlayerStates.IDLE, image_xscale);
+//changeState(PlayerMode.NORMAL, PlayerStates.IDLE, image_xscale);
 
 #endregion States
 

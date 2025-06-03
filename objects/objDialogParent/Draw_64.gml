@@ -48,4 +48,9 @@ if(showingDialog) {
 	draw_set_font(-1);
 	
 	#endregion
+	var _sprite = currentDialog.sprite;
+	var _spriteWitdh = sprite_get_width(_sprite)/2;
+	var _scale = 5;
+	
+	draw_sprite_ext(currentDialog.sprite, 0, boxX1+(_spriteWitdh*_scale), boxY1, _scale, _scale, 0, c_white, 1);
 }

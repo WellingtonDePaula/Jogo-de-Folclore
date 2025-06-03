@@ -1,0 +1,20 @@
+{
+  "$GMPath":"",
+  "%Name":"pthCucaJailKeyCreated",
+  "closed":false,
+  "kind":1,
+  "name":"pthCucaJailKeyCreated",
+  "parent":{
+    "name":"Caminhos",
+    "path":"folders/Caminhos.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":0.0,"y":220.0,},
+    {"speed":90.0,"x":127.0,"y":225.0,},
+    {"speed":80.0,"x":202.21582,"y":239.36896,},
+    {"speed":70.0,"x":236.02878,"y":266.7071,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

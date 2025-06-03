@@ -20,7 +20,6 @@ options[MenuTypes.MAIN] = {
 	option2: {
 		text: "Novo Jogo",
 		func: function() {
-			room_goto(rmCutscenes);
 			global.cutsceneManager.startFrameCutscene(Cutscenes.FRAME_NEW_GAME);
 		},
 	},

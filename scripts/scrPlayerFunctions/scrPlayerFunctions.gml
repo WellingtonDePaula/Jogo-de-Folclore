@@ -115,13 +115,7 @@ function updatePlayerSprite() {
 
 function dash() {
 	with(objPlayer) {
-		if(cutsceneRunning) {
-			changeState(PlayerMode.CUTSCENE, state, image_xscale);
-		} else {
-			changeState(PlayerMode.NORMAL, state, image_xscale);
-		}
 		state = PlayerStates.DASH;
-		isPaused = true;
 		var dir = 0;
 		if(argument[0] == undefined) {
 			

@@ -44,10 +44,12 @@ startFrameCutscene = function(_cutscene) {
 	}
 }
 
-startVideoCutscene = function(_cutscene) {
+startVideoCutscene = function(_cutscene, _toExec = [], _args = []) {
 	global.gamePaused = true;
 	currentScene = instance_create_layer(0, 0, "GUI", objVideoCutscene);
 	var _path = scenes[_cutscene];
+	currentScene.toExec = _toExec;
+	currentScene.args = _args;
 	currentScene.videoPath = _path;
 	currentScene.run();
 }

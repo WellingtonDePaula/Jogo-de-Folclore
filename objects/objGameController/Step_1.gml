@@ -6,9 +6,6 @@ delta = delta_time / 1000000 * FPS;
 if(keyboard_check_pressed(ord("T"))) {
 	global.cutsceneManager.startVideoCutscene(Cutscenes.VIDEO_CUCA_JAIL_GETTING_KEY);
 }
-if(keyboard_check_pressed(ord("O"))) {
-	tempSaveGame();
-}
 
 if(keyboard_check_pressed(vk_escape)) {
 	global.gamePaused = !global.gamePaused;

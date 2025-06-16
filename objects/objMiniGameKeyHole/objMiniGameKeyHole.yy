@@ -1,18 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"objMiniGameKeyHole",
+  "%Name":"objMinigameKeyHole",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objMiniGameKeyHole",
+  "name":"objMinigameKeyHole",
   "overriddenProperties":[],
   "parent":{
-    "name":"Parents",
-    "path":"folders/Objetos/Minigames/Parents.yy",
+    "name":"Minigames",
+    "path":"folders/Objetos/Minigames.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objMinigameArm",
+    "path":"objects/objMinigameArm/objMinigameArm.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

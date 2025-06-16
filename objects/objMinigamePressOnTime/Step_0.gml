@@ -1,4 +1,6 @@
-if(dir > 360) {dir = 0}
+if(dir > 360) {dir = 0} else {
+	if(dir < 0) {dir = 360}
+}
 
 //var _scale = global.scale;
 
@@ -27,7 +29,7 @@ for(var _i = 0; _i < array_length(targets); _i ++) {
 	
 	var _pos = _target.position;
 	
-	var _angle_rad = -(_pos/radius);
+	var _angle_rad = -_pos/radius;
 	
 	var _x_dist = radius * cos(_angle_rad);
 	var _y_dist = radius * sin(_angle_rad);
@@ -43,9 +45,9 @@ for(var _i = 0; _i < array_length(targets); _i ++) {
 	if(_pos <= _linear_position + _target.length/2 && _pos >= _linear_position - _target.length/2) {
 		var _pressed = keyboard_check_pressed(vk_space);
 		if(_pressed) {
-			show_message("pressionou paizao")
+			velDir = array_get(targets, _i).Pressed(velDir);
 			array_delete(targets, _i, 1);
-			rand_target();
+			rand_target(Target);
 		}
 	}
 }

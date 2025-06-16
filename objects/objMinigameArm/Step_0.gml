@@ -2,10 +2,10 @@ var _holding = mouse_check_button(mb_left);
 var _scale = global.scale * 16;
 
 for(var _i = 0; _i < array_length(objects); _i++) {
-	array_get(objects, _i).updateBbox(_scale);
+	array_get(objects, _i).UpdateBbox(_scale);
 }
 for(var _i = 0; _i < array_length(environment); _i++) {
-	array_get(environment, _i).updateBbox(_scale);
+	array_get(environment, _i).UpdateBbox(_scale);
 }
 
 switch(arm.state) {

@@ -21,15 +21,12 @@ var _dir_rad = degtorad(45);
 
 var _linear_position = _dir_rad * radius;
 
-rand_target = function() {
+rand_target = function(_type) {
 	var _rand_pos = random_range(0, 2 * pi * radius);
 	
-	var _target = new Target(_rand_pos, 50);
+	var _target = new _type(_rand_pos, 50);
 	
 	array_push(targets, _target);
 }
 
-targets = [
-	new Target(_linear_position, 50),
-	//new Target(_orbit_length/2, 50),
-];
+targets = [new Target(30, 50)];

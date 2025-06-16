@@ -16,7 +16,7 @@ function MinigameObject(_x, _y, _sprite) constructor {
 	
 	state = "free";
 	
-	static updateBbox = function(_scale) {
+	static UpdateBbox = function(_scale) {
 		var _xoffset = sprite_get_xoffset(sprite);
 		var _yoffset = sprite_get_yoffset(sprite);
 		
@@ -42,6 +42,16 @@ function Target(_position, _length) constructor {
 	length = _length;
 	hitted = false;
 	
+	static Pressed = function(_velDir) {
+		return _velDir;
+	}
+	
 	x = 0;
 	y = 0;
+}
+
+function ReverseTarget(_position, _length) : Target(_position, _length) constructor {
+	static Pressed = function(_velDir) {
+		return -_velDir;
+	}
 }

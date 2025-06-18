@@ -47,7 +47,7 @@ for(var _i = 0; _i < array_length(targets); _i ++) {
 		if(_pressed) {
 			velDir = array_get(targets, _i).Pressed(velDir);
 			array_delete(targets, _i, 1);
-			rand_target(Target);
+			rand_target(ReverseTarget);
 		}
 	}
 }

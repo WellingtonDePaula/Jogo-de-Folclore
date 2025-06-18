@@ -23,7 +23,7 @@ for(var _i = 0; _i < array_length(targets); _i ++) {
 	var _w = _target.length;
 	
 	
-	draw_rotated_rect(_x, _y, _h, _w, _dir, c_white);
+	draw_rotated_rect(_x, _y, _h * _scale, _w * _scale, _dir, c_white);
 }
 
 

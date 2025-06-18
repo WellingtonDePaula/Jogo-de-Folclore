@@ -4,8 +4,10 @@ yy = 0;
 x = display_get_gui_width()/2;
 y = display_get_gui_height()/2;
 
-radius = 20;
-radius = radius * 10;
+var _scale = global.scale;
+
+radius = 26;
+radius = radius * 10 * _scale;
 
 dir = 0;
 velDir = 1;
@@ -29,4 +31,4 @@ rand_target = function(_type) {
 	array_push(targets, _target);
 }
 
-targets = [new Target(30, 50)];
+targets = [new ReverseTarget(30, 50)];

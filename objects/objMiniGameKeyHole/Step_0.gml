@@ -26,6 +26,9 @@ switch(_key.state) {
 		break;
 		
 	case "attached":
-		
+		if(!minigame) {
+			minigame = instance_create_layer(0, 0, "GameController", objMinigamePressOnTime);
+			minigame.depth = depth-1;
+		}
 		break;
 }

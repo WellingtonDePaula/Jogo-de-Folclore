@@ -22,3 +22,5 @@ finalY = _displayHeight / 2 - 100;
 keyHole = new MinigameKeyHole(finalX, finalY, sprKeyHole);
 
 array_push(environment, keyHole);
+
+minigame = undefined;

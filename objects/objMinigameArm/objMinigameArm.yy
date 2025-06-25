@@ -13,7 +13,10 @@
     "name":"Parents",
     "path":"folders/Objetos/Minigames/Parents.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objMinigame",
+    "path":"objects/objMinigame/objMinigame.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

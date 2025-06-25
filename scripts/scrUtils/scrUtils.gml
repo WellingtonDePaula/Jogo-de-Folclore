@@ -32,3 +32,33 @@ function draw_rotated_rect(_x, _y, _w, _h, _angle, _color) {
     draw_vertex(rx0, ry0); // fecha o retângulo
     draw_primitive_end();
 }
+
+/// draw_curved_strip(x, y, radius, width, angle_start, angle_end, color)
+function draw_curved_strip(_x, _y, _r, _w, _a_start, _a_end, _color) {
+    var sides = 20; // quanto mais, mais suave será a curva
+    var half_w = _w * 0.5;
+    var rad_start = degtorad(_a_start);
+    var rad_end = degtorad(_a_end);
+    
+    draw_primitive_begin(pr_trianglestrip);
+    draw_set_color(_color);
+
+    for (var i = 0; i <= sides; i++) {
+        var t = i / sides;
+        var ang = lerp(rad_start, rad_end, t);
+        
+        var _cos = dcos(radtodeg(ang));
+        var _sin = dsin(radtodeg(ang));
+        
+        var inner_x = _x + (_r - half_w) * _cos;
+        var inner_y = _y + (_r - half_w) * _sin;
+        
+        var outer_x = _x + (_r + half_w) * _cos;
+        var outer_y = _y + (_r + half_w) * _sin;
+
+        draw_vertex(inner_x, inner_y);
+        draw_vertex(outer_x, outer_y);
+    }
+
+    draw_primitive_end();
+}

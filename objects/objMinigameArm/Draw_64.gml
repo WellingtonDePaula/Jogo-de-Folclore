@@ -14,17 +14,21 @@ var _scale = global.scale * 16;
 
 for(var _i = 0; _i < array_length(environment); _i++) {
 	var obj = array_get(environment, _i);
-
-	draw_sprite_ext(obj.sprite, obj.image_index, obj.x, obj.y, _scale, _scale, obj.image_angle, c_white, 1);
+	
+	var _objScale = _scale + obj.scale;
+	
+	draw_sprite_ext(obj.sprite, obj.image_index, obj.x, obj.y, _objScale, _objScale, obj.image_angle, c_white, 1);
 	//draw_rectangle(obj.bbox_left, obj.bbox_top, obj.bbox_right, obj.bbox_bottom, false);
 }
 
 for(var _i = 0; _i < array_length(objects); _i++) {
 	var obj = array_get(objects, _i);
 	
+	var _objScale = _scale + obj.scale;
+	
 	draw_rectangle(obj.bbox_left, obj.bbox_top, obj.bbox_right, obj.bbox_bottom, false);
 
-	draw_sprite_ext(obj.sprite, obj.image_index, obj.x, obj.y, _scale, _scale, obj.image_angle, c_white, 1);
+	draw_sprite_ext(obj.sprite, obj.image_index, obj.x, obj.y, _objScale, _objScale, obj.image_angle, c_white, 1);
 }
 
 arm.x = device_mouse_x_to_gui(0);

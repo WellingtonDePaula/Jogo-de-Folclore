@@ -1,7 +1,7 @@
 event_inherited();
 
 var _key = objects[0];
-show_debug_message(_key.state)
+//show_debug_message(_key.state);
 switch(_key.state) {
 	case "free":
 		var _scale = global.scale * 16;
@@ -28,7 +28,20 @@ switch(_key.state) {
 	case "attached":
 		if(!minigame) {
 			minigame = instance_create_layer(0, 0, "GameController", objMinigamePressOnTime);
+			minigame.minigameFather = self;
+			minigame.targets = targets;
+			minigame.maxScore = maxScore;
+			minigame.maxErrors = maxErrors;
+			minigame.create_event_end();
+			
+			//ds_list_destroy(targets);
+			
 			minigame.depth = depth-1;
 		}
+		_key.state = "free";
 		break;
+}
+
+if(minigameFinished) {
+	minigameEnd();
 }

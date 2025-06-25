@@ -1,5 +1,7 @@
 event_inherited();
 
+minigame = undefined;
+
 interactId = objPlayer;
 
-distToInteract = 20;
+distToInteract = 10;

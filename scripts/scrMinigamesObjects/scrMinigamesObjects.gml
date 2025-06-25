@@ -1,8 +1,9 @@
-function MinigameObject(_x, _y, _sprite) constructor {
+function MinigameObject(_x, _y, _sprite, _scale = 0) constructor {
 	x = _x;
 	y = _y;
 	
 	sprite = _sprite;
+	scale = _scale;
 	
 	image_angle = 0;
 	angleToAdd = 0;
@@ -31,11 +32,11 @@ function MinigameObject(_x, _y, _sprite) constructor {
 }
 
 //function Ammo(_obj,  _amount, _maxAmount) : Item(_obj,  _amount, _maxAmount) constructor {}
-function MinigamePlayerArm(_x, _y, _sprite) : MinigameObject(_x, _y, _sprite) constructor {
+function MinigamePlayerArm(_x, _y, _sprite, _scale) : MinigameObject(_x, _y, _sprite, _scale) constructor {
 	holding = undefined;
 }
 
-function MinigameKeyHole(_x, _y, _sprite) : MinigameObject(_x, _y, _sprite) constructor {}
+function MinigameKeyHole(_x, _y, _sprite, _scale) : MinigameObject(_x, _y, _sprite, _scale) constructor {}
 
 function Target(_position, _length) constructor {
 	position = _position;
@@ -50,7 +51,7 @@ function Target(_position, _length) constructor {
 	y = 0;
 }
 
-function ReverseTarget(_position, _length) : Target(_position, _length) constructor {
+function TargetReverse(_position, _length) : Target(_position, _length) constructor {
 	static Pressed = function(_velDir) {
 		return -_velDir;
 	}

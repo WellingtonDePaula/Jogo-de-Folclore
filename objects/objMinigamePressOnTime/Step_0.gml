@@ -18,8 +18,8 @@ var _linear_position = _dir_rad * radius;
 // é como se o _linear_position fosse o x da bolinha do player no plano
 // a _orbit_lenght é o tamanho intero da reta no plano
 
-for(var _i = 0; _i < array_length(targets); _i ++) {
-	var _target = targets[_i];
+for(var _i = 0; _i < array_length(targetsOn); _i ++) {
+	var _target = targetsOn[_i];
 	
 	if(_target.position > _orbit_length) {
 		_target.position = 0;
@@ -41,15 +41,26 @@ for(var _i = 0; _i < array_length(targets); _i ++) {
 	//if(_pos <= _linear_position + _target.length/2 && _pos >= _linear_position - _target.length/2) {
 	//	show_message("ta dentro");
 	//}
-	
-	if(_pos <= _linear_position + _target.length/2 && _pos >= _linear_position - _target.length/2) {
-		var _pressed = keyboard_check_pressed(vk_space);
-		if(_pressed) {
-			velDir = array_get(targets, _i).Pressed(velDir);
-			array_delete(targets, _i, 1);
-			rand_target(ReverseTarget);
+	var _pressed = keyboard_check_pressed(vk_space);
+	if(_pressed) {
+		if(_pos <= _linear_position + _target.length/2 && _pos >= _linear_position - _target.length/2) {
+			velDir = array_get(targetsOn, _i).Pressed(velDir);
+			errors = 0;
+			score = clamp(score + 1, 0, maxScore);
+			array_delete(targetsOn, _i, 1);
+			if(ds_list_size(targets) > 0) {
+				target_create();
+			}
+		} else {
+			errors = clamp(errors + 1, 0, maxErrors);
+			score = clamp(score - 1, 0, maxScore);
 		}
 	}
 }
 
 dir += velDir;
+
+if(score >= maxScore) {
+	minigameFather.minigameFinished = true;
+	instance_destroy();
+}

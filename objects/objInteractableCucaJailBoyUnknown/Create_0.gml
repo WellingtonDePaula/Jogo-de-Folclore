@@ -1,7 +1,9 @@
 event_inherited();
 
+background = true;
+
 interactId = objPlayer;
 
-distToInteract = 20;
+distToInteract = 0;
 
 currentDialog = objDialogCucaJailBoyUnknown01;

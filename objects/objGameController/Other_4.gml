@@ -9,6 +9,28 @@ switch(room) {
 		}
 		
 		break;
+		
+	case rmJailHall:
+		with(global.cam) {
+			clampPos = false;
+			staticX = room_width/2;
+			staticY = room_height/2;
+			setCamScale(global.cam, global.ScaleFactors.JAIL_HALL);
+			setCamState(self, CameraStates.STATIC);
+		}
+		
+		break;
+		
+	case rmCucaWarehouse:
+		with(global.cam) {
+			clampPos = false;
+			staticX = room_width/2;
+			staticY = room_height/2;
+			setCamScale(global.cam, global.ScaleFactors.CUCA_WAREHOUSE);
+			setCamState(self, CameraStates.STATIC);
+		}
+		
+		break;
 
 	case rmTest:
 		with(global.cam) {

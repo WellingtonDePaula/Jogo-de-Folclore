@@ -1,3 +1,6 @@
+if(!background) {
+	depth = -bbox_bottom;
+}
 if(!global.gamePaused) {
 	var x1 = bbox_left - distToInteract;
 	var y1 = bbox_top - distToInteract;

@@ -1,32 +1,23 @@
 draw_self();
 
+var isIn = false;
+
+var _x1 = bbox_left - distToInteract;
+var _y1 = bbox_top - distToInteract;
+var _x2 = bbox_right + distToInteract;
+var _y2 = bbox_bottom + distToInteract;
+with(interactId) {
+	isIn = point_in_rectangle(x, y, _x1, _y1, _x2, _y2);
+}
+
 if(instance_exists(interactId) && interactId.canInteract && canBeInteracted && canBeInteracted2 && !global.gamePaused) {
-	var x1 = bbox_left - distToInteract;
-	var y1 = bbox_top - distToInteract;
-	var x2 = bbox_right + distToInteract;
-	var y2 = bbox_bottom + distToInteract;
+
 	
-	draw_set_alpha(.7);
-	draw_rectangle(x1, y1, x2, y2, false);
-	draw_set_alpha(1);
+	//draw_set_alpha(.7);
+	//draw_rectangle(x1, y1, x2, y2, false);
+	//draw_set_alpha(1);
 	
-	with(interactId) {
-		if(!point_in_rectangle(x, y, x1, y1, x2, y2)) {
-			return;
-		}
+	if(isIn) {
+		draw_sprite_ext(sprite_index, image_index, x, y, 1.1, 1.1, image_angle, c_white, .3);
 	}
-	var width = 0;
-	var height = 0;
-	if(sprite_index) {
-		width = sprite_get_width(sprite_index);
-		height = sprite_get_height(sprite_index);
-	}
-	
-	var xx = x;
-	var yy = y - height;
-	draw_set_halign(fa_center);
-	draw_set_valign(fa_bottom);
-	draw_text(xx, yy, chr(interactId.inputs.interact));
-	draw_set_halign(-1);
-	draw_set_valign(-1);
 }

@@ -1,5 +1,7 @@
 delta = delta_time / 1000000 * FPS;
 
+show_debug_message(instance_exists(objCamera));
+
 //if(room == rmTest) {
 //	global.cam.clampPos = false;
 //}

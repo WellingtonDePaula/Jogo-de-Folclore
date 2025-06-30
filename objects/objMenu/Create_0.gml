@@ -28,7 +28,8 @@ options[MenuTypes.MAIN] = {
 	option3: {
 		text: "Desenvolvedor",
 		func: function() {
-			room_goto(rmTest);
+			//room_goto(rmTest);
+			room_goto(rmJailHall);
 		},
 	},
 	

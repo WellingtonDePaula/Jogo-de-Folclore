@@ -23,7 +23,7 @@ function inventoryStruct(_inv, _type) {
 	}
 }
 
-function inventoryRemoveAmout(_inv, _type, _amount) {
+function inventoryRemoveAmount(_inv, _type, _amount) {
 	if(inventoryVerifyType(_inv, _type)) {
 		var item = inventoryStruct(_inv, _type);
 		var i = ds_list_find_index(_inv, item);

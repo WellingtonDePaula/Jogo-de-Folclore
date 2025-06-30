@@ -43,5 +43,10 @@ switch(_key.state) {
 }
 
 if(minigameFinished) {
+	with(requestBy) {
+		minigameReturn = function() {
+			inventoryRemoveAmount(interactId.inv, Key, 1);
+		}
+	}
 	minigameEnd();
 }

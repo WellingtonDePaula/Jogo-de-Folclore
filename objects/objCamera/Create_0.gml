@@ -2,6 +2,8 @@
 global.ScaleFactors = {
 	NORMAL: 670,
 	CUCA_JAIL: 500,
+	JAIL_HALL: 500,
+	CUCA_WAREHOUSE: 500,
 }
 
 scaleFactor = global.ScaleFactors.NORMAL;

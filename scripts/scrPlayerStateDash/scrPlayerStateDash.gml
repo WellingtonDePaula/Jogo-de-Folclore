@@ -28,7 +28,7 @@ function scrPlayerStateDash() {
 	
 
 	if(!spriteChanged) {
-		inventoryRemoveAmout(inv, Ammo, 1);
+		inventoryRemoveAmount(inv, Ammo, 1);
 		updatePlayerSprite();
 		spriteChanged = true;
 	}

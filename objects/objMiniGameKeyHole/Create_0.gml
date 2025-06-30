@@ -1,12 +1,12 @@
 event_inherited();
 
+requestBy = undefined;
+
 maxScore = 3;
 maxErrors = 2;
 
 targets = ds_list_create();
 ds_list_add(targets, Target, TargetReverse);
-
-
 
 var _displayWidth = display_get_gui_width();
 var _displayHeight = display_get_gui_height();

@@ -59,6 +59,30 @@ function draw_curved_strip(_x, _y, _r, _w, _a_start, _a_end, _color) {
         draw_vertex(inner_x, inner_y);
         draw_vertex(outer_x, outer_y);
     }
-
+	
+	draw_set_color(-1);
     draw_primitive_end();
+}
+
+
+/// draw_sprite_outline(_sprite, _subimg, _x, _y, _color, _thickness)
+
+function draw_sprite_outline(_sprite, _subimg, _x, _y, _color, _thickness) {
+    var outline_color = _color;
+    var thickness = _thickness;
+
+    draw_set_blend_mode(bm_normal);
+    draw_set_color(outline_color);
+
+    for (var dx = -thickness; dx <= thickness; dx++) {
+        for (var dy = -thickness; dy <= thickness; dy++) {
+            if (dx != 0 || dy != 0) {
+                draw_sprite(_sprite, _subimg, _x + dx, _y + dy);
+            }
+        }
+    }
+
+    // Desenha a sprite original no topo (com transparência normal)
+    draw_set_color(c_white); // reset color
+    draw_sprite(_sprite, _subimg, _x, _y);
 }

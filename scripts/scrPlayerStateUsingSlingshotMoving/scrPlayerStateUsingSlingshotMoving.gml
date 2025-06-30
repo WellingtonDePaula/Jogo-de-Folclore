@@ -31,12 +31,11 @@ function scrPlayerStateUsingSlingshotMoving(){
 			return;
 		} else {
 			myWeapon.resetCharge();
+			charged = false;
+			image_index = 0;
 			changeState(PlayerMode.NORMAL, PlayerStates.IDLE, image_xscale);
 			return;
 		}
-		charged = false;
-		image_index = 0;
-		return;
 	}
 	
 	#endregion

@@ -26,7 +26,7 @@ charge = function() {
 shoot = function() {
 	with(weaponId) {
 		if(other.strenghtCharged >= other.minStrenght && inventoryItemAmount(inv, Ammo) > 0) {
-			inventoryRemoveAmout(inv, Ammo, 1);
+			inventoryRemoveAmount(inv, Ammo, 1);
 			var ammoStruct = inventoryStruct(inv, Ammo);
 		
 			var bulletType = ammoStruct.obj;

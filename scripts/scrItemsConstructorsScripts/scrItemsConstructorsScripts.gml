@@ -17,3 +17,6 @@ function Ammo(_obj,  _amount, _maxAmount) : Item(_obj,  _amount, _maxAmount) con
 
 
 function Key(_obj,  _amount, _maxAmount) : Item(_obj,  _amount, _maxAmount) constructor {}
+
+
+function Rag(_obj,  _amount, _maxAmount) : Item(_obj,  _amount, _maxAmount) constructor {}

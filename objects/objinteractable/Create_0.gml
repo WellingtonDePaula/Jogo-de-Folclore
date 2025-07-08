@@ -9,6 +9,7 @@ canBeInteracted = true;
 interacted = false;
 
 canBeInteracted2 = true;
+canBeInteracted3 = true;
 
 inAction = false;
 

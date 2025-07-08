@@ -10,7 +10,7 @@ if(!global.gamePaused) {
 	var xId = interactId.x;
 	var yId = interactId.y;
 
-	if(point_in_rectangle(xId, yId, x1, y1, x2, y2) && interactId.canInteract && canBeInteracted && canBeInteracted2) {
+	if(point_in_rectangle(xId, yId, x1, y1, x2, y2) && interactId.canInteract && canBeInteracted && canBeInteracted2 && canBeInteracted3) {
 		interacted = keyboard_check_pressed(interactId.inputs.interact);
 	}
 

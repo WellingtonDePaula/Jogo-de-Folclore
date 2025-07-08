@@ -19,8 +19,9 @@ facing = 1;
 
 inv = ds_list_create();
 
-ds_list_add(inv, new Ammo(objRock, 3, 5));
+ds_list_add(inv, new Ammo(objRock, 0, 5));
 
+myWeapon = noone;
 myWeapon = instance_create_layer(0, 0, "Player", objSlingshot);
 myWeapon.weaponId = self;
 isAiming = false;
@@ -69,9 +70,9 @@ stateSprites[PlayerMode.NORMAL][PlayerStates.GETTING_UP] = [sprPlayerGettingUpFr
 
 // CHARGING SLINGSHOT
 stateSprites[PlayerMode.USING_SLINGSHOT] = [];
-stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.IDLE] = [sprPlayerIdleChargingFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
-stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.MOVING] = [sprPlayerIdleChargingFront, sprPlayerMovingSideFront, sprPlayerMovingBack, sprPlayerMovingSideBack];
-stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.SHOOT] = [sprPlayerIdleFront, sprPlayerIdleSideFront, sprPlayerIdleBack, sprPlayerIdleSideBack];
+stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.IDLE] = [sprPlayerIdleChargingFront, sprPlayerIdleChargingSideFront, sprPlayerIdleChargingBack, sprPlayerIdleChargingSideBack];
+stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.MOVING] = [sprPlayerIdleChargingFront, sprPlayerIdleChargingSideFront, sprPlayerIdleChargingBack, sprPlayerIdleChargingSideBack];
+stateSprites[PlayerMode.USING_SLINGSHOT][PlayerStates.SHOOT] = [sprPlayerShootingFront, sprPlayerShootingSideFront, sprPlayerShootingBack, sprPlayerShootingSideBack];
 
 #endregion
 
